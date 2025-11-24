@@ -37,9 +37,9 @@
 
 Как переименовал .txt файлы:
 
-`Vless-Reality-Black-Lists-Rus-Cable.txt` ........➡️ `BLACK_VLESS_RUS.txt`
+`Vless-Reality-Black-Lists-Rus-Cable.txt` ........➡️ `BLACK_VLESS_RUS.txt`        --->        обновилась ссылка!
 
-`Shadowsocks-Hysteria2-Black-Lists-Rus-Cable.txt` ➡️ `BLACK_SS+All_RUS.txt`
+`Shadowsocks-Hysteria2-Black-Lists-Rus-Cable.txt` ➡️ `BLACK_SS+All_RUS.txt`       --->        обновилась ссылка!
 
 `Vless-Reality-White-Lists-Rus-Cable.txt` ........➡️ `Оставил такое же название`
 
