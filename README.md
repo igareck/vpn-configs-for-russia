@@ -218,8 +218,9 @@ VPN-конфигурации на вашем устройстве удобнее
 *Используйте VPN и любые средства обхода блокировок ответственно!*
 
 # 👀 Количество посетителей
-<img src="https://komarev.com/ghpvc/?username=igareck&label=Visitors&color=0e75b6&style=flat-square" alt="Visitor Count" /> <br/> <img src="https://visitor-badge.laobi.icu/badge?page_id=igareck.visitor-badge&left_color=black&right_color=green&left_text=Cyber+Hits" alt="Cyber Hits"/>  
+<img src="https://komarev.com/ghpvc/?username=igareck&label=Visitors&color=0e75b6&style=flat-square" alt="Visitor Count" /> <img src="https://visitor-badge.laobi.icu/badge?page_id=igareck.visitor-badge&left_color=black&right_color=green&left_text=Cyber+Hits" alt="Cyber Hits"/>  
 </div>
 
-
+# ⭐ ★★★
+<a href="https://www.star-history.com/#igareck/vpn-configs-for-russia&type=date&legend=top-left"><picture><source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=igareck/vpn-configs-for-russia&type=date&theme=dark&legend=top-left" /><source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=igareck/vpn-configs-for-russia&type=date&legend=top-left" /><img alt="Star History Chart" src="https://api.star-history.com/svg?repos=igareck/vpn-configs-for-russia&type=date&legend=top-left" /></picture></a>
 
