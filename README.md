@@ -24,7 +24,7 @@
 Какая была сортировка:
 
 Черные списки 4 штуки (кабель, телефон, Vless, Shadowsocks[SS]),
-Белые списки 3 штуки (кабель, телефон, целиком в одном файле). Итого 7 штук.
+Белые списки 3 штуки (кабель, телефон и все целиком в одном файле). Итого 7 штук.
 Как оказалось - это больше, чем нужно, я сам, например, мобильными версиями на черных списках
 так и не воспользовался, теперь будет все проще.
 
@@ -46,17 +46,21 @@
 
 Старые файлы скачал, загрузил в папку "old/24.11.2025" репозитория.
 
-Как переименовал .txt файлы:
+Как обновились .txt файлы/подписки:
 
-- `Vless-Reality-Black-Lists-Rus-Cable.txt` ........➡️ `BLACK_VLESS_RUS.txt`   -->  изменилась ссылка!
+- `Shadowsocks-Hysteria2-Black-Lists-Rus-Cable.txt`  ⬊ 
+-                                                       ▶   `BLACK_SS+All_RUS.txt`  -->  изменилась ссылка!
+- `Shadowsocks-Hysteria2-Black-Lists-Rus-Mobile.txt`️ ⬈ 
 
-- `Shadowsocks-Hysteria2-Black-Lists-Rus-Cable.txt` ➡️ `BLACK_SS+All_RUS.txt`  -->  изменилась ссылка!
+- `Vless-Reality-Black-Lists-Rus-Cable.txt` .........⬊️ 
+-                                                       ▶   `BLACK_VLESS_RUS.txt`   -->  изменилась ссылка!
+- `Vless-Reality-Black-Lists-Rus-Mobile.txt` .......️.⬈️ 
 
-+ `Vless-Reality-White-Lists-Rus-Cable.txt` ........➡️ `Оставил такое же название`
++ `Vless-Reality-White-Lists-Rus-Cable.txt` ............▶ `Осталось такое же название`
 
-+ `Vless-Reality-White-Lists-Rus-Mobile.txt` .......➡️ `Оставил такое же название`
++ `Vless-Reality-White-Lists-Rus-Mobile.txt` ...........▶ `Осталось такое же название`
 
-- `White_Lists_Full_Rus.txt` .......................➡️ `WHITE_DELETED.txt`     -->  изменилась ссылка!
+- `White_Lists_Full_Rus.txt` ...........................▶   `WHITE_DELETED.txt`     -->  изменилась ссылка!
 
 ```
 
@@ -147,7 +151,7 @@ VPN-конфигурации на вашем устройстве удобнее
 
 ---
 
-**VLESS КАБЕЛЬ**::  [Vless-Reality-White-Lists-Rus-Cable.txt](https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Cable.txt)
+**VLESS КАБЕЛЬ**:  [Vless-Reality-White-Lists-Rus-Cable.txt](https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/Vless-Reality-White-Lists-Rus-Cable.txt)
 
 <details>
 <summary> QR-код </summary>
