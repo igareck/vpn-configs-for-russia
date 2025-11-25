@@ -49,18 +49,18 @@
 Как обновились .txt файлы/подписки:
 
 - `Shadowsocks-Hysteria2-Black-Lists-Rus-Cable.txt`  ⬊ 
--                                                       ▶   `BLACK_SS+All_RUS.txt`  -->  изменилась ссылка!
+-                                                       ▶  `BLACK_SS+All_RUS.txt` ->  изменилась ссылка!
 - `Shadowsocks-Hysteria2-Black-Lists-Rus-Mobile.txt`️ ⬈ 
 
 - `Vless-Reality-Black-Lists-Rus-Cable.txt` .........⬊️ 
--                                                       ▶   `BLACK_VLESS_RUS.txt`   -->  изменилась ссылка!
+-                                                       ▶  `BLACK_VLESS_RUS.txt`  ->  изменилась ссылка!
 - `Vless-Reality-Black-Lists-Rus-Mobile.txt` .......️.⬈️ 
 
 + `Vless-Reality-White-Lists-Rus-Cable.txt` ............▶ `Осталось такое же название`
 
 + `Vless-Reality-White-Lists-Rus-Mobile.txt` ...........▶ `Осталось такое же название`
 
-- `White_Lists_Full_Rus.txt` ...........................▶   `WHITE_DELETED.txt`     -->  изменилась ссылка!
+- `White_Lists_Full_Rus.txt` ...........................▶  `WHITE_DELETED.txt`    ->  изменилась ссылка!
 
 ```
 
