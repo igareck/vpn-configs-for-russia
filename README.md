@@ -118,7 +118,7 @@ VPN-конфигурации на вашем устройстве удобнее
 
 Можно, конечно, добавлять все вручную по-отдельности, просто копируя содержимое каждого txt-файла в клиент v2rayN и др., но подписки удобнее тем, что они обновляются автоматически у вас на устройстве после обновления на Github, без необходимости удаления и нового копирования, упрощая процесс.
 
-## ![IMAGE SOURCE](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=32&duration=2000&pause=1500&color=D73537&vCenter=true&width=500&height=40&lines=%F0%9F%92%BE+%D0%A1%D0%9A%D0%90%D0%A7%D0%90%D0%A2%D0%AC+VPN-%D0%9A%D0%9E%D0%9D%D0%A4%D0%98%D0%93%D0%98)
+## ![IMAGE SOURCE](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=32&duration=2000&pause=1500&color=D73537&vCenter=true&width=500&height=55&lines=%F0%9F%92%BE+%D0%A1%D0%9A%D0%90%D0%A7%D0%90%D0%A2%D0%AC+VPN-%D0%9A%D0%9E%D0%9D%D0%A4%D0%98%D0%93%D0%98)
 
 <details>
 
