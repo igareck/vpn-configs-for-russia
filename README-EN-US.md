@@ -44,7 +44,7 @@ The "BLACK LIST" (BLACK LIST) is an "international VPN option" and contains the 
 
 THANK YOU FOR YOUR ATTENTION!
 
-## ![IMAGE SOURCE](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=32&duration=2000&pause=1500&color=D73537&vCenter=true&width=500&height=75&lines=%F0%9F%92%BE+%D0%A1%D0%9A%D0%90%D0%A7%D0%90%D0%A2%D0%AC+VPN-%D0%9A%D0%9E%D0%9D%D0%A4%D0%98%D0%93%D0%98)
+## <img src="https://raw.githubusercontent.com/igareck/GoldCaviar/refs/heads/main/Files/Download-VPN-configs-banner-EN-US.svg" width="600">
 
   *Enable auto-update in your VPN client!*
 
