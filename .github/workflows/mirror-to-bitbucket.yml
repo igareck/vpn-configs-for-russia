@@ -1,0 +1,38 @@
+name: Mirror to Bitbucket
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: mirror-to-bitbucket
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Push main branch to Bitbucket
+        env:
+          BITBUCKET_TOKEN: ${{ secrets.BITBUCKET_MIRROR_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git remote remove bitbucket 2>/dev/null || true
+          git remote add bitbucket "https://x-token-auth:${BITBUCKET_TOKEN}@bitbucket.org/igareck/vpn-configs-for-russia.git"
+
+          git push bitbucket HEAD:main --force
