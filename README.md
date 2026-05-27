@@ -13,7 +13,7 @@
 ![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)
 [![Email](https://img.shields.io/badge/Email-igareck%40proton.me-0e75b6?logo=gmail&logoColor=white)](mailto:igareck@proton.me)
 
-[![Support on Patreon](https://img.shields.io/badge/Support_on-Patreon-f96854?logo=patreon&logoColor=white)](https://www.patreon.com/igareck/shop)
+[![Support me on Patreon](https://img.shields.io/badge/Support_me_on-Patreon-f96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/igareck/shop)
 
 
 [1]: https://custom-icon-badges.demolab.com/github/last-commit/igareck/vpn-configs-for-russia?logo=history&logoColor=white&color=0e75b6&style=flat
@@ -1250,7 +1250,9 @@ https://github.com/hiddify/Hiddify-Manager/wiki/Tutorial-for-ShadowRocket-app
 
 Эта особенность касается и клиентов на мобильных устройствах. Например, на iOS, кроме Karing можно поставить Streisand или Shadowrocket и сравнить.
 
-###  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3amtqMmQxOGh0aG0waGk5OGhhNG5odmdob2k1bWc4ejNyZ3E3N2Y2bCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/xUS4Fp5i6iIn2Y1EYT/giphy.gif" width="25"> Windows/Linux/MacOS - клиенты для VPN-конфигураций на ноутбуках и стационарных компьютерах
+##  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3amtqMmQxOGh0aG0waGk5OGhhNG5odmdob2k1bWc4ejNyZ3E3N2Y2bCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/xUS4Fp5i6iIn2Y1EYT/giphy.gif" width="25"> `Windows/Linux/MacOS`
+
+###  Клиенты для VPN-конфигураций на ноутбуках и стационарных компьютерах.
 
 <details>
 <summary><strong><em> Клиент №1, который рекомендую - это Karing </em></strong></summary>
@@ -1341,39 +1343,47 @@ https://github.com/hiddify/Hiddify-Manager/wiki/Tutorial-for-ShadowRocket-app
    
 ---
 
-### <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGcxcG8yMGNzOTNmZDE1Z3hob3V3ajU4dmhkdnhsY2doMXFrNXowMyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/oFSDc1Oq12Ie5NJnmA/giphy.gif" width="20"> iOS - используйте Streisand, Shadowrocket, Karing, V2Box или v2RayTun из App Store.
+## <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGcxcG8yMGNzOTNmZDE1Z3hob3V3ajU4dmhkdnhsY2doMXFrNXowMyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/oFSDc1Oq12Ie5NJnmA/giphy.gif" width="20"> `iOS`
+
+### Используйте `Karing`, `Streisand`, `Shadowrocket`, `Happ`, `v2RayTun` или `V2Box` из App Store.
 
   Рекомендую Karing, так как автоматически проверяет доступные сервера в режиме онлайн, избавляя пользователя от ручного перебора, все правила маршрутизации в зависимости от региона работают из коробки, загрузка и работа конфигов самая стабильная.
 
-  Happ не рекомендуется пользователями из-за нестабильной работы/пинга, а также неудобств в виде ручного перебора.
+  Happ не рекомендуется пользователями из-за нестабильной работы/пинга, а также неудобств в виде ручного перебора и отсутствия встроенных правил маршрутизации трафика.
 
    **1)** `Karing` https://apps.apple.com/us/app/karing/id6472431552
      
    *Лучший бесплатный автоматический клиент на данный момент*
 
-   **1)** `Streisand` https://apps.apple.com/us/app/streisand/id6450534064 
+   **2)** `Streisand` https://apps.apple.com/us/app/streisand/id6450534064 
    
    *Альтернативный бесплатный клиент для iOS без сбора данных*
 
-   **2)** `Shadowrocket` https://apps.apple.com/us/app/shadowrocket/id932747118 
+   **3)** `Shadowrocket` https://apps.apple.com/us/app/shadowrocket/id932747118 
    
    *Не теряет соединения даже после долгого ожидания, не ведется сбор данных, но платный*
 
-   **4)** `V2Box` https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690
+   **4)** `Happ` https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973 (RU-Store)
+
+   https://apps.apple.com/us/app/happ-proxy-utility/id6504287215 (Global)
 
    **5)** `v2RayTun` https://apps.apple.com/us/app/v2raytun/id6476628951
 
+   **6)** `V2Box` https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690
+
 ---
   
-### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODUzYWRwNzNpa3doMDd1bXo4NTlzanJsaTcya3dlNXA4d3c5cnVzNCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/UQJlZ2OcaCA2RLfGiZ/giphy.gif" width="20"> Android - используйте v2rayNG и NekoBox из GitHub или v2Box и v2RayTun из Google Play.
+## <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODUzYWRwNzNpa3doMDd1bXo4NTlzanJsaTcya3dlNXA4d3c5cnVzNCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/UQJlZ2OcaCA2RLfGiZ/giphy.gif" width="20"> `Android`
 
-Рекомендую Karing, так как автоматически проверяет доступные сервера в режиме онлайн, избавляя пользователя от ручного перебора, все правила маршрутизации в зависимости от региона работают из коробки, загрузка и работа конфигов самая стабильная.
+### Используйте `Karing`, `v2rayNG`, `Exclave`, `NekoBox` из GitHub или `v2RayTun`, `Happ` и `v2Box` из Google Play.
 
-Второй в списке - v2rayNG, так как это аналог моего второго фаворита v2rayN для ПК от того же разработчика "2dust", но для Андроида. Автоматики нет.
+Рекомендую Karing, так как он автоматически проверяет доступные сервера в режиме онлайн, избавляя пользователя от ручного перебора, все правила маршрутизации в зависимости от региона работают из коробки, загрузка и работа конфигов самая стабильная.
 
-Также попробуйте NekoBox, пользователи хвалят. Автоматики нет.
+Второй в списке - v2rayNG, так как это аналог моего второго фаворита v2rayN для ПК от того же разработчика @2dust, но для Андроида. Автоматики нет.
 
-Happ не рекомендуется пользователями из-за нестабильной работы/пинга. Автоматики нет.
+Также попробуйте NekoBox и Exclave, пользователи хвалят. Автоматики нет.
+
+Happ не рекомендуется пользователями из-за нестабильной работы/пинга, а также неудобств в виде ручного перебора и отсутствия встроенных правил маршрутизации трафика.
 
   **1)** `Karing` https://github.com/KaringX/karing/releases
 
@@ -1385,10 +1395,13 @@ Happ не рекомендуется пользователями из-за не
 
   **4)** `NekoBox` https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 
-  **5)** `v2Box` https://play.google.com/store/apps/details?id=dev.hexasoftware.v2box
+  **5)** `v2RayTun` https://play.google.com/store/apps/details?id=com.v2raytun.android&hl=en&pli=1
 
-  **6)** `v2RayTun` https://play.google.com/store/apps/details?id=com.v2raytun.android&hl=en&pli=1
+  **6)** `Happ` https://play.google.com/store/apps/details?id=com.happproxy
 
+  **7)** `v2Box` https://play.google.com/store/apps/details?id=dev.hexasoftware.v2box
+
+---
 ---
 
 ## 🧅 Приложения (клиенты) для Tor Bridges на ПК и телефоне
@@ -1413,7 +1426,9 @@ Happ не рекомендуется пользователями из-за не
 
 ---
 
-###  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3amtqMmQxOGh0aG0waGk5OGhhNG5odmdob2k1bWc4ejNyZ3E3N2Y2bCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/xUS4Fp5i6iIn2Y1EYT/giphy.gif" width="25"> Windows/MacOS - клиенты для Tor Bridges на ноутбуках и стационарных компьютерах
+##  <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3amtqMmQxOGh0aG0waGk5OGhhNG5odmdob2k1bWc4ejNyZ3E3N2Y2bCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/xUS4Fp5i6iIn2Y1EYT/giphy.gif" width="25"> `Windows/MacOS`
+
+###  Клиенты для Tor Bridges на ноутбуках и стационарных компьютерах.
 
 ### `1) OnionHop V2`
 
@@ -1437,7 +1452,9 @@ Happ не рекомендуется пользователями из-за не
 
 ---
 
-### <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODUzYWRwNzNpa3doMDd1bXo4NTlzanJsaTcya3dlNXA4d3c5cnVzNCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/UQJlZ2OcaCA2RLfGiZ/giphy.gif" width="20"> <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGcxcG8yMGNzOTNmZDE1Z3hob3V3ajU4dmhkdnhsY2doMXFrNXowMyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/oFSDc1Oq12Ie5NJnmA/giphy.gif" width="20"> iOS/Android - клиенты для Tor Bridges на мобильных устройствах:
+## <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExODUzYWRwNzNpa3doMDd1bXo4NTlzanJsaTcya3dlNXA4d3c5cnVzNCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/UQJlZ2OcaCA2RLfGiZ/giphy.gif" width="20"> <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGcxcG8yMGNzOTNmZDE1Z3hob3V3ajU4dmhkdnhsY2doMXFrNXowMyZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/oFSDc1Oq12Ie5NJnmA/giphy.gif" width="20"> `iOS/Android`
+
+###  Клиенты для Tor Bridges на мобильных устройствах.
 
 `Orbot` **Wikipedia:** https://en.wikipedia.org/wiki/Orbot
 
@@ -1449,6 +1466,7 @@ Happ не рекомендуется пользователями из-за не
 
 `Invizible Pro` **Google Play:** https://play.google.com/store/apps/details?id=pan.alexander.tordnscrypt.gp
 
+---
 ---
 
 ## <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3ZDhxeG02NHlucTdqZGhtejBnb2V5dGpwaDBmcHhobWlsOHQxdWpoYSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/8L0hXHQkY4o7eyQHJB/giphy.gif" width="30"> Полезная информация
@@ -1711,6 +1729,8 @@ https://github.com/uazo/cromite
 Всем неравнодушным заранее благодарен!
 
 ### 1. Донат на `Patreon.com/igareck`
+
+[![Support me on Patreon](https://img.shields.io/badge/Support_me_on-Patreon-f96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/igareck/shop)
 
 Patreon в России работает только через VPN.
 
