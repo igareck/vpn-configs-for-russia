@@ -8,7 +8,7 @@ on:
 
 concurrency:
   group: mirror-to-gitlab
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -16,6 +16,7 @@ permissions:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout GitHub repository
@@ -35,4 +36,18 @@ jobs:
           git remote remove gitlab 2>/dev/null || true
           git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@gitlab.com/igareck/vpn-configs-for-russia.git"
 
-          git push gitlab HEAD:main
+          for attempt in 1 2 3 4 5; do
+            echo "GitLab push attempt $attempt/5"
+
+            if git push gitlab HEAD:main; then
+              echo "GitLab push successful"
+              exit 0
+            fi
+
+            sleep_time=$((attempt * 30))
+            echo "GitLab push failed. Sleeping ${sleep_time}s before retry..."
+            sleep "$sleep_time"
+          done
+
+          echo "GitLab push failed after all retries"
+          exit 1
