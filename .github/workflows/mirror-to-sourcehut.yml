@@ -8,7 +8,7 @@ on:
 
 concurrency:
   group: mirror-to-sourcehut
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -16,6 +16,7 @@ permissions:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout GitHub repository
@@ -48,5 +49,19 @@ jobs:
           git remote remove sourcehut 2>/dev/null || true
           git remote add sourcehut "git@git.sr.ht:~igareck/vpn-configs-for-russia"
 
-          GIT_SSH_COMMAND="ssh -i ~/.ssh/sourcehut_mirror_ed25519 -o IdentitiesOnly=yes" \
-            git push sourcehut HEAD:main --force
+          for attempt in 1 2 3 4 5; do
+            echo "SourceHut push attempt $attempt/5"
+
+            if GIT_SSH_COMMAND="ssh -i ~/.ssh/sourcehut_mirror_ed25519 -o IdentitiesOnly=yes" \
+              git push sourcehut HEAD:main --force; then
+              echo "SourceHut push successful"
+              exit 0
+            fi
+
+            sleep_time=$((attempt * 45))
+            echo "SourceHut push failed. Sleeping ${sleep_time}s before retry..."
+            sleep "$sleep_time"
+          done
+
+          echo "SourceHut push failed after all retries"
+          exit 1
