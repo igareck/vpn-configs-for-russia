@@ -1,4 +1,4 @@
-name: 2-Hour Happ Smart Sync
+name: 2-Hour Happ Filter Sync
 
 on:
   schedule:
@@ -9,41 +9,50 @@ permissions:
   contents: write
 
 jobs:
-  merge-and-encode:
+  filter-and-encode:
     runs-on: ubuntu-latest
     steps:
       - name: Открываем репозиторий
         uses: actions/checkout@v4
 
-      - name: Объединяем, настраиваем автовыбор и кодируем в Base64
+      - name: Сбор, фильтрация и кодирование живых прокси
         run: |
-          > temp_happ.txt
-          cat *BLACK*.txt >> temp_happ.txt 2>/dev/null || true
-          cat *VLESS*.txt >> temp_happ.txt 2>/dev/null || true
-          cat *SS*.txt >> temp_happ.txt 2>/dev/null || true
+          > temp_raw.txt
+          # Собираем все прокси из твоих файлов
+          cat *BLACK*.txt >> temp_raw.txt 2>/dev/null || true
+          cat *VLESS*.txt >> temp_raw.txt 2>/dev/null || true
+          cat *SS*.txt >> temp_raw.txt 2>/dev/null || true
           
-          # Очищаем список от мусора
-          cat temp_happ.txt | grep -E '^([a-zA-Z0-9_-]+)://' > clean_nodes.txt
+          # Очищаем от пустых строк и мусора
+          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > all_nodes.txt
           
-          if [ -s clean_nodes.txt ]; then
-            # СОЗДАЕМ УМНЫЙ ХЕДЕР ДЛЯ HAPP
-            # Этот блок заставляет Happ автоматически тестировать прокси каждые 180 секунд 
-            # и переключаться на живые сервера на лету без твоего участия
-            echo "#profile-title: Авто-прокси (Умный выбор)" > final_profile.txt
-            echo "#profile-update-interval: 2" >> final_profile.txt
-            echo "#auto-policy: url-test" >> final_profile.txt
-            echo "#auto-url: http://gstatic.com" >> final_profile.txt
-            echo "#auto-interval: 180" >> final_profile.txt
-            
-            # Добавляем сами прокси-адреса
-            cat clean_nodes.txt >> final_profile.txt
-            
-            # Кодируем всё в Base64 для Happ
-            base64 -w 0 final_profile.txt > happ_final.txt
-            echo "Умный профиль для Happ успешно создан!"
+          > live_nodes.txt
+          
+          # УМНЫЙ ФИЛЬТР: Робот проверяет каждый адрес на доступность порта
+          while read -r line; do
+            # Извлекаем домен/IP и порт из строки прокси-ссылки
+            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
+              host="${BASH_REMATCH[1]}"
+              port="${BASH_REMATCH[2]}"
+              
+              # Пингуем порт сервера с таймаутом в 2 секунды
+              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
+                echo "$line" >> live_nodes.txt
+              fi
+            else
+              # Если формат нестандартный, оставляем его на всякий случай
+              echo "$line" >> live_nodes.txt
+            fi
+          done < all_nodes.txt
+
+          # Если нашли живые прокси — кодируем их в Base64 для Happ
+          if [ -s live_nodes.txt ]; then
+            base64 -w 0 live_nodes.txt > happ_final.txt
+            echo "Фильтрация завершена. Только живые прокси сохранены!"
           else
-            echo "Ошибка: файлы пусты"
-            exit 1
+            # Если все упали, оставляем старый список, чтобы не ломать приложение
+            cat all_nodes.txt | base64 -w 0 > happ_final.txt
+            echo "Предупреждение: Живых прокси не найдено, сохранен общий список."
           fi
 
       - name: Сохраняем изменения в репозиторий
@@ -51,5 +60,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add happ_final.txt
-          git commit -m "Синхронизация смарт-прокси для Happ [skip ci]" || echo "Изменений нет"
+          git commit -m "Очистка и синхронизация живых прокси [skip ci]" || echo "Изменений нет"
           git push
