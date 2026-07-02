@@ -1,61 +1,45 @@
-name: 30-Min Happ Proxy Guard & Sync
+name: 30-Min Happ Mobile Proxy Sync
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Автоматический запуск каждые 30 минут
-  workflow_dispatch: # Кнопка ручного запуска в любое время
+    - cron: '*/30 * * * *' # Каждые 30 минут
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  sync-and-filter:
+  sync-mobile:
     runs-on: ubuntu-latest
     steps:
       - name: Открываем твой репозиторий
         uses: actions/checkout@v4
 
-      - name: Скачиваем свежие файлы у автора igareck
+      - name: Скачиваем ТОП-150 мобильных прокси у igareck
         run: |
-          # Робот сам идет к автору и забирает оригинальные файлы
-          curl -s "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt" -o BLACK_SS+All_RUS.txt || true
-          curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS.txt || true
+          # Качаем облегченный и самый живучий список для телефонов
+          curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS_mobile.txt || true
 
-      - name: Режим стража - фильтрация живых портов
+      - name: Сборка Base64 без удаления скрытых серверов
         run: |
           > temp_raw.txt
-          cat BLACK_SS+All_RUS.txt >> temp_raw.txt 2>/dev/null || true
-          cat BLACK_VLESS_RUS.txt >> temp_raw.txt 2>/dev/null || true
+          cat BLACK_VLESS_RUS_mobile.txt >> temp_raw.txt 2>/dev/null || true
           
-          # Очищаем строки от мусора
-          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > all_nodes.txt
+          # Очищаем только от пустых строк
+          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > happ_nodes.txt
           
-          > live_nodes.txt
-          # Проверяем доступность портов (Таймаут 2 секунды)
-          while read -r line; do
-            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
-              host="${BASH_REMATCH[1]}"
-              port="${BASH_REMATCH[2]}"
-              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
-                echo "$line" >> live_nodes.txt
-              fi
-            else
-              echo "$line" >> live_nodes.txt
-            fi
-          done < all_nodes.txt
-
-          # Кодируем только живые прокси в Base64 без изменения порядка (без сортировки)
-          if [ -s live_nodes.txt ]; then
-            base64 -w 0 live_nodes.txt > happ_final.txt
-            echo "Файлы обновлены у автора и успешно отфильтрованы!"
+          if [ -s happ_nodes.txt ]; then
+            base64 -w 0 happ_nodes.txt > happ_final.txt
+            echo "Мобильный список успешно обновлен!"
           else
-            cat all_nodes.txt | base64 -w 0 > happ_final.txt
+            echo "Ошибка скачивания"
+            exit 1
           fi
 
-      - name: Сохраняем свежие файлы и готовый список в твой репозиторий
+      - name: Сохраняем в твой репозиторий
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add BLACK_SS+All_RUS.txt BLACK_VLESS_RUS.txt happ_final.txt
-          git commit -m "Синхронизация с автором и фильтрация портов [skip ci]" || echo "Изменений нет"
+          git add BLACK_VLESS_RUS_mobile.txt happ_final.txt
+          git commit -m "Синхронизация мобильных прокси [skip ci]" || echo "Изменений нет"
           git push
