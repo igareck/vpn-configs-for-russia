@@ -1,0 +1,45 @@
+name: 2-Hour Happ Sync
+
+on:
+  schedule:
+    - cron: '30 */2 * * *' # Будет запускаться каждые 2 часа (на 30 минут позже Karing, чтобы не перегружать робота)
+  workflow_dispatch: # Кнопка для ручного запуска
+
+permissions:
+  contents: write
+
+jobs:
+  merge-and-encode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Открываем репозиторий
+        uses: actions/checkout@v4
+
+      - name: Объединяем и кодируем в Base64
+        run: |
+          > temp_happ.txt
+          
+          # Берем те же два файла
+          if [ -f "BLACK_SS+All_RUS.txt" ]; then
+            cat "BLACK_SS+All_RUS.txt" >> temp_happ.txt
+          fi
+          if [ -f "BLACK_VLESS_RUS.txt" ]; then
+            cat "BLACK_VLESS_RUS.txt" >> temp_happ.txt
+          fi
+          
+          # Очищаем от мусора и кодируем в Base64 одной строкой
+          if [ -s temp_happ.txt ]; then
+            cat temp_happ.txt | grep -E '^([a-zA-Z0-9_-]+)://' | base64 -w 0 > happ_final.txt
+            echo "Файл для Happ успешно закодирован!"
+          else
+            echo "Ошибка: Исходные файлы пусты"
+            exit 1
+          fi
+
+      - name: Сохраняем изменения в репозиторий
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          git add happ_final.txt
+          git commit -m "Синхронизация прокси для Happ [skip ci]" || echo "Изменений нет"
+          git push
