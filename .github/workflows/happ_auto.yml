@@ -1,15 +1,15 @@
-name: 30-Min Happ Mobile Proxy Sync
+name: 30-Min Happ Smart Mobile Sync
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Каждые 30 минут
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  sync-mobile:
+  sync-sort-mobile:
     runs-on: ubuntu-latest
     steps:
       - name: Открываем твой репозиторий
@@ -17,29 +17,51 @@ jobs:
 
       - name: Скачиваем ТОП-150 мобильных прокси у igareck
         run: |
-          # Качаем облегченный и самый живучий список для телефонов
           curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS_mobile.txt || true
 
-      - name: Сборка Base64 без удаления скрытых серверов
+      - name: Замер скорости и жесткая сортировка наверх
         run: |
           > temp_raw.txt
           cat BLACK_VLESS_RUS_mobile.txt >> temp_raw.txt 2>/dev/null || true
-          
-          # Очищаем только от пустых строк
           cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > happ_nodes.txt
           
-          if [ -s happ_nodes.txt ]; then
-            base64 -w 0 happ_nodes.txt > happ_final.txt
-            echo "Мобильный список успешно обновлен!"
+          > timed_nodes.txt
+          
+          # Быстрый пинг каждого сервера роботом
+          while read -r line; do
+            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
+              host="${BASH_REMATCH[1]}"
+              port="${BASH_REMATCH[2]}"
+              
+              start_time=$(date +%s%N)
+              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
+                end_time=$(date +%s%N)
+                ping_ms=$(( (end_time - start_time) / 1000000 ))
+                # Записываем "время_пинга ссылка"
+                echo "$ping_ms $line" >> timed_nodes.txt
+              else
+                # Если сервер не ответил роботу, кидаем в самый низ
+                echo "9999 $line" >> timed_nodes.txt
+              fi
+            else
+              echo "9998 $line" >> timed_nodes.txt
+            fi
+          done < happ_nodes.txt
+
+          > final_sorted.txt
+          if [ -s timed_nodes.txt ]; then
+            # Сортируем цифры от меньшего к большему, а потом отрезаем сами цифры, оставляя чистый прокси
+            sort -n timed_nodes.txt | cut -d' ' -f2- > final_sorted.txt
+            base64 -w 0 final_sorted.txt > happ_final.txt
+            echo "Робот сам расставил всё по местам!"
           else
-            echo "Ошибка скачивания"
-            exit 1
+            cat happ_nodes.txt | base64 -w 0 > happ_final.txt
           fi
 
       - name: Сохраняем в твой репозиторий
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@://github.com"
           git config --local user.name "github-actions[bot]"
           git add BLACK_VLESS_RUS_mobile.txt happ_final.txt
-          git commit -m "Синхронизация мобильных прокси [skip ci]" || echo "Изменений нет"
+          git commit -m "Принудительная сортировка прокси [skip ci]" || echo "Изменений нет"
           git push
