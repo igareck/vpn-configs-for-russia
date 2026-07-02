@@ -2,7 +2,7 @@ name: 2-Hour Karing Sync
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Скрипт будет запускаться сам каждые 2 часа
+    - cron: '0 */2 * * *' # Автоматический запуск каждые 2 часа
   workflow_dispatch: # Кнопка для ручного запуска в любое время
 
 permissions:
@@ -15,29 +15,34 @@ jobs:
       - name: Открываем репозиторий
         uses: actions/checkout@v4
 
-      - name: Объединяем текстовые файлы
+      - name: Объединяем и очищаем прокси
         run: |
-          # Очищаем финальный файл перед записью
-          > karing_final.txt
+          # Создаем пустой временный файл
+          > temp_proxies.txt
           
-          # ВНИМАНИЕ: Замените имена файлов ниже на реальные имена из вашего репозитория!
-          # Если файл всего один, оставьте только первую строчку.
-          cat файл1.txt >> temp_proxies.txt
-          cat файл2.txt >> temp_proxies.txt
+          # Проверяем наличие первого файла и добавляем его содержимое
+          if [ -f "BLACK_SS+All_RUS.txt" ]; then
+            cat "BLACK_SS+All_RUS.txt" >> temp_proxies.txt
+          fi
           
-          # Очищаем список: оставляем только рабочие прокси-ссылки, убираем пустые строки
+          # Проверяем наличие второго файла и добавляем его содержимое
+          if [ -f "BLACK_VLESS_RUS.txt" ]; then
+            cat "BLACK_VLESS_RUS.txt" >> temp_proxies.txt
+          fi
+          
+          # Очищаем список: оставляем только строки с прокси-протоколами
           if [ -s temp_proxies.txt ]; then
             cat temp_proxies.txt | grep -E '^([a-zA-Z0-9_-]+)://' > karing_final.txt
-            echo "Файл для Karing успешно создан!"
+            echo "Файлы объединены. Создан karing_final.txt"
           else
-            echo "Ошибка: исходные файлы пусты"
+            echo "Ошибка: Исходные файлы не найдены или они пустые!"
             exit 1
           fi
 
-      - name: Сохраняем изменения в ваш репозиторий
+      - name: Сохраняем изменения в твой репозиторий
         run: |
           git config --local user.email "github-actions[bot]@://github.com"
           git config --local user.name "github-actions[bot]"
           git add karing_final.txt
-          git commit -m "Автообновление списка каждые 2 часа [skip ci]" || echo "Нет новых изменений"
+          git commit -m "Синхронизация прокси каждые 2 часа [skip ci]" || echo "Новых прокси нет"
           git push
