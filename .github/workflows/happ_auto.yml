@@ -1,4 +1,4 @@
-name: 30-Min Happ Mobile Proxy Sync
+name: 30-Min Happ Mobile Proxy Sync & Sort
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  sync-mobile:
+  sync-sort-mobile:
     runs-on: ubuntu-latest
     steps:
       - name: Открываем твой репозиторий
@@ -19,32 +19,55 @@ jobs:
         run: |
           curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS_mobile.txt || true
 
-      - name: Сборка Base64 и принудительное отключение сбойного модуля
+      - name: Замер скорости и жесткая сортировка наверх
         run: |
           > temp_raw.txt
           cat BLACK_VLESS_RUS_mobile.txt >> temp_raw.txt 2>/dev/null || true
-          
-          # Чистим от мусора
           cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > happ_nodes.txt
           
-          if [ -s happ_nodes.txt ]; then
-            # ДОБАВЛЯЕМ СПЕЦИАЛЬНУЮ СИСТЕМНУЮ ДИРЕКТИВУ ДЛЯ HAPP
-            # Эта строчка жестко говорит приложению: "Отключи встроенную маршрутизацию и не лезь на happ.su"
+          > timed_nodes.txt
+          
+          # Быстрый пинг каждого сервера роботом
+          while read -r line; do
+            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
+              host="${BASH_REMATCH[1]}"
+              port="${BASH_REMATCH[2]}"
+              
+              start_time=$(date +%s%N)
+              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
+                end_time=$(date +%s%N)
+                ping_ms=$(( (end_time - start_time) / 1000000 ))
+                echo "$ping_ms $line" >> timed_nodes.txt
+              else
+                # Если сервер не ответил, кидаем в самый низ
+                echo "9999 $line" >> timed_nodes.txt
+              fi
+            else
+              echo "9998 $line" >> timed_nodes.txt
+            fi
+          done < happ_nodes.txt
+
+          > final_sorted.txt
+          if [ -s timed_nodes.txt ]; then
+            # Сортируем цифры от меньшего к большему, а потом отрезаем сами цифры, оставляя чистый прокси
+            sort -n timed_nodes.txt | cut -d' ' -f2- > final_sorted.txt
+            
+            # Добавляем команду отключения роутинга, которая вылечила нам ошибку PremiumFallback
+            echo "#routing-enable: 0" > final_profile.txt
+            cat final_sorted.txt >> final_profile.txt
+            
+            base64 -w 0 final_profile.txt > happ_final.txt
+            echo "Робот сам расставил всё по местам!"
+          else
             echo "#routing-enable: 0" > final_profile.txt
             cat happ_nodes.txt >> final_profile.txt
-            
-            # Пакуем в Base64 для Happ
             base64 -w 0 final_profile.txt > happ_final.txt
-            echo "Блокировка ошибок happ.su успешно внедрена в файл!"
-          else
-            echo "Ошибка скачивания"
-            exit 1
           fi
 
       - name: Сохраняем в твой репозиторий
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@://github.com"
           git config --local user.name "github-actions[bot]"
           git add BLACK_VLESS_RUS_mobile.txt happ_final.txt
-          git commit -m "Принудительное отключение сбойного роутинга [skip ci]" || echo "Изменений нет"
+          git commit -m "Принудительная сортировка мобильных прокси [skip ci]" || echo "Изменений нет"
           git push
