@@ -1,15 +1,15 @@
-name: 30-Min Happ Ultra-Light Sync
+name: 30-Min Happ Mobile Proxy Sync
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Каждые 30 минут
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  sync-top-15:
+  sync-mobile:
     runs-on: ubuntu-latest
     steps:
       - name: Открываем твой репозиторий
@@ -19,44 +19,32 @@ jobs:
         run: |
           curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS_mobile.txt || true
 
-      - name: Отбор ТОП-15 самых быстрых серверов
+      - name: Сборка Base64 и принудительное отключение сбойного модуля
         run: |
           > temp_raw.txt
           cat BLACK_VLESS_RUS_mobile.txt >> temp_raw.txt 2>/dev/null || true
+          
+          # Чистим от мусора
           cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > happ_nodes.txt
           
-          > timed_nodes.txt
-          
-          # Быстрый пинг каждого порта
-          while read -r line; do
-            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
-              host="${BASH_REMATCH}"
-              port="${BASH_REMATCH}"
-              
-              start_time=$(date +%s%N)
-              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
-                end_time=$(date +%s%N)
-                ping_ms=$(( (end_time - start_time) / 1000000 ))
-                echo "$ping_ms $line" >> timed_nodes.txt
-              fi
-            fi
-          done < happ_nodes.txt
-
-          > final_top15.txt
-          if [ -s timed_nodes.txt ]; then
-            # Сортируем по скорости и ЖЁСТКО ОТБИРАЕМ ТОЛЬКО ПЕРВЫЕ 15 ШТУК (head -n 15)
-            sort -n timed_nodes.txt | head -n 15 | cut -d' ' -f2- > final_top15.txt
-            base64 -w 0 final_top15.txt > happ_final.txt
-            echo "Отбор завершен. В списке оставлено только 15 лучших прокси!"
+          if [ -s happ_nodes.txt ]; then
+            # ДОБАВЛЯЕМ СПЕЦИАЛЬНУЮ СИСТЕМНУЮ ДИРЕКТИВУ ДЛЯ HAPP
+            # Эта строчка жестко говорит приложению: "Отключи встроенную маршрутизацию и не лезь на happ.su"
+            echo "#routing-enable: 0" > final_profile.txt
+            cat happ_nodes.txt >> final_profile.txt
+            
+            # Пакуем в Base64 для Happ
+            base64 -w 0 final_profile.txt > happ_final.txt
+            echo "Блокировка ошибок happ.su успешно внедрена в файл!"
           else
-            # Если робот лег, оставляем первые 15 из оригинального файла
-            head -n 15 happ_nodes.txt | base64 -w 0 > happ_final.txt
+            echo "Ошибка скачивания"
+            exit 1
           fi
 
-      - name: Сохраняем изменения
+      - name: Сохраняем в твой репозиторий
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add BLACK_VLESS_RUS_mobile.txt happ_final.txt
-          git commit -m "Оставили только ТОП-15 лучших прокси [skip ci]" || echo "Изменений нет"
+          git commit -m "Принудительное отключение сбойного роутинга [skip ci]" || echo "Изменений нет"
           git push
