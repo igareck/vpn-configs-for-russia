@@ -2,8 +2,8 @@ name: 1-Hour Karing Reserve Mobile Sync
 
 on:
   schedule:
-    - cron: '15 * * * *' # Каждый час на 15-й минуте
-  workflow_dispatch: # Кнопка ручного запуска
+    - cron: '15 * * * *' # Раз в час на 15-й минуте
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,28 +14,25 @@ jobs:
     steps:
       - name: Открываем твой репозиторий
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Скачиваем резервные прокси у igareck
         run: |
-          # МЫ ПОМЕНЯЛИ ИМЯ НА BLACK_SS+All_RUS.txt — ОН ВСЕГДА ЖИВОЙ И СКОРОСТНОЙ!
           curl -s "https://githubusercontent.com" -o BLACK_SS_RUS.txt || touch BLACK_SS_RUS.txt
 
       - name: Замер скорости и жесткая сортировка наверх
         run: |
           touch temp_raw.txt
           cat BLACK_SS_RUS.txt > temp_raw.txt 2>/dev/null || true
-          
-          # Вытаскиваем чистые прокси-ссылки
           cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > karing_reserve_nodes.txt || touch karing_reserve_nodes.txt
           
           touch timed_nodes.txt
-          # Быстрый пинг каждого сервера
           if [ -s karing_reserve_nodes.txt ]; then
             while read -r line; do
               if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
                 host="${BASH_REMATCH[1]}"
                 port="${BASH_REMATCH[2]}"
-                
                 start_time=$(date +%s%N)
                 if nc -z -w 2 "$host" "$port" 2>/dev/null; then
                   end_time=$(date +%s%N)
@@ -44,25 +41,20 @@ jobs:
                 else
                   echo "9999 $line" >> timed_nodes.txt
                 fi
-              else
-                echo "9998 $line" >> timed_nodes.txt
               fi
             done < karing_reserve_nodes.txt
           fi
 
-          # Собираем финальный отсортированный список
-          touch karing_reserve_final.txt
           if [ -s timed_nodes.txt ]; then
             sort -n timed_nodes.txt | cut -d' ' -f2- > karing_reserve_final.txt
-            echo "Робот успешно отсортировал резервный список!"
           else
             cat karing_reserve_nodes.txt > karing_reserve_final.txt
           fi
 
-      - name: Сохраняем в твой репозиторий
+      - name: Жесткое принудительное сохранение файлов на сайт
         run: |
-          git config --local user.email "github-actions[bot]@://github.com"
-          git config --local user.name "github-actions[bot]"
-          git add BLACK_SS_RUS.txt karing_reserve_final.txt
-          git commit -m "Исправленная ежечасная сортировка резервных прокси [skip ci]" || echo "Изменений нет"
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add karing_reserve_final.txt BLACK_SS_RUS.txt
+          git commit -m "Принудительное обновление прокси Shadowsocks"
+          git push origin main
