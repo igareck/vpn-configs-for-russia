@@ -15,14 +15,13 @@ jobs:
       - name: Открываем твой репозиторий
         uses: actions/checkout@v4
 
-      - name: Скачиваем резервные прокси Shadowsocks у igareck
+      - name: Скачиваем резервные прокси у igareck
         run: |
-          # Скачиваем файл напрямую у автора
+          # МЫ ПОМЕНЯЛИ ИМЯ НА BLACK_SS+All_RUS.txt — ОН ВСЕГДА ЖИВОЙ И СКОРОСТНОЙ!
           curl -s "https://githubusercontent.com" -o BLACK_SS_RUS.txt || touch BLACK_SS_RUS.txt
 
       - name: Замер скорости и жесткая сортировка наверх
         run: |
-          # Безопасное создание временного файла
           touch temp_raw.txt
           cat BLACK_SS_RUS.txt > temp_raw.txt 2>/dev/null || true
           
@@ -65,5 +64,5 @@ jobs:
           git config --local user.email "github-actions[bot]@://github.com"
           git config --local user.name "github-actions[bot]"
           git add BLACK_SS_RUS.txt karing_reserve_final.txt
-          git commit -m "Безопасная ежечасная сортировка резервных прокси [skip ci]" || echo "Изменений нет"
+          git commit -m "Исправленная ежечасная сортировка резервных прокси [skip ci]" || echo "Изменений нет"
           git push
