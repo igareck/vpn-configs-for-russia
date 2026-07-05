@@ -2,11 +2,11 @@ name: 1-Hour Karing Reserve Mobile Sync
 
 on:
   schedule:
-    - cron: '15 * * * *' # Раз в час на 15-й минуте
-  workflow_dispatch:
+    - cron: '15 * * * *' # Раз в час на 15-й минуте (чтобы не перегружать облако)
+  workflow_dispatch: # Кнопка для ручного запуска
 
 permissions:
-  contents: write
+  contents: write # Даем роботу официальные права на запись файлов!
 
 jobs:
   sync-sort-reserve:
@@ -15,13 +15,13 @@ jobs:
       - name: Открываем твой репозиторий
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }} # Подключаем системный токен безопасности
 
       - name: Скачиваем резервные прокси у igareck
         run: |
           curl -s "https://githubusercontent.com" -o BLACK_SS_RUS.txt || touch BLACK_SS_RUS.txt
 
-      - name: Замер скорости и жесткая сортировка наверх
+      - name: Замер скорости и жесткая原始сортировка наверх
         run: |
           touch temp_raw.txt
           cat BLACK_SS_RUS.txt > temp_raw.txt 2>/dev/null || true
@@ -56,5 +56,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add karing_reserve_final.txt BLACK_SS_RUS.txt
-          git commit -m "Принудительное обновление прокси Shadowsocks"
+          # Разрешаем коммит, даже если список серверов остался прежним
+          git commit -m "Принудительное обновление прокси Shadowsocks" --allow-empty
           git push origin main
