@@ -2,11 +2,11 @@ name: 1-Hour Karing Smart Mobile Sync
 
 on:
   schedule:
-    - cron: '0 * * * *' # Робот запускается автоматически ровно один раз в час!
-  workflow_dispatch: # Кнопка для ручного запуска в любое время
+    - cron: '0 * * * *' # Раз в час
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write # Даем роботу официальные права на запись файлов!
 
 jobs:
   sync-sort-karing:
@@ -14,52 +14,48 @@ jobs:
     steps:
       - name: Открываем твой репозиторий
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Подключаем системный токен безопасности
 
       - name: Скачиваем ТОП-150 мобильных прокси у igareck
         run: |
-          curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS_mobile.txt || true
+          curl -s "https://githubusercontent.com" -o BLACK_VLESS_RUS_mobile.txt || touch BLACK_VLESS_RUS_mobile.txt
 
       - name: Замер скорости и жесткая сортировка наверх
         run: |
-          > temp_raw.txt
-          cat BLACK_VLESS_RUS_mobile.txt >> temp_raw.txt 2>/dev/null || true
-          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > karing_nodes.txt
+          touch temp_raw.txt
+          cat BLACK_VLESS_RUS_mobile.txt > temp_raw.txt 2>/dev/null || true
+          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > karing_nodes.txt || touch karing_nodes.txt
           
-          > timed_nodes.txt
-          
-          # Быстрый пинг каждого сервера роботом
-          while read -r line; do
-            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
-              host="${BASH_REMATCH}"
-              port="${BASH_REMATCH}"
-              
-              start_time=$(date +%s%N)
-              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
-                end_time=$(date +%s%N)
-                ping_ms=$(( (end_time - start_time) / 1000000 ))
-                echo "$ping_ms $line" >> timed_nodes.txt
-              else
-                # Мертвые сервера кидаем в самый низ
-                echo "9999 $line" >> timed_nodes.txt
+          touch timed_nodes.txt
+          if [ -s karing_nodes.txt ]; then
+            while read -r line; do
+              if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
+                host="${BASH_REMATCH[1]}"
+                port="${BASH_REMATCH[2]}"
+                start_time=$(date +%s%N)
+                if nc -z -w 2 "$host" "$port" 2>/dev/null; then
+                  end_time=$(date +%s%N)
+                  ping_ms=$(( (end_time - start_time) / 1000000 ))
+                  echo "$ping_ms $line" >> timed_nodes.txt
+                else
+                  echo "9999 $line" >> timed_nodes.txt
+                fi
               fi
-            else
-              echo "9998 $line" >> timed_nodes.txt
-            fi
-          done < karing_nodes.txt
+            done < karing_nodes.txt
+          fi
 
-          > karing_final.txt
           if [ -s timed_nodes.txt ]; then
-            # Сортируем цифры от меньшего к большему и убираем замер скорости, оставляя чистый прокси
             sort -n timed_nodes.txt | cut -d' ' -f2- > karing_final.txt
-            echo "Робот отсортировал список для Karing!"
           else
             cat karing_nodes.txt > karing_final.txt
           fi
 
-      - name: Сохраняем отсортированный текстовый файл в твой репозиторий
+      - name: Жесткое принудительное сохранение файлов на сайт
         run: |
-          git config --local user.email "github-actions[bot]@://github.com"
-          git config --local user.name "github-actions[bot]"
-          git add BLACK_VLESS_RUS_mobile.txt karing_final.txt
-          git commit -m "Ежечасная сортировка мобильных прокси [skip ci]" || echo "Изменений нет"
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add karing_final.txt BLACK_VLESS_RUS_mobile.txt
+          # Делаем чистый коммит без заглушек ошибок, чтобы видеть реальный статус записи
+          git commit -m "Принудительное обновление прокси VLESS"
+          git push origin main
