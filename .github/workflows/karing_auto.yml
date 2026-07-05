@@ -2,8 +2,8 @@ name: 1-Hour Karing Smart Mobile Sync
 
 on:
   schedule:
-    - cron: '0 * * * *' # Раз в час
-  workflow_dispatch:
+    - cron: '0 * * * *' # Раз в час, ровно в 00 минут
+  workflow_dispatch: # Кнопка для ручного запуска
 
 permissions:
   contents: write # Даем роботу официальные права на запись файлов!
@@ -56,6 +56,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add karing_final.txt BLACK_VLESS_RUS_mobile.txt
-          # Делаем чистый коммит без заглушек ошибок, чтобы видеть реальный статус записи
-          git commit -m "Принудительное обновление прокси VLESS"
+          # Разрешаем коммит, даже если список серверов остался прежним
+          git commit -m "Принудительное обновление прокси VLESS" --allow-empty
           git push origin main
