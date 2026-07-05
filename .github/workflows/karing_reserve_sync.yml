@@ -1,0 +1,61 @@
+name: 1-Hour Karing Reserve Mobile Sync
+
+on:
+  schedule:
+    - cron: '15 * * * *' # Робот запускается каждый час на 15-й минуте (в 12:15, 13:15 и т.д.)
+  workflow_dispatch: # Кнопка ручного запуска
+
+permissions:
+  contents: write
+
+jobs:
+  sync-sort-reserve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Открываем твой репозиторий
+        uses: actions/checkout@v4
+
+      - name: Скачиваем резервные прокси Shadowsocks у igareck
+        run: |
+          curl -s "https://githubusercontent.com" -o BLACK_SS_RUS.txt || true
+
+      - name: Замер скорости и жесткая сортировка наверх
+        run: |
+          > temp_raw.txt
+          cat BLACK_SS_RUS.txt >> temp_raw.txt 2>/dev/null || true
+          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > karing_reserve_nodes.txt
+          
+          > timed_nodes.txt
+          while read -r line; do
+            if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
+              host="${BASH_REMATCH[1]}"
+              port="${BASH_REMATCH[2]}"
+              
+              start_time=$(date +%s%N)
+              if nc -z -w 2 "$host" "$port" 2>/dev/null; then
+                end_time=$(date +%s%N)
+                ping_ms=$(( (end_time - start_time) / 1000000 ))
+                echo "$ping_ms $line" >> timed_nodes.txt
+              else
+                echo "9999 $line" >> timed_nodes.txt
+              fi
+            else
+              echo "9998 $line" >> timed_nodes.txt
+            fi
+          done < karing_reserve_nodes.txt
+
+          > karing_reserve_final.txt
+          if [ -s timed_nodes.txt ]; then
+            sort -n timed_nodes.txt | cut -d' ' -f2- > karing_reserve_final.txt
+            echo "Робот отсортировал резервный список!"
+          else
+            cat karing_reserve_nodes.txt > karing_reserve_final.txt
+          fi
+
+      - name: Сохраняем в твой репозиторий
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          git add BLACK_SS_RUS.txt karing_reserve_final.txt
+          git commit -m "Ежечасная сортировка резервных прокси [skip ci]" || echo "Изменений нет"
+          git push
