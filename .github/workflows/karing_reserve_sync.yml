@@ -2,11 +2,11 @@ name: 1-Hour Karing Reserve Mobile Sync
 
 on:
   schedule:
-    - cron: '15 * * * *' # Раз в час на 15-й минуте (чтобы не перегружать облако)
+    - cron: '15 * * * *' # Раз в час на 15-й минуте
   workflow_dispatch: # Кнопка для ручного запуска
 
 permissions:
-  contents: write # Даем роботу официальные права на запись файлов!
+  contents: write
 
 jobs:
   sync-sort-reserve:
@@ -15,20 +15,24 @@ jobs:
       - name: Открываем твой репозиторий
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} # Подключаем системный токен безопасности
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Скачиваем резервные прокси у igareck
         run: |
-          curl -s "https://githubusercontent.com" -o BLACK_SS_RUS.txt || touch BLACK_SS_RUS.txt
+          # Скачиваем ТОП-содержимое со всеми протоколами Shadowsocks, Hysteria2, Vmess
+          curl -s "https://githubusercontent.com" -o raw_reserve.txt || touch raw_reserve.txt
 
-      - name: Замер скорости и жесткая原始сортировка наверх
+      - name: Замер скорости и жесткая сортировка наверх
         run: |
           touch temp_raw.txt
-          cat BLACK_SS_RUS.txt > temp_raw.txt 2>/dev/null || true
-          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > karing_reserve_nodes.txt || touch karing_reserve_nodes.txt
+          cat raw_reserve.txt > temp_raw.txt 2>/dev/null || true
+          
+          # Отфильтровываем только чистые ссылки
+          cat temp_raw.txt | grep -E '^([a-zA-Z0-9_-]+)://' > filtered_reserve.txt || touch filtered_reserve.txt
           
           touch timed_nodes.txt
-          if [ -s karing_reserve_nodes.txt ]; then
+          # Жесткий пинг каждого сервера по очереди
+          if [ -s filtered_reserve.txt ]; then
             while read -r line; do
               if [[ "$line" =~ @([^:]+):([0-9]+) ]]; then
                 host="${BASH_REMATCH[1]}"
@@ -42,20 +46,22 @@ jobs:
                   echo "9999 $line" >> timed_nodes.txt
                 fi
               fi
-            done < karing_reserve_nodes.txt
+            done < filtered_reserve.txt
           fi
 
+          # Собираем готовый отсортированный файл подписки
+          touch karing_reserve_final.txt
           if [ -s timed_nodes.txt ]; then
             sort -n timed_nodes.txt | cut -d' ' -f2- > karing_reserve_final.txt
+            echo "Робот успешно отсортировал резервный список!"
           else
-            cat karing_reserve_nodes.txt > karing_reserve_final.txt
+            cat filtered_reserve.txt > karing_reserve_final.txt
           fi
 
       - name: Жесткое принудительное сохранение файлов на сайт
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add karing_reserve_final.txt BLACK_SS_RUS.txt
-          # Разрешаем коммит, даже если список серверов остался прежним
-          git commit -m "Принудительное обновление прокси Shadowsocks" --allow-empty
+          git add karing_reserve_final.txt
+          git commit -m "Принудительное обновление резервных прокси" --allow-empty
           git push origin main
