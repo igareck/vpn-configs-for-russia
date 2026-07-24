@@ -1,7 +1,7 @@
 # profile-title: 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
 # profile-update-interval: 1
-# Date/Time: 2026-07-24 / 07:35 (Moscow)
-# Количество: 6
+# Date/Time: 2026-07-24 / 08:43 (Moscow)
+# Количество: 4
 # For more info and VPN-configs - visit: www.github.com/igareck/vpn-configs-for-russia
 
 mixed-port: 7890
@@ -9,7 +9,22 @@ allow-lan: false
 mode: rule
 log-level: warning
 proxies:
-- name: 🇪🇪 Estonia [*CIDR] YA
+- name: 🇪🇪 Estonia | [*CIDR] YA
+  type: vless
+  server: "\x35\x31\x2e\x32\x35\x30\x2e\x31\x33\x2e\x31\x33\x34"
+  port: 443
+  uuid: "\x66\x35\x38\x34\x32\x32\x66\x66\x2d\x62\x62\x32\x65\x2d\x34\x63\x63\x65\x2d\x61\x37\x37\x32\x2d\x65\x66\x66\x37\x64\x62\x33\x65\x64\x33\x34\x33"
+  udp: true
+  encryption: none
+  tls: true
+  servername: "\x65\x73\x2e\x6e\x6f\x64\x65\x2e\x67\x68\x6f\x73\x74\x73\x79\x76\x70\x6e\x2e\x6f\x72\x67"
+  client-fingerprint: edge
+  reality-opts:
+    public-key: vyKm3CvZn8rUxSwWZ89buOc2bTMa18zfWmWMGHnYt18
+  network: grpc
+  grpc-opts:
+    grpc-service-name: api
+- name: '🇪🇪 Estonia | [*CIDR] YA #2'
   type: vless
   server: "\x35\x31\x2e\x32\x35\x30\x2e\x31\x33\x2e\x31\x33\x34"
   port: 443
@@ -24,40 +39,9 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: api
-- name: 🇸🇪 Sweden [*CIDR] VK
+- name: 🌐 Anycast-IP | 🇪🇪 🇱🇻 | [*CIDR] VK
   type: vless
-  server: "\x32\x31\x33\x2e\x32\x31\x39\x2e\x32\x31\x32\x2e\x32\x35\x34"
-  port: 8443
-  uuid: "\x66\x63\x65\x65\x32\x63\x30\x66\x2d\x64\x33\x30\x63\x2d\x34\x62\x65\x31\x2d\x62\x64\x38\x32\x2d\x62\x62\x36\x36\x66\x39\x33\x62\x38\x39\x35\x38"
-  udp: true
-  encryption: none
-  tls: true
-  servername: "\x33\x36\x30\x2e\x79\x61\x6e\x64\x65\x78\x2e\x72\x75"
-  client-fingerprint: qq
-  reality-opts:
-    public-key: ZpXBddDY5CBXaRTnUz4lM4xs_KBVX4CPulN-q9AqhAI
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ns
-- name: 🌐 Anycast-IP | 🇧🇾 🇩🇪 🇪🇪 🇵🇱 [*CIDR] VK
-  type: vless
-  server: "\x35\x2e\x31\x38\x38\x2e\x31\x34\x30\x2e\x31\x39\x34"
-  port: 2053
-  uuid: "\x33\x30\x38\x32\x35\x64\x33\x65\x2d\x36\x37\x35\x63\x2d\x31\x31\x66\x31\x2d\x61\x31\x30\x33\x2d\x61\x65\x66\x36\x33\x63\x37\x31\x32\x36\x62\x30"
-  udp: true
-  encryption: none
-  tls: true
-  servername: "\x68\x68\x2e\x72\x75"
-  client-fingerprint: edge
-  reality-opts:
-    public-key: WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M
-    short-id: 4b685844d0b4f724
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-direct
-- name: 🌐 Anycast-IP | 🇩🇪 🇪🇪 🇱🇻 [*CIDR] VK
-  type: vless
-  server: "\x35\x2e\x31\x38\x38\x2e\x31\x34\x30\x2e\x31\x39\x34"
+  server: "\x38\x39\x2e\x32\x30\x38\x2e\x32\x33\x31\x2e\x38\x32"
   port: 2053
   uuid: "\x33\x30\x38\x32\x35\x64\x33\x65\x2d\x36\x37\x35\x63\x2d\x31\x31\x66\x31\x2d\x61\x31\x30\x33\x2d\x61\x65\x66\x36\x33\x63\x37\x31\x32\x36\x62\x30"
   udp: true
@@ -71,31 +55,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-direct
-- name: 🌐 Anycast-IP | 🇳🇱 [*CIDR] YA
+- name: '🌐 Anycast-IP | 🇪🇪 🇱🇻 | [*CIDR] VK #2'
   type: vless
-  server: "\x31\x35\x38\x2e\x31\x36\x30\x2e\x32\x34\x36\x2e\x31\x39\x33"
-  port: 443
-  uuid: "\x63\x30\x31\x63\x32\x64\x61\x37\x2d\x36\x39\x37\x37\x2d\x34\x62\x35\x33\x2d\x61\x34\x39\x33\x2d\x63\x64\x61\x31\x37\x66\x61\x36\x31\x62\x34\x66"
+  server: "\x38\x39\x2e\x32\x30\x38\x2e\x32\x33\x31\x2e\x38\x32"
+  port: 2053
+  uuid: "\x33\x30\x38\x32\x35\x64\x33\x65\x2d\x36\x37\x35\x63\x2d\x31\x31\x66\x31\x2d\x61\x31\x30\x33\x2d\x61\x65\x66\x36\x33\x63\x37\x31\x32\x36\x62\x30"
   udp: true
   encryption: none
   tls: true
-  servername: "\x73\x74\x61\x74\x69\x63\x2d\x6d\x6f\x6e\x2e\x79\x61\x6e\x64\x65\x78\x2e\x6e\x65\x74"
-  client-fingerprint: safari
+  servername: "\x68\x68\x2e\x72\x75"
+  client-fingerprint: qq
   reality-opts:
-    public-key: 9lryIkDCyHLzVsVJiGE4LFMuOHdzYDSTNJOFqGlpcl8
-    short-id: 2901df419dc4e3ff
+    public-key: WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M
+    short-id: 4b685844d0b4f724
   network: grpc
-- name: 🌐 Anycast-IP | 🇳🇱 🇷🇺 [*CIDR] YA
-  type: vless
-  server: "\x31\x35\x38\x2e\x31\x36\x30\x2e\x32\x34\x36\x2e\x31\x39\x33"
-  port: 443
-  uuid: "\x63\x30\x31\x63\x32\x64\x61\x37\x2d\x36\x39\x37\x37\x2d\x34\x62\x35\x33\x2d\x61\x34\x39\x33\x2d\x63\x64\x61\x31\x37\x66\x61\x36\x31\x62\x34\x66"
-  udp: true
-  encryption: none
-  tls: true
-  servername: "\x73\x74\x61\x74\x69\x63\x2d\x6d\x6f\x6e\x2e\x79\x61\x6e\x64\x65\x78\x2e\x6e\x65\x74"
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9lryIkDCyHLzVsVJiGE4LFMuOHdzYDSTNJOFqGlpcl8
-    short-id: 2901df419dc4e3ff
-  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-direct
