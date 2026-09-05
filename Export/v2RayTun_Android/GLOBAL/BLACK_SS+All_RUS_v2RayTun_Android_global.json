@@ -605,7 +605,7 @@
       "protocol": "hysteria",
       "settings": {
         "version": 2,
-        "address": "104.165.205.46",
+        "address": "104.165.205.43",
         "port": 9443
       },
       "streamSettings": {
@@ -632,7 +632,7 @@
       "protocol": "hysteria",
       "settings": {
         "version": 2,
-        "address": "104.165.205.52",
+        "address": "104.165.205.46",
         "port": 9443
       },
       "streamSettings": {
@@ -659,7 +659,7 @@
       "protocol": "hysteria",
       "settings": {
         "version": 2,
-        "address": "104.165.205.53",
+        "address": "104.165.205.52",
         "port": 9443
       },
       "streamSettings": {
@@ -686,7 +686,7 @@
       "protocol": "hysteria",
       "settings": {
         "version": 2,
-        "address": "104.165.205.81",
+        "address": "104.165.205.53",
         "port": 9443
       },
       "streamSettings": {
@@ -713,7 +713,7 @@
       "protocol": "hysteria",
       "settings": {
         "version": 2,
-        "address": "lv02.gotosvo.com",
+        "address": "104.165.205.81",
         "port": 9443
       },
       "streamSettings": {
@@ -737,32 +737,28 @@
     },
     {
       "tag": "igareck-node-016",
-      "protocol": "vmess",
+      "protocol": "hysteria",
       "settings": {
-        "vnext": [
-          {
-            "address": "156.226.183.181",
-            "port": 54321,
-            "users": [
-              {
-                "id": "d3bcc1f1-6294-4f68-bcf3-c3bcb2001520",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
+        "version": 2,
+        "address": "gevip.larpvpn.space",
+        "port": 4434
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "hysteria",
+        "security": "tls",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "9fd994ad-d36c-476d-96c7-25f10bbdf2cb"
+        },
+        "tlsSettings": {
+          "serverName": "gevip.larpvpn.space",
+          "alpn": [
+            "h3"
+          ]
+        },
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
         }
       }
     },
@@ -955,36 +951,32 @@
     },
     {
       "tag": "igareck-node-023",
-      "protocol": "vmess",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "172.64.80.1",
-            "port": 8443,
-            "users": [
-              {
-                "id": "60441548-b68e-43b2-8191-e3b884be4b3c",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
+            "address": "dggg.wsone.icu",
+            "port": 443,
+            "password": "M7v%w11Se*"
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
         },
-        "wsSettings": {
-          "path": "/lMnsZUN4/",
-          "headers": {
-            "Host": "v2ray1.dozapp.xyz"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
         "security": "tls",
-        "tlsSettings": {}
+        "tlsSettings": {
+          "serverName": "dggg.wsone.icu",
+          "fingerprint": "android"
+        }
       }
     },
     {
@@ -993,32 +985,27 @@
       "settings": {
         "servers": [
           {
-            "address": "185.204.171.3",
-            "port": 2052,
-            "password": "v5ncoq10h6398eru"
+            "address": "dggg.wsone.icu",
+            "port": 443,
+            "password": "M7v%w11Se*"
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
         },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "185.204.171.3"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "185.204.171.3",
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+          "serverName": "dggg.wsone.icu",
+          "fingerprint": "chrome"
         }
       }
     },
@@ -1028,32 +1015,27 @@
       "settings": {
         "servers": [
           {
-            "address": "185.204.171.3",
-            "port": 2052,
-            "password": "v5ncoq10h6398eru"
+            "address": "35.246.185.109",
+            "port": 443,
+            "password": "M7v%w11Se*"
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
         },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "185.204.171.3"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "185.204.171.3",
-          "fingerprint": "firefox",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+          "serverName": "dggg.wsone.icu",
+          "fingerprint": "chrome"
         }
       }
     },
@@ -1063,32 +1045,27 @@
       "settings": {
         "servers": [
           {
-            "address": "185.204.171.3",
-            "port": 2052,
-            "password": "v5ncoq10h6398eru"
+            "address": "35.246.185.109",
+            "port": 443,
+            "password": "M7v%w11Se*"
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
         },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "185.204.171.3"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "185.204.171.3",
-          "fingerprint": "qq",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
+          "serverName": "dggg.wsone.icu",
+          "fingerprint": "ios"
         }
       }
     },
