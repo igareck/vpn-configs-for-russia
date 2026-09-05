@@ -1,0 +1,213 @@
+# ============================================================
+# Igareck Mihomo Subscription
+# Источник/Source: WHITE-SNI-RU-all.txt
+# 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | SNI-RU
+# Количество/Quantity: 1
+# Date/Time: 2026-09-05 / 13:48 (Moscow)
+#
+# Режим / Mode:
+# - Автоматический Выбор лучшего прокси / Igareck Auto Select;
+# - Ручной Выбор / Igareck Manual;
+# - GLOBAL;
+# ============================================================
+
+mode: rule
+unified-delay: true
+tcp-concurrent: true
+
+keep-alive-idle: 300
+keep-alive-interval: 60
+disable-keep-alive: false
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "localhost"
+
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "time1.*.com"
+    - "time2.*.com"
+    - "time3.*.com"
+    - "time4.*.com"
+    - "time5.*.com"
+    - "time6.*.com"
+    - "time7.*.com"
+
+    - "ntp.*.com"
+    - "ntp1.*.com"
+    - "ntp2.*.com"
+    - "ntp3.*.com"
+    - "ntp4.*.com"
+    - "ntp5.*.com"
+    - "ntp6.*.com"
+    - "ntp7.*.com"
+    - "*.pool.ntp.org"
+
+    - "+.push.apple.com"
+
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - "+.stun.playstation.net"
+
+    - "lens.l.google.com"
+    - "*.n.n.srv.nintendo.net"
+    - "xbox.*.*.microsoft.com"
+    - "*.*.xboxlive.com"
+
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+
+    - "WORKGROUP"
+
+  cache-algorithm: arc
+
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+
+  nameserver:
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.adguard-dns.com/dns-query
+    - https://freedns.controld.com/p0
+    - https://dns.mullvad.net/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.libredns.gr/dns-query
+    - https://doh.dns4all.eu/dns-query
+    - https://wikimedia-dns.org/dns-query
+    - https://dns.hostux.net/dns-query
+    - https://blank.dnsforge.de/dns-query
+
+  proxy-server-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+    - system
+
+  direct-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+    - system
+
+  direct-nameserver-follow-policy: false
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+
+    TLS:
+      ports: [443, 8443]
+
+    QUIC:
+      ports: [443, 8443]
+
+proxies:
+- name: Igareck Node 001 | 🇰🇷 South Korea [SNI-RU] vk.com
+  type: hysteria2
+  server: "\x31\x33\x2e\x31\x32\x34\x2e\x32\x33\x33\x2e\x32\x31\x31"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: vk.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+
+proxy-groups:
+  - name: "Igareck Auto Select (Автоподключение)"
+    type: url-test
+    include-all: true
+    exclude-type: "Direct|Reject|RejectDrop|Compatible|Pass|Dns"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    lazy: true
+    timeout: 5000
+    max-failed-times: 2
+    expected-status: 204
+
+  - name: "Igareck Manual (Ручное Подключение)"
+    type: select
+    proxies:
+      - "Igareck Auto Select (Автоподключение)"
+    include-all: true
+    exclude-type: "Direct|Reject|RejectDrop|Compatible|Pass|Dns"
+    default-selected: "Igareck Auto Select (Автоподключение)"
+
+  - name: "GLOBAL"
+    type: select
+    proxies:
+      - "Igareck Auto Select (Автоподключение)"
+      - "Igareck Manual (Ручное Подключение)"
+    default-selected: "Igareck Auto Select (Автоподключение)"
+
+rules:
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - "DOMAIN-REGEX,^[^.]+$,DIRECT"
+
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+
+
+  - "MATCH,Igareck Manual (Ручное Подключение)"
