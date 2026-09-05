@@ -2,8 +2,8 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-SNI-RU-all.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | SNI-RU
-# Количество/Quantity: 2
-# Date/Time: 2026-09-05 / 22:53 (Moscow)
+# Количество/Quantity: 4
+# Date/Time: 2026-09-06 / 00:03 (Moscow)
 #
 # Режим / Mode:
 # - Автоматический Выбор лучшего прокси / Igareck Auto Select;
@@ -154,28 +154,62 @@ sniffer:
       ports: [443, 8443]
 
 proxies:
-- name: Igareck Node 001 | 🇺🇸 United States [SNI-RU] www.vk.com
-  type: hysteria2
-  server: "\x31\x30\x38\x2e\x35\x39\x2e\x32\x34\x34\x2e\x31\x35\x38"
+- name: Igareck Node 001 | 🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com
+  type: vless
+  server: "\x37\x38\x2e\x31\x35\x39\x2e\x32\x34\x30\x2e\x34\x31"
   port: 443
-  password: 9ef86b2a4534f780f32546236211fc74
+  uuid: "\x33\x39\x64\x39\x32\x37\x61\x34\x2d\x62\x38\x63\x37\x2d\x34\x64\x63\x37\x2d\x39\x31\x66\x31\x2d\x38\x62\x32\x65\x30\x35\x64\x38\x62\x36\x62\x36"
   udp: true
-  sni: www.vk.com
-  alpn:
-  - h3
-  - h2
-  - http/1.1
-  skip-cert-verify: true
-- name: Igareck Node 002 | 🇺🇸 United States [SNI-RU] www.vk.com
-  type: hysteria2
-  server: "\x31\x30\x38\x2e\x35\x39\x2e\x32\x34\x34\x2e\x31\x35\x38"
+  tls: true
+  servername: "\x69\x64\x2e\x76\x6b\x2e\x63\x6f\x6d"
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+- name: Igareck Node 002 | 🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com
+  type: vless
+  server: "\x37\x38\x2e\x31\x35\x39\x2e\x32\x34\x30\x2e\x34\x31"
   port: 443
-  password: 9ef86b2a4534f780f32546236211fc74
+  uuid: "\x33\x39\x64\x39\x32\x37\x61\x34\x2d\x62\x38\x63\x37\x2d\x34\x64\x63\x37\x2d\x39\x31\x66\x31\x2d\x38\x62\x32\x65\x30\x35\x64\x38\x62\x36\x62\x36"
   udp: true
-  sni: www.vk.com
-  alpn:
-  - h3
-  skip-cert-verify: true
+  tls: true
+  servername: "\x69\x64\x2e\x76\x6b\x2e\x63\x6f\x6d"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+- name: Igareck Node 003 | 🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com
+  type: vless
+  server: "\x37\x38\x2e\x31\x35\x39\x2e\x32\x34\x30\x2e\x34\x31"
+  port: 443
+  uuid: "\x33\x39\x64\x39\x32\x37\x61\x34\x2d\x62\x38\x63\x37\x2d\x34\x64\x63\x37\x2d\x39\x31\x66\x31\x2d\x38\x62\x32\x65\x30\x35\x64\x38\x62\x36\x62\x36"
+  udp: true
+  tls: true
+  servername: "\x69\x64\x2e\x76\x6b\x2e\x63\x6f\x6d"
+  client-fingerprint: ios
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
+- name: Igareck Node 004 | 🇩🇪 Germany | 🌐 | [SNI-RU] id.vk.com
+  type: vless
+  server: "\x37\x38\x2e\x31\x35\x39\x2e\x32\x34\x30\x2e\x34\x31"
+  port: 443
+  uuid: "\x33\x39\x64\x39\x32\x37\x61\x34\x2d\x62\x38\x63\x37\x2d\x34\x64\x63\x37\x2d\x39\x31\x66\x31\x2d\x38\x62\x32\x65\x30\x35\x64\x38\x62\x36\x62\x36"
+  udp: true
+  tls: true
+  servername: "\x69\x64\x2e\x76\x6b\x2e\x63\x6f\x6d"
+  client-fingerprint: qq
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc-reality
 
 proxy-groups:
   - name: "Igareck Auto Select (Автоподключение)"
