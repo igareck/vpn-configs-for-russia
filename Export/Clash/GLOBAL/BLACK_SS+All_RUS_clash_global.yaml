@@ -1,0 +1,922 @@
+# ============================================================
+# Igareck Mihomo Subscription
+# Источник/Source: BLACK_SS+All_RUS.txt
+# 🏴 ЧЕРНЫЕ СПИСКИ 🏴 BLACK LISTS | Полная • Full | SS, Hy2, Vmess, Trojan
+# Количество/Quantity: 68
+# Date/Time: 2026-09-05 / 06:55 (Moscow)
+#
+# Режим / Mode:
+# - Автоматический Выбор лучшего прокси / Igareck Auto Select;
+# - Ручной Выбор / Igareck Manual;
+# - GLOBAL;
+# ============================================================
+
+mode: rule
+unified-delay: true
+tcp-concurrent: true
+
+keep-alive-idle: 300
+keep-alive-interval: 60
+disable-keep-alive: false
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "localhost"
+
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "time1.*.com"
+    - "time2.*.com"
+    - "time3.*.com"
+    - "time4.*.com"
+    - "time5.*.com"
+    - "time6.*.com"
+    - "time7.*.com"
+
+    - "ntp.*.com"
+    - "ntp1.*.com"
+    - "ntp2.*.com"
+    - "ntp3.*.com"
+    - "ntp4.*.com"
+    - "ntp5.*.com"
+    - "ntp6.*.com"
+    - "ntp7.*.com"
+    - "*.pool.ntp.org"
+
+    - "+.push.apple.com"
+
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - "+.stun.playstation.net"
+
+    - "lens.l.google.com"
+    - "*.n.n.srv.nintendo.net"
+    - "xbox.*.*.microsoft.com"
+    - "*.*.xboxlive.com"
+
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+
+    - "WORKGROUP"
+
+  cache-algorithm: arc
+
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+
+  nameserver:
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.adguard-dns.com/dns-query
+    - https://freedns.controld.com/p0
+    - https://dns.mullvad.net/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.libredns.gr/dns-query
+    - https://doh.dns4all.eu/dns-query
+    - https://wikimedia-dns.org/dns-query
+    - https://dns.hostux.net/dns-query
+    - https://blank.dnsforge.de/dns-query
+
+  proxy-server-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+    - system
+
+  direct-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+    - system
+
+  direct-nameserver-follow-policy: false
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+
+    TLS:
+      ports: [443, 8443]
+
+    QUIC:
+      ports: [443, 8443]
+
+proxies:
+- name: Igareck Node 001 | 🇦🇺 Australia， Sydney | 🌐 | [BL]
+  type: hysteria2
+  server: "\x76\x70\x6e\x2d\x61\x75\x2d\x30\x30\x32\x2e\x66\x61\x73\x74\x65\x72\x76\x70\x6e\x2e\x77\x6f\x72\x6c\x64"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: css.rbxcdn.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 002 | 🇦🇺 Australia， Sydney | 🌐 | [BL]
+  type: hysteria2
+  server: "\x76\x70\x6e\x2d\x61\x75\x2d\x30\x30\x32\x2e\x66\x61\x73\x74\x65\x72\x76\x70\x6e\x2e\x77\x6f\x72\x6c\x64"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: speedtest.tinkoff.ru
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 003 | 🇦🇺 Australia， Sydney | 🌐 | [BL]
+  type: hysteria2
+  server: "\x76\x70\x6e\x2d\x61\x75\x2d\x30\x30\x32\x2e\x66\x61\x73\x74\x65\x72\x76\x70\x6e\x2e\x77\x6f\x72\x6c\x64"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: t.me
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 004 | 🇪🇪 Estonia， Tallinn | 🌐 | [BL]
+  type: hysteria2
+  server: "\x37\x37\x2e\x32\x33\x39\x2e\x31\x32\x36\x2e\x32\x31\x39"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 005 | 🇫🇮 Finland， Helsinki | [BL]
+  type: hysteria2
+  server: "\x38\x37\x2e\x32\x35\x31\x2e\x31\x37\x2e\x31\x30"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 006 | 🇫🇮 Finland， Helsinki | [BL]
+  type: hysteria2
+  server: "\x66\x72\x2e\x76\x70\x6e\x2e\x6c\x65\x67\x65\x6e\x64\x61\x61\x68\x2e\x78\x79\x7a"
+  port: 36723
+  password: Krab9Hyst2_Rk7pQ2xL
+  udp: true
+  sni: fr.vpn.legendaah.xyz
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 007 | 🇫🇮 Finland， Helsinki | [BL]
+  type: hysteria2
+  server: "\x66\x72\x2e\x76\x70\x6e\x2e\x6c\x65\x67\x65\x6e\x64\x61\x61\x68\x2e\x78\x79\x7a"
+  port: 36723
+  password: Krab9Hyst2_Rk7pQ2xL
+  udp: true
+  sni: 127.0.0.1
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 008 | 🇫🇮 Finland， Helsinki | [BL]
+  type: hysteria2
+  server: "\x66\x72\x2e\x76\x70\x6e\x2e\x6c\x65\x67\x65\x6e\x64\x61\x61\x68\x2e\x78\x79\x7a"
+  port: 36723
+  password: Krab9Hyst2_Rk7pQ2xL
+  udp: true
+  sni: fr.vpn.legendaah.xyz
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 009 | 🇫🇮 Finland， Helsinki | 🌐 | [BL]
+  type: hysteria2
+  server: "\x66\x6c\x2e\x6c\x61\x72\x70\x76\x70\x6e\x2e\x73\x70\x61\x63\x65"
+  port: 4434
+  password: 9fd994ad-d36c-476d-96c7-25f10bbdf2cb
+  udp: true
+  sni: fl.larpvpn.space
+  alpn:
+  - h3
+- name: Igareck Node 010 | 🇩🇪 Germany， Frankfurt am Main | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x37\x2e\x32\x34\x2e\x32\x34\x34"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 011 | 🇩🇪 Germany， Frankfurt am Main | 🌐 | [BL]
+  type: hysteria2
+  server: "\x34\x35\x2e\x31\x35\x37\x2e\x32\x33\x35\x2e\x33\x30"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 012 | 🇩🇪 Germany， Frankfurt am Main (Innenstadt I) | [BL]
+  type: hysteria2
+  server: "\x64\x65\x75\x30\x30\x30\x33\x6e\x74\x72\x68\x79\x30\x31\x2e\x74\x63\x70\x2d\x72\x65\x73\x65\x74\x2d\x63\x6c\x75\x62\x2e\x6e\x65\x74"
+  port: 443
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  udp: true
+  sni: deu0003ntrhy01.tcp-reset-club.net
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 013 | 🇮🇳 India， Mumbai | [BL]
+  type: hysteria2
+  server: "\x76\x70\x6e\x2d\x69\x6e\x2d\x30\x30\x31\x2e\x66\x61\x73\x74\x65\x72\x76\x70\x6e\x2e\x77\x6f\x72\x6c\x64"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: t.me
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 014 | 🇯🇵 Japan， Inzai (Otsuka) | [BL]
+  type: hysteria2
+  server: "\x31\x34\x30\x2e\x32\x33\x38\x2e\x34\x33\x2e\x30"
+  port: 50160
+  password: 9c5be37406b6584005b8de0ee3734dd9
+  udp: true
+  sni: www.bing.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 015 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x31\x34\x32"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 016 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x31\x39\x31"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 017 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x32\x31\x39"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 018 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x32\x33"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 019 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x32\x35\x30"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 020 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x34\x34"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 021 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x34\x36"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 022 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x35\x32"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 023 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x35\x33"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 024 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x30\x34\x2e\x31\x36\x35\x2e\x32\x30\x35\x2e\x38\x31"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 025 | 🇱🇻 Latvia， Riga | 🌐 | [BL]
+  type: hysteria2
+  server: "\x6c\x76\x30\x32\x2e\x67\x6f\x74\x6f\x73\x76\x6f\x2e\x63\x6f\x6d"
+  port: 9443
+  password: e3c3b722-1264-4cdc-a97c-b0a1bb73cd67
+  udp: true
+  sni: onecloudstream.com
+  alpn:
+  - h3
+- name: Igareck Node 026 | 🇲🇾 Malaysia， Cyberjaya | [BL]
+  type: hysteria2
+  server: "\x6d\x6c\x78\x79\x32\x2e\x6d\x61\x6e\x67\x73\x68\x65\x2e\x78\x79\x7a"
+  port: 2060
+  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  udp: true
+  sni: mlxy2.mangshe.xyz
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 027 | 🇷🇴 Romania， Bucharest | [BL]
+  type: hysteria2
+  server: "\x72\x6f\x75\x30\x30\x30\x31\x6e\x74\x72\x68\x79\x30\x31\x2e\x74\x63\x70\x2d\x72\x65\x73\x65\x74\x2d\x63\x6c\x75\x62\x2e\x6e\x65\x74"
+  port: 443
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  udp: true
+  sni: rou0001ntrhy01.tcp-reset-club.net
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 028 | 🇸🇬 Singapore， Singapore (Loyang) | 🌐 | [BL]
+  type: hysteria2
+  server: "\x31\x33\x38\x2e\x32\x2e\x37\x33\x2e\x32\x33\x38"
+  port: 50160
+  password: f87376e17da040ed04c9665ce8972930
+  udp: true
+  sni: www.bing.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 029 | 🇰🇷 South Korea， Chuncheon-si | [BL]
+  type: hysteria2
+  server: "\x31\x35\x32\x2e\x36\x37\x2e\x32\x30\x30\x2e\x38\x32"
+  port: 50160
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  udp: true
+  sni: css.rbxcdn.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 030 | 🇰🇷 South Korea， Chuncheon-si | [BL]
+  type: hysteria2
+  server: "\x31\x35\x32\x2e\x36\x37\x2e\x32\x30\x30\x2e\x38\x32"
+  port: 50160
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  udp: true
+  sni: speedtest.tinkoff.ru
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 031 | 🇰🇷 South Korea， Incheon | [BL]
+  type: hysteria2
+  server: "\x33\x2e\x33\x36\x2e\x31\x31\x31\x2e\x31\x36\x36"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: css.rbxcdn.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 032 | 🇰🇷 South Korea， Incheon | [BL]
+  type: hysteria2
+  server: "\x33\x2e\x33\x36\x2e\x31\x31\x31\x2e\x31\x36\x36"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: speedtest.tinkoff.ru
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 033 | 🇰🇷 South Korea， Incheon | [BL]
+  type: hysteria2
+  server: "\x33\x2e\x33\x36\x2e\x31\x31\x31\x2e\x31\x36\x36"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: t.me
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 034 | 🇰🇷 South Korea， Yongsan-dong | [BL]
+  type: hysteria2
+  server: "\x31\x33\x2e\x31\x32\x34\x2e\x32\x33\x33\x2e\x32\x31\x31"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: css.rbxcdn.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 035 | 🇰🇷 South Korea， Yongsan-dong | [BL]
+  type: hysteria2
+  server: "\x31\x33\x2e\x31\x32\x34\x2e\x32\x33\x33\x2e\x32\x31\x31"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: speedtest.tinkoff.ru
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 036 | 🇰🇷 South Korea， Yongsan-dong | [BL]
+  type: hysteria2
+  server: "\x31\x33\x2e\x31\x32\x35\x2e\x31\x31\x2e\x39\x31"
+  port: 443
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  udp: true
+  sni: speedtest.tinkoff.ru
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 037 | 🇨🇭 Switzerland | 🌐 | [BL]
+  type: hysteria2
+  server: "\x63\x68\x65\x30\x31\x70\x6c\x72\x68\x79\x30\x31\x2e\x74\x63\x70\x2d\x72\x65\x73\x65\x74\x2d\x63\x6c\x75\x62\x2e\x6e\x65\x74"
+  port: 443
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  udp: true
+  sni: che01plrhy01.tcp-reset-club.net
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 038 | 🇨🇭 Switzerland， Bern | [BL]
+  type: hysteria2
+  server: "\x63\x68\x65\x30\x31\x70\x6c\x72\x68\x79\x30\x31\x2e\x74\x63\x70\x2d\x72\x65\x73\x65\x74\x2d\x63\x6c\x75\x62\x2e\x6e\x65\x74"
+  port: 443
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  udp: true
+  sni: che01plrhy01.tcp-reset-club.net
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 039 | 🇨🇭 Switzerland， Bern | [BL]
+  type: hysteria2
+  server: "\x63\x68\x65\x30\x31\x70\x6c\x72\x68\x79\x30\x31\x2e\x74\x63\x70\x2d\x72\x65\x73\x65\x74\x2d\x63\x6c\x75\x62\x2e\x6e\x65\x74"
+  port: 443
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  udp: true
+  sni: 127.0.0.1
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 040 | 🇳🇱 The Netherlands， Amsterdam (Amsterdam-Zuidoost) | [BL]
+  type: hysteria2
+  server: "\x6e\x6c\x30\x31\x6e\x74\x72\x68\x79\x30\x31\x2e\x74\x63\x70\x2d\x72\x65\x73\x65\x74\x2d\x63\x6c\x75\x62\x2e\x6e\x65\x74"
+  port: 443
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  udp: true
+  sni: nl01ntrhy01.tcp-reset-club.net
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 041 | 🇬🇧 United Kingdom， London | [BL]
+  type: hysteria2
+  server: "\x6c\x61\x62\x73\x2e\x66\x72\x6b\x6e\x2e\x6f\x72\x67"
+  port: 443
+  password: 3b8c82ed-fe66-472d-915e-034ccb57103f
+  udp: true
+  sni: labs.frkn.org
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: Igareck Node 042 | 🇭🇰 Hong Kong， Hong Kong | [BL]
+  type: vmess
+  server: "\x31\x35\x36\x2e\x32\x32\x36\x2e\x31\x38\x33\x2e\x31\x38\x31"
+  port: 54321
+  uuid: "\x64\x33\x62\x63\x63\x31\x66\x31\x2d\x36\x32\x39\x34\x2d\x34\x66\x36\x38\x2d\x62\x63\x66\x33\x2d\x63\x33\x62\x63\x62\x32\x30\x30\x31\x35\x32\x30"
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: Igareck Node 043 | 🇲🇽 Mexico， Mexico City | [BL]
+  type: vmess
+  server: "\x33\x38\x2e\x36\x30\x2e\x32\x32\x34\x2e\x31\x37\x33"
+  port: 32153
+  uuid: "\x35\x63\x66\x31\x66\x34\x37\x30\x2d\x33\x66\x37\x30\x2d\x34\x35\x38\x39\x2d\x61\x32\x61\x34\x2d\x34\x36\x35\x37\x65\x61\x33\x61\x31\x65\x64\x66"
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: Igareck Node 044 | 🇳🇱 The Netherlands， Amsterdam | [BL]
+  type: vmess
+  server: "\x37\x38\x2e\x31\x37\x2e\x37\x31\x2e\x32\x33\x36"
+  port: 33736
+  uuid: "\x62\x33\x61\x31\x31\x30\x36\x38\x2d\x31\x61\x37\x65\x2d\x34\x36\x34\x33\x2d\x38\x35\x64\x65\x2d\x37\x63\x38\x32\x63\x63\x65\x34\x36\x39\x34\x33"
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+- name: Igareck Node 045 | 🇳🇱 The Netherlands， Amsterdam | [BL]
+  type: vmess
+  server: "\x37\x38\x2e\x31\x37\x2e\x37\x31\x2e\x32\x33\x36"
+  port: 33736
+  uuid: "\x62\x33\x61\x31\x31\x30\x36\x38\x2d\x31\x61\x37\x65\x2d\x34\x36\x34\x33\x2d\x38\x35\x64\x65\x2d\x37\x63\x38\x32\x63\x63\x65\x34\x36\x39\x34\x33"
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+    headers:
+      Host: Telegram-Leviko_v2ray
+- name: Igareck Node 046 | 🇳🇱 The Netherlands， Amsterdam | [BL]
+  type: vmess
+  server: "\x37\x38\x2e\x31\x37\x2e\x37\x31\x2e\x32\x33\x36"
+  port: 33736
+  uuid: "\x62\x33\x61\x31\x31\x30\x36\x38\x2d\x31\x61\x37\x65\x2d\x34\x36\x34\x33\x2d\x38\x35\x64\x65\x2d\x37\x63\x38\x32\x63\x63\x65\x34\x36\x39\x34\x33"
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+    headers:
+      Host: telegram-leviko_v2ray
+- name: Igareck Node 047 | 🇳🇱 The Netherlands， Amsterdam | [BL]
+  type: vmess
+  server: "\x37\x38\x2e\x31\x37\x2e\x37\x31\x2e\x32\x33\x36"
+  port: 33736
+  uuid: "\x62\x33\x61\x31\x31\x30\x36\x38\x2d\x31\x61\x37\x65\x2d\x34\x36\x34\x33\x2d\x38\x35\x64\x65\x2d\x37\x63\x38\x32\x63\x63\x65\x34\x36\x39\x34\x33"
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+- name: Igareck Node 048 | 🇳🇱 The Netherlands， Amsterdam | [BL]
+  type: vmess
+  server: "\x37\x38\x2e\x31\x37\x2e\x37\x31\x2e\x32\x33\x36"
+  port: 33736
+  uuid: "\x62\x33\x61\x31\x31\x30\x36\x38\x2d\x31\x61\x37\x65\x2d\x34\x36\x34\x33\x2d\x38\x35\x64\x65\x2d\x37\x63\x38\x32\x63\x63\x65\x34\x36\x39\x34\x33"
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess-ws
+    headers:
+      Host: Telegram-Leviko_v2ray
+- name: Igareck Node 049 | 🇺🇸 United States， St Louis (Downtown) | [BL]
+  type: vmess
+  server: "\x31\x37\x32\x2e\x36\x34\x2e\x38\x30\x2e\x31"
+  port: 8443
+  uuid: "\x36\x30\x34\x34\x31\x35\x34\x38\x2d\x62\x36\x38\x65\x2d\x34\x33\x62\x32\x2d\x38\x31\x39\x31\x2d\x65\x33\x62\x38\x38\x34\x62\x65\x34\x62\x33\x63"
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- name: Igareck Node 050 | .𖥔 ݁ ˖ִ🛸༄˖°. | [BL]
+  type: trojan
+  server: "\x31\x38\x35\x2e\x32\x30\x34\x2e\x31\x37\x31\x2e\x33"
+  port: 2052
+  password: v5ncoq10h6398eru
+  udp: true
+  sni: 185.204.171.3
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 185.204.171.3
+- name: Igareck Node 051 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  client-fingerprint: android
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 052 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 053 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  client-fingerprint: safari
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 054 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  sni: 194.9.172.236
+  client-fingerprint: edge
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 055 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  sni: 194.9.172.236
+  client-fingerprint: firefox
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 056 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  sni: 194.9.172.236
+  client-fingerprint: ios
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 057 | 🇫🇷 France， Lyon | [BL]
+  type: trojan
+  server: "\x31\x39\x34\x2e\x39\x2e\x31\x37\x32\x2e\x32\x33\x36"
+  port: 1105
+  password: kakashka13222
+  udp: true
+  sni: 194.9.172.236
+  client-fingerprint: safari
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 058 | 🇩🇪 Germany | 🌐 | [BL]
+  type: trojan
+  server: "\x31\x38\x35\x2e\x32\x30\x34\x2e\x31\x37\x31\x2e\x33"
+  port: 2052
+  password: v5ncoq10h6398eru
+  udp: true
+  sni: 185.204.171.3
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 185.204.171.3
+- name: Igareck Node 059 | 🇩🇪 Germany | 🌐 | [BL]
+  type: trojan
+  server: "\x31\x38\x35\x2e\x32\x30\x34\x2e\x31\x37\x31\x2e\x33"
+  port: 2052
+  password: v5ncoq10h6398eru
+  udp: true
+  sni: 185.204.171.3
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 185.204.171.3
+- name: Igareck Node 060 | 🇩🇪 Germany， Münster | [BL]
+  type: trojan
+  server: "\x35\x2e\x32\x34\x39\x2e\x31\x36\x34\x2e\x32\x38"
+  port: 25615
+  password: kakashka13222
+  udp: true
+  sni: op-1.firecone.eu
+  alpn:
+  - http/1.1
+  client-fingerprint: android
+  network: ws
+  ws-opts:
+    path: /femboyporn--femboyporn--femboyporn--femboyporn/free-trojan-node/only-smux-supported
+    headers:
+      Host: op-1.firecone.eu
+  skip-cert-verify: true
+- name: Igareck Node 061 | 🇩🇪 Germany， Münster | [BL]
+  type: trojan
+  server: "\x35\x2e\x32\x34\x39\x2e\x31\x36\x34\x2e\x32\x38"
+  port: 25615
+  password: kakashka13222
+  udp: true
+  sni: op-1.firecone.eu
+  alpn:
+  - http/1.1
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /femboyporn--femboyporn--femboyporn--femboyporn/free-trojan-node/only-smux-supported
+    headers:
+      Host: op-1.firecone.eu
+  skip-cert-verify: true
+- name: Igareck Node 062 | 🇩🇪 Germany， Münster | [BL]
+  type: trojan
+  server: "\x35\x2e\x32\x34\x39\x2e\x31\x36\x34\x2e\x32\x38"
+  port: 25615
+  password: kakashka13222
+  udp: true
+  sni: op-1.firecone.eu
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /femboyporn--femboyporn--femboyporn--femboyporn/free-trojan-node/only-smux-supported
+    headers:
+      Host: op-1.firecone.eu
+  skip-cert-verify: true
+- name: Igareck Node 063 | 🇩🇪 Germany， Münster | [BL]
+  type: trojan
+  server: "\x35\x2e\x32\x34\x39\x2e\x31\x36\x34\x2e\x32\x38"
+  port: 25615
+  password: kakashka13222
+  udp: true
+  sni: op-1.firecone.eu
+  alpn:
+  - http/1.1
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /femboyporn--femboyporn--femboyporn--femboyporn/free-trojan-node/only-smux-supported
+    headers:
+      Host: op-1.firecone.eu
+  skip-cert-verify: true
+- name: Igareck Node 064 | 🇩🇪 Germany， Münster | [BL]
+  type: trojan
+  server: "\x35\x2e\x32\x34\x39\x2e\x31\x36\x34\x2e\x32\x38"
+  port: 25615
+  password: kakashka13222
+  udp: true
+  sni: op-1.firecone.eu
+  alpn:
+  - http/1.1
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /femboyporn--femboyporn--femboyporn--femboyporn/free-trojan-node/only-smux-supported
+    headers:
+      Host: op-1.firecone.eu
+  skip-cert-verify: true
+- name: Igareck Node 065 | 🇺🇸 United States， San Jose | [BL]
+  type: trojan
+  server: "\x32\x31\x36\x2e\x31\x39\x35\x2e\x32\x31\x31\x2e\x35\x30"
+  port: 443
+  password: UQfj7bdfjibTjpUHfg72aew51S7fB32g
+  udp: true
+  client-fingerprint: ios
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 066 | 🇺🇸 United States， San Jose | [BL]
+  type: trojan
+  server: "\x32\x31\x36\x2e\x31\x39\x35\x2e\x32\x31\x31\x2e\x35\x30"
+  port: 443
+  password: UQfj7bdfjibTjpUHfg72aew51S7fB32g
+  udp: true
+  client-fingerprint: qq
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 067 | 🇺🇸 United States， San Jose | [BL]
+  type: trojan
+  server: "\x6c\x69\x74\x74\x6f\x72\x61\x6c\x2e\x61\x70\x70\x61\x67\x65\x6e\x74\x2e\x6e\x65\x74"
+  port: 443
+  password: UQfj7bdfjibTjpUHfg72aew51S7fB32g
+  udp: true
+  sni: littoral.appagent.net
+  client-fingerprint: chrome
+  network: tcp
+  skip-cert-verify: true
+- name: Igareck Node 068 | 🇺🇸 United States， San Jose | [BL]
+  type: trojan
+  server: "\x6c\x69\x74\x74\x6f\x72\x61\x6c\x2e\x61\x70\x70\x61\x67\x65\x6e\x74\x2e\x6e\x65\x74"
+  port: 443
+  password: UQfj7bdfjibTjpUHfg72aew51S7fB32g
+  udp: true
+  sni: littoral.appagent.net
+  client-fingerprint: safari
+  network: tcp
+  skip-cert-verify: true
+
+proxy-groups:
+  - name: "Igareck Auto Select (Автоподключение)"
+    type: url-test
+    include-all: true
+    exclude-type: "Direct|Reject|RejectDrop|Compatible|Pass|Dns"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    lazy: true
+    timeout: 5000
+    max-failed-times: 2
+    expected-status: 204
+
+  - name: "Igareck Manual (Ручное Подключение)"
+    type: select
+    proxies:
+      - "Igareck Auto Select (Автоподключение)"
+    include-all: true
+    exclude-type: "Direct|Reject|RejectDrop|Compatible|Pass|Dns"
+    default-selected: "Igareck Auto Select (Автоподключение)"
+
+  - name: "GLOBAL"
+    type: select
+    proxies:
+      - "Igareck Auto Select (Автоподключение)"
+      - "Igareck Manual (Ручное Подключение)"
+    default-selected: "Igareck Auto Select (Автоподключение)"
+
+rules:
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - "DOMAIN-REGEX,^[^.]+$,DIRECT"
+
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+
+
+  - "MATCH,Igareck Manual (Ручное Подключение)"
