@@ -1,0 +1,413 @@
+# ============================================================
+# Igareck Mihomo Subscription
+# Источник/Source: WHITE-CIDR-RU-checked.txt
+# 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
+# Количество/Quantity: 15
+# Date/Time: 2026-09-05 / 21:43 (Moscow)
+#
+# Режим / Mode:
+# - Автоматический Выбор лучшего прокси / Igareck Auto Select;
+# - Ручной Выбор / Igareck Manual;
+# - GLOBAL;
+# ============================================================
+
+mode: rule
+unified-delay: true
+tcp-concurrent: true
+
+keep-alive-idle: 300
+keep-alive-interval: 60
+disable-keep-alive: false
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+dns:
+  enable: true
+  prefer-h3: false
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: false
+
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "localhost"
+
+    - "time.*.com"
+    - "time.*.gov"
+    - "time.*.apple.com"
+    - "time-ios.apple.com"
+    - "time1.*.com"
+    - "time2.*.com"
+    - "time3.*.com"
+    - "time4.*.com"
+    - "time5.*.com"
+    - "time6.*.com"
+    - "time7.*.com"
+
+    - "ntp.*.com"
+    - "ntp1.*.com"
+    - "ntp2.*.com"
+    - "ntp3.*.com"
+    - "ntp4.*.com"
+    - "ntp5.*.com"
+    - "ntp6.*.com"
+    - "ntp7.*.com"
+    - "*.pool.ntp.org"
+
+    - "+.push.apple.com"
+
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - "+.stun.playstation.net"
+
+    - "lens.l.google.com"
+    - "*.n.n.srv.nintendo.net"
+    - "xbox.*.*.microsoft.com"
+    - "*.*.xboxlive.com"
+
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+
+    - "WORKGROUP"
+
+  cache-algorithm: arc
+
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+
+  nameserver:
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
+    - https://dns.adguard-dns.com/dns-query
+    - https://freedns.controld.com/p0
+    - https://dns.mullvad.net/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://doh.opendns.com/dns-query
+    - https://doh.libredns.gr/dns-query
+    - https://doh.dns4all.eu/dns-query
+    - https://wikimedia-dns.org/dns-query
+    - https://dns.hostux.net/dns-query
+    - https://blank.dnsforge.de/dns-query
+
+  proxy-server-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+    - system
+
+  direct-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 94.140.14.14
+    - 76.76.2.0
+    - 76.76.10.0
+    - 1.0.0.1
+    - 1.1.1.1
+    - 208.67.220.220
+    - 208.67.222.222
+    - system
+
+  direct-nameserver-follow-policy: false
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+
+    TLS:
+      ports: [443, 8443]
+
+    QUIC:
+      ports: [443, 8443]
+
+proxies:
+- name: Igareck Node 001 | 🇫🇮 Finland | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 2080
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 002 | 🇫🇮 Finland | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 2080
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: edge
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 003 | 🇫🇮 Finland | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 2080
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 004 | 🇫🇮 Finland | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 2080
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: qq
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 005 | 🇫🇮 Finland | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 2080
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: safari
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 006 | 🇱🇹 Lithuania | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1034
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 007 | 🇱🇹 Lithuania | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1034
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: edge
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 008 | 🇱🇹 Lithuania | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1034
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: ios
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 009 | 🇱🇹 Lithuania | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1034
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: qq
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 010 | 🇱🇹 Lithuania | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1034
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x75\x6e\x70\x6b\x67\x2e\x63\x6f\x6d"
+  client-fingerprint: safari
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 011 | 🇷🇺 Russia | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1035
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x63\x64\x6e\x6a\x73\x2e\x63\x6f\x6d"
+  client-fingerprint: android
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 012 | 🇷🇺 Russia | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1035
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x63\x64\x6e\x6a\x73\x2e\x63\x6f\x6d"
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 013 | 🇷🇺 Russia | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1035
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x63\x64\x6e\x6a\x73\x2e\x63\x6f\x6d"
+  client-fingerprint: edge
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 014 | 🇷🇺 Russia | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1035
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x63\x64\x6e\x6a\x73\x2e\x63\x6f\x6d"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+- name: Igareck Node 015 | 🇷🇺 Russia | [*CIDR] CDN
+  type: vless
+  server: "\x70\x6c\x61\x79\x2e\x6d\x61\x69\x6e\x2d\x73\x6f\x66\x74\x2e\x72\x75"
+  port: 1035
+  uuid: "\x33\x38\x65\x62\x33\x65\x37\x31\x2d\x34\x33\x34\x39\x2d\x34\x62\x64\x36\x2d\x39\x62\x61\x66\x2d\x39\x37\x34\x30\x65\x31\x38\x39\x36\x34\x39\x35"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x63\x64\x6e\x6a\x73\x2e\x63\x6f\x6d"
+  client-fingerprint: ios
+  reality-opts:
+    public-key: CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko
+    short-id: "b0d8c9a285c70f6f"
+  network: tcp
+
+proxy-groups:
+  - name: "Igareck Auto Select (Автоподключение)"
+    type: url-test
+    include-all: true
+    exclude-type: "Direct|Reject|RejectDrop|Compatible|Pass|Dns"
+    url: "https://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 150
+    lazy: true
+    timeout: 5000
+    max-failed-times: 2
+    expected-status: 204
+
+  - name: "Igareck Manual (Ручное Подключение)"
+    type: select
+    proxies:
+      - "Igareck Auto Select (Автоподключение)"
+    include-all: true
+    exclude-type: "Direct|Reject|RejectDrop|Compatible|Pass|Dns"
+    default-selected: "Igareck Auto Select (Автоподключение)"
+
+  - name: "GLOBAL"
+    type: select
+    proxies:
+      - "Igareck Auto Select (Автоподключение)"
+      - "Igareck Manual (Ручное Подключение)"
+    default-selected: "Igareck Auto Select (Автоподключение)"
+
+rules:
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - "DOMAIN-REGEX,^[^.]+$,DIRECT"
+
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+
+
+  - "MATCH,Igareck Manual (Ручное Подключение)"
