@@ -332,28 +332,32 @@
   "outbounds": [
     {
       "tag": "igareck-node-001",
-      "protocol": "hysteria",
+      "protocol": "vmess",
       "settings": {
-        "version": 2,
-        "address": "fl.larpvpn.space",
-        "port": 4434
+        "vnext": [
+          {
+            "address": "38.60.224.173",
+            "port": 32153,
+            "users": [
+              {
+                "id": "5cf1f470-3f70-4589-a2a4-4657ea3a1edf",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
       },
       "streamSettings": {
-        "network": "hysteria",
-        "security": "tls",
-        "hysteriaSettings": {
-          "version": 2,
-          "auth": "9fd994ad-d36c-476d-96c7-25f10bbdf2cb"
-        },
-        "tlsSettings": {
-          "serverName": "fl.larpvpn.space",
-          "alpn": [
-            "h3"
-          ]
-        },
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
         }
       }
     },
