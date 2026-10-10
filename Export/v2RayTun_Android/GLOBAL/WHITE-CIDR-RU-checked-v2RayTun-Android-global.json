@@ -59,8 +59,7 @@
           "domain:local",
           "domain:lan",
           "regexp:^[^.]+$",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -117,8 +116,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -139,8 +137,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -161,8 +158,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -183,8 +179,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -205,8 +200,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -227,8 +221,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -249,8 +242,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -271,8 +263,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -293,8 +284,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -315,8 +305,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -337,8 +326,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -359,8 +347,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:cosmo-pulse.ru",
-          "full:birthdaysale.net"
+          "full:cosmo-pulse.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -450,36 +437,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "185.86.145.183",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "chrome",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -489,36 +477,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "185.86.145.183",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "edge",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "ios",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -528,36 +517,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "185.86.145.183",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "firefox",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "qq",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -567,36 +557,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "185.86.145.183",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "chrome",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "safari",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -606,36 +597,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "ios",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -645,36 +637,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "safari",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -684,36 +677,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {}
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "chrome",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "chrome"
         }
       }
     },
@@ -723,36 +712,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {}
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "edge",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "firefox"
         }
       }
     },
@@ -762,36 +747,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {}
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "firefox",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "qq"
         }
       }
     },
@@ -801,36 +782,32 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {}
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "qq",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "safari"
         }
       }
     },
@@ -840,36 +817,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "cosmo-pulse.ru"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "random",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cosmo-pulse.ru",
+          "fingerprint": "ios",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -879,282 +857,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "90.156.218.163",
-            "port": 443,
-            "users": [
-              {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "safari",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-013",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "90.156.218.163",
-            "port": 443,
-            "users": [
-              {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "ios",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-014",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "90.156.218.163",
-            "port": 443,
-            "users": [
-              {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "safari",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-015",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "90.156.218.163",
-            "port": 443,
-            "users": [
-              {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "edge",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-016",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "90.156.218.163",
-            "port": 443,
-            "users": [
-              {
-                "id": "adc11f30-e4cb-4985-bf5e-f9ded69c019f",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "eh.vk.ru",
-          "fingerprint": "qq",
-          "publicKey": "fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI",
-          "shortId": "db04ce8bdb8900f1"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-017",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.183",
-            "port": 443,
-            "users": [
-              {
-                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/nl7ws",
-          "headers": {
-            "Host": "cosmo-pulse.ru"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cosmo-pulse.ru",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-018",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.183",
-            "port": 443,
-            "users": [
-              {
-                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/nl7ws",
-          "headers": {
-            "Host": "cosmo-pulse.ru"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cosmo-pulse.ru",
-          "fingerprint": "ios",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-019",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.183",
+            "address": "cosmo-pulse.ru",
             "port": 443,
             "users": [
               {
@@ -1185,231 +888,6 @@
           "alpn": [
             "http/1.1"
           ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-020",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.183",
-            "port": 443,
-            "users": [
-              {
-                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/nl7ws",
-          "headers": {
-            "Host": "cosmo-pulse.ru"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cosmo-pulse.ru",
-          "fingerprint": "safari",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-021",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cosmo-pulse.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/nl7ws",
-          "headers": {
-            "Host": "cosmo-pulse.ru"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cosmo-pulse.ru",
-          "fingerprint": "edge",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-022",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cosmo-pulse.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "7ec9f26a-edec-4bf1-addd-700626df27c1",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/nl7ws",
-          "headers": {
-            "Host": "cosmo-pulse.ru"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cosmo-pulse.ru",
-          "fingerprint": "safari",
-          "alpn": [
-            "http/1.1"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-023",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "birthdaysale.net",
-            "port": 443,
-            "users": [
-              {
-                "id": "bbc14a63-c539-4931-9128-e8cdb0c9217b",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "birthdaysale.net",
-          "mode": "auto"
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "birthdaysale.net",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-024",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "birthdaysale.net",
-            "port": 443,
-            "users": [
-              {
-                "id": "bbc14a63-c539-4931-9128-e8cdb0c9217b",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "birthdaysale.net",
-          "mode": "auto"
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "birthdaysale.net",
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-025",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "birthdaysale.net",
-            "port": 443,
-            "users": [
-              {
-                "id": "bbc14a63-c539-4931-9128-e8cdb0c9217b",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "birthdaysale.net",
-          "mode": "auto"
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "birthdaysale.net",
-          "fingerprint": "safari"
         }
       }
     },
