@@ -2,8 +2,8 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-CIDR-RU-checked.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
-# Количество/Quantity: 7
-# Date/Time: 2026-10-31 / 19:08 (Moscow)
+# Количество/Quantity: 4
+# Date/Time: 2026-10-31 / 21:20 (Moscow)
 #
 # Режим / Mode:
 # - Автоматический Выбор лучшего прокси / Igareck Auto Select;
@@ -151,7 +151,7 @@ sniffer:
       ports: [443, 8443]
 
 proxies:
-- name: Igareck Node 001 | 🇳🇱 The Netherlands | [*CIDR] VK
+- name: Igareck Node 001 | 🇳🇱 The Netherlands [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
   port: 443
@@ -159,45 +159,13 @@ proxies:
   udp: true
   tls: true
   servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  alpn:
-  - http/1.1
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /amws
     headers:
       Host: ara.rtkdvbr.cc
-- name: Igareck Node 002 | 🇳🇱 The Netherlands | [*CIDR] VK
-  type: vless
-  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
-  port: 443
-  uuid: "\x65\x33\x37\x65\x62\x66\x33\x62\x2d\x61\x63\x33\x32\x2d\x34\x38\x61\x38\x2d\x38\x66\x35\x36\x2d\x64\x31\x31\x33\x39\x36\x37\x65\x61\x66\x32\x39"
-  udp: true
-  tls: true
-  servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  alpn:
-  - http/1.1
-  client-fingerprint: safari
-  network: ws
-  ws-opts:
-    path: /amws
-    headers:
-      Host: ara.rtkdvbr.cc
-- name: Igareck Node 003 | 🇳🇱 The Netherlands | [*CIDR] VK
-  type: vless
-  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
-  port: 443
-  uuid: "\x65\x33\x37\x65\x62\x66\x33\x62\x2d\x61\x63\x33\x32\x2d\x34\x38\x61\x38\x2d\x38\x66\x35\x36\x2d\x64\x31\x31\x33\x39\x36\x37\x65\x61\x66\x32\x39"
-  udp: true
-  tls: true
-  servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /amws
-    headers:
-      Host: ara.rtkdvbr.cc
-- name: Igareck Node 004 | 🇳🇱 The Netherlands [*CIDR] VK
+- name: Igareck Node 002 | 🇳🇱 The Netherlands [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
   port: 443
@@ -211,16 +179,7 @@ proxies:
     path: /amws
     headers:
       Host: ara.rtkdvbr.cc
-- name: Igareck Node 005 | 🌐 Anycast-IP | 🇬🇧 🇳🇱 [*CIDR] CDN
-  type: hysteria2
-  server: "\x34\x36\x2e\x32\x34\x33\x2e\x32\x33\x34\x2e\x31\x32"
-  port: 5555
-  password: 9172dd01-7998-40b3-bb8c-61f665ff3f9c
-  udp: true
-  sni: wl11.white-dns.cloud
-  alpn:
-  - h3
-- name: Igareck Node 006 | 🇷🇺 Russia | [*CIDR] YA
+- name: Igareck Node 003 | 🇷🇺 Russia | [*CIDR] YA
   type: vmess
   server: "\x31\x35\x38\x2e\x31\x36\x30\x2e\x31\x38\x30\x2e\x31\x36\x35"
   port: 24212
@@ -232,7 +191,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: Igareck Node 007 | 🇷🇺 Russia | [*CIDR] YA
+- name: Igareck Node 004 | 🇷🇺 Russia | [*CIDR] YA
   type: vmess
   server: "\x31\x35\x38\x2e\x31\x36\x30\x2e\x31\x38\x30\x2e\x31\x36\x35"
   port: 24212
