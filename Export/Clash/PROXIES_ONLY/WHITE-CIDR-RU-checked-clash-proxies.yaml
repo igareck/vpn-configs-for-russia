@@ -3,7 +3,7 @@
 # Источник/Source: WHITE-CIDR-RU-checked.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
 # Количество/Quantity: 7
-# Date/Time: 2026-10-31 / 17:00 (Moscow)
+# Date/Time: 2026-10-31 / 19:08 (Moscow)
 #
 # Не содержит никаких настроек, только список прокси / No settings, just proxies list;
 # ============================================================
@@ -17,7 +17,9 @@ proxies:
   udp: true
   tls: true
   servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  client-fingerprint: edge
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /amws
@@ -31,7 +33,9 @@ proxies:
   udp: true
   tls: true
   servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  client-fingerprint: firefox
+  alpn:
+  - http/1.1
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /amws
@@ -45,15 +49,13 @@ proxies:
   udp: true
   tls: true
   servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  alpn:
-  - http/1.1
   client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /amws
     headers:
       Host: ara.rtkdvbr.cc
-- name: Igareck Node 004 | 🇳🇱 The Netherlands | [*CIDR] VK
+- name: Igareck Node 004 | 🇳🇱 The Netherlands [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
   port: 443
@@ -61,8 +63,6 @@ proxies:
   udp: true
   tls: true
   servername: "\x61\x72\x61\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
-  alpn:
-  - http/1.1
   client-fingerprint: qq
   network: ws
   ws-opts:
