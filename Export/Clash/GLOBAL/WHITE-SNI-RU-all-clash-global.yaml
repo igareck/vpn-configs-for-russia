@@ -2,8 +2,8 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-SNI-RU-all.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | SNI-RU
-# Количество/Quantity: 2
-# Date/Time: 2026-11-01 / 01:30 (Moscow)
+# Количество/Quantity: 6
+# Date/Time: 2026-11-01 / 03:18 (Moscow)
 #
 # Режим / Mode:
 # - Автоматический Выбор лучшего прокси / Igareck Auto Select;
@@ -151,7 +151,67 @@ sniffer:
       ports: [443, 8443]
 
 proxies:
-- name: Igareck Node 001 | 🇰🇷 South Korea [SNI-RU] vk.com
+- name: Igareck Node 001 | 🇺🇸 United States | 🌐 [SNI-RU] ok.ru
+  type: vless
+  server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x34\x37\x2e\x31\x37\x36"
+  port: 30447
+  uuid: "\x32\x64\x32\x66\x37\x31\x30\x62\x2d\x35\x37\x34\x63\x2d\x34\x33\x65\x37\x2d\x62\x63\x38\x63\x2d\x38\x64\x36\x39\x63\x33\x65\x37\x38\x30\x36\x61"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x6f\x6b\x2e\x72\x75"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 516PSdm_rjV1YdoGT8npOHTH3u8SfiD-2gV-Tkax02g
+    short-id: "850a8440dff47fe2"
+  network: tcp
+- name: Igareck Node 002 | 🌐 Anycast-IP | 🇩🇪 🇬🇧 [SNI-RU] max.ru
+  type: vless
+  server: "\x31\x33\x38\x2e\x31\x32\x34\x2e\x35\x33\x2e\x32\x32\x34"
+  port: 30444
+  uuid: "\x32\x64\x32\x66\x37\x31\x30\x62\x2d\x35\x37\x34\x63\x2d\x34\x33\x65\x37\x2d\x62\x63\x38\x63\x2d\x38\x64\x36\x39\x63\x33\x65\x37\x38\x30\x36\x61"
+  udp: true
+  tls: true
+  servername: "\x6d\x61\x78\x2e\x72\x75"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 9p_IFYdiRFr2rS0dkAEM3dncMWlNrMRbqnK-fCi0H3w
+    short-id: "11360560921d04c2"
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-neo
+- name: Igareck Node 003 | 🌐 Anycast-IP | 🇩🇪 🇬🇧 [SNI-RU] ok.ru
+  type: vless
+  server: "\x31\x33\x38\x2e\x31\x32\x34\x2e\x35\x33\x2e\x32\x32\x34"
+  port: 30446
+  uuid: "\x32\x64\x32\x66\x37\x31\x30\x62\x2d\x35\x37\x34\x63\x2d\x34\x33\x65\x37\x2d\x62\x63\x38\x63\x2d\x38\x64\x36\x39\x63\x33\x65\x37\x38\x30\x36\x61"
+  udp: true
+  tls: true
+  servername: "\x6f\x6b\x2e\x72\x75"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: m1IKQBFBKoY1Dzltcv40GXf6IA4_LgtKdvCIN1e31hA
+    short-id: "fe3e6b8b31192185"
+  network: xhttp
+  xhttp-opts:
+    path: /api/v2/config
+    host: ok.ru
+    mode: auto
+- name: Igareck Node 004 | 🌐 Anycast-IP | 🇩🇪 🇬🇧 [SNI-RU] ok.ru
+  type: vless
+  server: "\x31\x33\x38\x2e\x31\x32\x34\x2e\x35\x33\x2e\x32\x32\x34"
+  port: 30447
+  uuid: "\x32\x64\x32\x66\x37\x31\x30\x62\x2d\x35\x37\x34\x63\x2d\x34\x33\x65\x37\x2d\x62\x63\x38\x63\x2d\x38\x64\x36\x39\x63\x33\x65\x37\x38\x30\x36\x61"
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  servername: "\x6f\x6b\x2e\x72\x75"
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 516PSdm_rjV1YdoGT8npOHTH3u8SfiD-2gV-Tkax02g
+    short-id: "850a8440dff47fe2"
+  network: tcp
+- name: Igareck Node 005 | 🇰🇷 South Korea [SNI-RU] vk.com
   type: hysteria2
   server: "\x31\x35\x32\x2e\x36\x37\x2e\x32\x30\x30\x2e\x38\x32"
   port: 50160
@@ -161,7 +221,7 @@ proxies:
   alpn:
   - h3
   skip-cert-verify: true
-- name: Igareck Node 002 | 🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com
+- name: Igareck Node 006 | 🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com
   type: hysteria2
   server: "\x35\x2e\x31\x32\x39\x2e\x32\x33\x35\x2e\x38\x35"
   port: 443
