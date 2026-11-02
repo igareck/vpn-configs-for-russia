@@ -142,11 +142,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "23.147.56.181",
-            "port": 52843,
+            "address": "39.108.113.127",
+            "port": 10086,
             "users": [
               {
-                "id": "88be793c-c368-4eb1-8809-057e5df96606",
+                "id": "fccbad0f-eb6c-4bdd-80ed-145409e2f761",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -155,15 +155,14 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
         }
       }
     },
@@ -173,11 +172,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "39.108.113.127",
-            "port": 10086,
+            "address": "d2.anonix.cloud",
+            "port": 8018,
             "users": [
               {
-                "id": "19ee3050-be66-4850-9f13-fc9d47487a3c",
+                "id": "b831381d-6324-4d53-ad4f-8cda48b30811",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -192,86 +191,20 @@
           "tcpKeepAliveInterval": 60
         },
         "wsSettings": {
-          "path": "/",
+          "path": "/websocket/transfer/gayporn",
           "headers": {}
         }
       }
     },
     {
       "tag": "igareck-node-004",
-      "protocol": "vmess",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "120.48.133.162",
-            "port": 10086,
-            "users": [
-              {
-                "id": "4fc543d5-23ce-4556-ae2b-01685edd4397",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-005",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "39.108.113.127",
-            "port": 10086,
-            "users": [
-              {
-                "id": "19ee3050-be66-4850-9f13-fc9d47487a3c",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-006",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "23.147.56.181",
-            "port": 52843,
-            "users": [
-              {
-                "id": "88be793c-c368-4eb1-8809-057e5df96606",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
           }
         ]
       },
@@ -279,13 +212,147 @@
         "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
         "rawSettings": {
           "header": {
             "type": "none"
           }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "android",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
+      }
+    },
+    {
+      "tag": "igareck-node-005",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-006",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "qq",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-007",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "safari",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "1-3",
+          "length": "50-100",
+          "interval": "10-20",
+          "maxSplit": "10"
+        },
+        "noises": [
+          {
+            "type": "rand",
+            "packet": "50-150",
+            "delay": "10-50"
+          }
+        ]
       }
     },
     {
