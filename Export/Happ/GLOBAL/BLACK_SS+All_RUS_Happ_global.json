@@ -3,12 +3,12 @@
     "name": "BLACK_SS+All_RUS — Happ Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "6 proxies",
+      "8 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "Happ",
     "source": "BLACK_SS+All_RUS.txt",
-    "source_datetime": "2026-11-02 16:24 Moscow"
+    "source_datetime": "2026-11-02 17:43 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -334,32 +334,28 @@
   "outbounds": [
     {
       "tag": "igareck-node-001",
-      "protocol": "vmess",
+      "protocol": "hysteria",
       "settings": {
-        "vnext": [
-          {
-            "address": "23.147.56.181",
-            "port": 52843,
-            "users": [
-              {
-                "id": "88be793c-c368-4eb1-8809-057e5df96606",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
+        "version": 2,
+        "address": "195.63.135.199",
+        "port": 8444
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "hysteria",
+        "security": "tls",
+        "hysteriaSettings": {
+          "version": 2,
+          "auth": "37dc525c-491e-4e6d-9925-fc0efd82b548"
+        },
+        "tlsSettings": {
+          "serverName": "195-63-135-199.sslip.io",
+          "alpn": [
+            "h3"
+          ]
+        },
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
         }
       }
     },
@@ -404,7 +400,7 @@
             "port": 10086,
             "users": [
               {
-                "id": "19ee3050-be66-4850-9f13-fc9d47487a3c",
+                "id": "fccbad0f-eb6c-4bdd-80ed-145409e2f761",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -430,11 +426,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "120.48.133.162",
-            "port": 10086,
+            "address": "d2.anonix.cloud",
+            "port": 8018,
             "users": [
               {
-                "id": "4fc543d5-23ce-4556-ae2b-01685edd4397",
+                "id": "b831381d-6324-4d53-ad4f-8cda48b30811",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -449,56 +445,20 @@
           "tcpKeepAliveInterval": 60
         },
         "wsSettings": {
-          "path": "/",
+          "path": "/websocket/transfer/gayporn",
           "headers": {}
         }
       }
     },
     {
       "tag": "igareck-node-005",
-      "protocol": "vmess",
+      "protocol": "trojan",
       "settings": {
-        "vnext": [
+        "servers": [
           {
-            "address": "39.108.113.127",
-            "port": 10086,
-            "users": [
-              {
-                "id": "19ee3050-be66-4850-9f13-fc9d47487a3c",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-006",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "23.147.56.181",
-            "port": 52843,
-            "users": [
-              {
-                "id": "88be793c-c368-4eb1-8809-057e5df96606",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
           }
         ]
       },
@@ -506,13 +466,147 @@
         "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
         "rawSettings": {
           "header": {
             "type": "none"
           }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "android",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
+      }
+    },
+    {
+      "tag": "igareck-node-006",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-007",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "qq",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-008",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "connect-se.mimowhat.online",
+            "port": 443,
+            "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "connect-se.mimowhat.online",
+          "fingerprint": "safari",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "1-3",
+          "length": "50-100",
+          "interval": "10-20",
+          "maxSplit": "10"
+        },
+        "noises": [
+          {
+            "type": "rand",
+            "packet": "50-150",
+            "delay": "10-50"
+          }
+        ]
       }
     },
     {
