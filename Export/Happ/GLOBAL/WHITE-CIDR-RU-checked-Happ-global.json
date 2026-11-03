@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — Happ Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "2 proxies",
+      "3 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "Happ",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-03 21:09 Moscow"
+    "source_datetime": "2026-11-03 23:18 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -462,6 +462,46 @@
     },
     {
       "tag": "igareck-node-002",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.86.145.37",
+            "port": 443,
+            "users": [
+              {
+                "id": "135aa7e5-87af-4df2-a9f0-0c4eaea0c492",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/amws",
+          "headers": {
+            "Host": "rar.rtkdvbr.cc"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rar.rtkdvbr.cc",
+          "fingerprint": "ios",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-003",
       "protocol": "vless",
       "settings": {
         "vnext": [
