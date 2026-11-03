@@ -3,7 +3,7 @@
 # Источник/Source: WHITE-CIDR-RU-checked.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
 # Количество/Quantity: 2
-# Date/Time: 2026-11-03 / 11:37 (Moscow)
+# Date/Time: 2026-11-03 / 19:14 (Moscow)
 #
 # Режим / Mode:
 # - Автоматический Выбор лучшего прокси / Igareck Auto Select;
@@ -151,34 +151,38 @@ sniffer:
       ports: [443, 8443]
 
 proxies:
-- name: Igareck Node 001 | 🇸🇪 Sweden | [*CIDR] YA
+- name: Igareck Node 001 | 🇳🇱 The Netherlands | [*CIDR] VK
   type: vless
-  server: "\x36\x32\x2e\x38\x34\x2e\x31\x32\x35\x2e\x39\x33"
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
   port: 443
-  uuid: "\x38\x63\x35\x61\x64\x62\x30\x37\x2d\x38\x37\x31\x32\x2d\x34\x32\x61\x35\x2d\x38\x64\x39\x36\x2d\x64\x38\x61\x32\x31\x39\x38\x61\x31\x36\x35\x31"
+  uuid: "\x31\x33\x35\x61\x61\x37\x65\x35\x2d\x38\x37\x61\x66\x2d\x34\x64\x66\x32\x2d\x61\x39\x66\x30\x2d\x30\x63\x34\x65\x61\x65\x61\x30\x63\x34\x39\x32"
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: "\x79\x61\x2e\x72\x75"
-  client-fingerprint: android
-  reality-opts:
-    public-key: 0FsVveXXSVSAOdFmO9gDCAqTLuXFUmIvOH4ynPCy3lw
-    short-id: "56057acd033fa61d"
-  network: tcp
-- name: Igareck Node 002 | 🇸🇪 Sweden | [*CIDR] YA
+  servername: "\x72\x61\x72\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
+  alpn:
+  - http/1.1
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /amws
+    headers:
+      Host: rar.rtkdvbr.cc
+- name: Igareck Node 002 | 🇳🇱 The Netherlands | [*CIDR] VK
   type: vless
-  server: "\x36\x32\x2e\x38\x34\x2e\x31\x32\x35\x2e\x39\x33"
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x33\x37"
   port: 443
-  uuid: "\x38\x63\x35\x61\x64\x62\x30\x37\x2d\x38\x37\x31\x32\x2d\x34\x32\x61\x35\x2d\x38\x64\x39\x36\x2d\x64\x38\x61\x32\x31\x39\x38\x61\x31\x36\x35\x31"
+  uuid: "\x31\x33\x35\x61\x61\x37\x65\x35\x2d\x38\x37\x61\x66\x2d\x34\x64\x66\x32\x2d\x61\x39\x66\x30\x2d\x30\x63\x34\x65\x61\x65\x61\x30\x63\x34\x39\x32"
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: "\x79\x61\x2e\x72\x75"
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0FsVveXXSVSAOdFmO9gDCAqTLuXFUmIvOH4ynPCy3lw
-    short-id: "56057acd033fa61d"
-  network: tcp
+  servername: "\x72\x61\x72\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
+  alpn:
+  - http/1.1
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /amws
+    headers:
+      Host: rar.rtkdvbr.cc
 
 proxy-groups:
   - name: "Igareck Auto Select (Автоподключение)"
