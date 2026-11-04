@@ -58,9 +58,7 @@
           "full:localhost",
           "domain:local",
           "domain:lan",
-          "regexp:^[^.]+$",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "regexp:^[^.]+$"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -116,9 +114,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -138,9 +134,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -160,9 +154,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -182,9 +174,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -204,9 +194,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -226,9 +214,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -248,9 +234,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -270,9 +254,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -292,9 +274,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -314,9 +294,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -336,9 +314,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -358,9 +334,7 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de",
-          "full:connect2.accessgate.link",
-          "full:connect.accessgate.link"
+          "full:blank.dnsforge.de"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -450,36 +424,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "connect2.accessgate.link",
-            "port": 2087,
+            "address": "185.86.145.37",
+            "port": 443,
             "users": [
               {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "40945325-a133-41ef-8fc3-2e726678ad52",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/amws",
+          "headers": {
+            "Host": "rar.rtkdvbr.cc"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "edge",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rar.rtkdvbr.cc",
+          "fingerprint": "ios",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -489,270 +464,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "connect2.accessgate.link",
-            "port": 2087,
+            "address": "185.86.145.37",
+            "port": 443,
             "users": [
               {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "40945325-a133-41ef-8fc3-2e726678ad52",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/amws",
+          "headers": {
+            "Host": "rar.rtkdvbr.cc"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "ios",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-003",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "217.16.26.34",
-            "port": 2081,
-            "users": [
-              {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "edge",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-004",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "217.16.26.34",
-            "port": 2081,
-            "users": [
-              {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "ios",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-005",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "connect.accessgate.link",
-            "port": 2081,
-            "users": [
-              {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "edge",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-006",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "connect.accessgate.link",
-            "port": 2081,
-            "users": [
-              {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "firefox",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-007",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "connect.accessgate.link",
-            "port": 2084,
-            "users": [
-              {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "edge",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-008",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "connect.accessgate.link",
-            "port": 2084,
-            "users": [
-              {
-                "id": "2f6c70f3-206a-4bc1-ac1f-6b70153f9c73",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "unpkg.com",
-          "fingerprint": "ios",
-          "publicKey": "CQBmePak1QN5SsSmK_KTOSLjsCTaiaM4Jtxt7jLheko",
-          "shortId": "b0d8c9a285c70f6f"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rar.rtkdvbr.cc",
+          "fingerprint": "qq",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
