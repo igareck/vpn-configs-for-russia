@@ -3,12 +3,12 @@
     "name": "BLACK_SS+All_RUS — Happ Auto Select RU-DIRECT",
     "generator": "Igareck GitHub",
     "notes": [
-      "34 proxies",
+      "37 proxies",
       "Interval is 5 minutes + leastPing + routing RU-DIRECT."
     ],
     "client": "Happ",
     "source": "BLACK_SS+All_RUS.txt",
-    "source_datetime": "2026-11-04 05:20 Moscow"
+    "source_datetime": "2026-11-04 06:41 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -426,7 +426,7 @@
             "port": 10086,
             "users": [
               {
-                "id": "a8d931b0-6c27-428b-8d86-c20efea3dba7",
+                "id": "f81d0fc9-c6b0-4dab-a270-6e697e0a367f",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -456,7 +456,7 @@
             "port": 10086,
             "users": [
               {
-                "id": "f81d0fc9-c6b0-4dab-a270-6e697e0a367f",
+                "id": "4fc543d5-23ce-4556-ae2b-01685edd4397",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -486,7 +486,7 @@
             "port": 10086,
             "users": [
               {
-                "id": "a8d931b0-6c27-428b-8d86-c20efea3dba7",
+                "id": "4fc543d5-23ce-4556-ae2b-01685edd4397",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -508,12 +508,102 @@
     },
     {
       "tag": "igareck-node-007",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "120.48.133.162",
+            "port": 10086,
+            "users": [
+              {
+                "id": "2a489513-46b5-488c-9899-9faaf2d83cd9",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-008",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "120.48.133.162",
+            "port": 10086,
+            "users": [
+              {
+                "id": "a8d931b0-6c27-428b-8d86-c20efea3dba7",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-009",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "120.48.133.162",
+            "port": 10086,
+            "users": [
+              {
+                "id": "f81d0fc9-c6b0-4dab-a270-6e697e0a367f",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-010",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "103.3.26.26",
-            "port": 443,
+            "address": "179.255.99.7",
+            "port": 8443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
@@ -539,7 +629,39 @@
       }
     },
     {
-      "tag": "igareck-node-008",
+      "tag": "igareck-node-011",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "179.255.99.7",
+            "port": 8443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-012",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -571,7 +693,7 @@
       }
     },
     {
-      "tag": "igareck-node-009",
+      "tag": "igareck-node-013",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -603,39 +725,7 @@
       }
     },
     {
-      "tag": "igareck-node-010",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.127.34.109",
-            "port": 443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-011",
+      "tag": "igareck-node-014",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -667,7 +757,7 @@
       }
     },
     {
-      "tag": "igareck-node-012",
+      "tag": "igareck-node-015",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -699,12 +789,12 @@
       }
     },
     {
-      "tag": "igareck-node-013",
+      "tag": "igareck-node-016",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "47.75.104.211",
+            "address": "179.255.103.84",
             "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
@@ -726,17 +816,17 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "api.85s.me",
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "igareck-node-014",
+      "tag": "igareck-node-017",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "47.75.104.211",
+            "address": "179.255.103.84",
             "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
@@ -763,7 +853,39 @@
       }
     },
     {
-      "tag": "igareck-node-015",
+      "tag": "igareck-node-018",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "179.255.103.84",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-019",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -795,135 +917,13 @@
       }
     },
     {
-      "tag": "igareck-node-016",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "121.127.33.130",
-            "port": 443,
-            "password": "f426d3c9-fb43-43c0-868b-898dfa451a74"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "likejennie.pages.dev",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-017",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "121.127.33.130",
-            "port": 443,
-            "password": "f426d3c9-fb43-43c0-868b-898dfa451a74"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "likejennie.pages.dev",
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-018",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "121.127.33.130",
-            "port": 443,
-            "password": "f426d3c9-fb43-43c0-868b-898dfa451a74"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "likejennie.pages.dev",
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-019",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "179.255.99.7",
-            "port": 8443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "igareck-node-020",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "179.255.99.7",
-            "port": 8443,
+            "address": "179.255.102.237",
+            "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
@@ -944,7 +944,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "api.85s.me",
-          "fingerprint": "firefox"
+          "fingerprint": "android"
         }
       }
     },
@@ -954,8 +954,8 @@
       "settings": {
         "servers": [
           {
-            "address": "179.255.99.7",
-            "port": 8443,
+            "address": "179.255.102.237",
+            "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
@@ -986,8 +986,8 @@
       "settings": {
         "servers": [
           {
-            "address": "179.255.99.7",
-            "port": 8443,
+            "address": "179.255.102.237",
+            "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
@@ -1014,6 +1014,102 @@
     },
     {
       "tag": "igareck-node-023",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "179.255.99.7",
+            "port": 8443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-024",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "179.255.99.7",
+            "port": 8443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-025",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "103.3.26.26",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-026",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -1045,7 +1141,7 @@
       }
     },
     {
-      "tag": "igareck-node-024",
+      "tag": "igareck-node-027",
       "protocol": "trojan",
       "settings": {
         "servers": [
@@ -1077,108 +1173,12 @@
       }
     },
     {
-      "tag": "igareck-node-025",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "45.127.34.109",
-            "port": 443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-026",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "69.8.133.223",
-            "port": 443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-027",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "69.8.133.223",
-            "port": 443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
       "tag": "igareck-node-028",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "69.8.133.223",
+            "address": "45.127.34.109",
             "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
@@ -1210,7 +1210,7 @@
       "settings": {
         "servers": [
           {
-            "address": "47.75.104.211",
+            "address": "69.8.133.223",
             "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
@@ -1242,72 +1242,8 @@
       "settings": {
         "servers": [
           {
-            "address": "83.147.15.84",
-            "port": 8443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-031",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "83.147.15.84",
-            "port": 8443,
-            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "api.85s.me"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "api.85s.me",
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-032",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "83.147.15.84",
-            "port": 8443,
+            "address": "69.8.133.223",
+            "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
@@ -1333,13 +1269,13 @@
       }
     },
     {
-      "tag": "igareck-node-033",
+      "tag": "igareck-node-031",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "83.147.15.84",
-            "port": 8443,
+            "address": "45.127.34.109",
+            "port": 443,
             "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
@@ -1360,19 +1296,19 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "api.85s.me",
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "igareck-node-034",
+      "tag": "igareck-node-032",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "121.127.33.130",
+            "address": "69.8.133.223",
             "port": 443,
-            "password": "f426d3c9-fb43-43c0-868b-898dfa451a74"
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
           }
         ]
       },
@@ -1385,11 +1321,173 @@
         },
         "wsSettings": {
           "path": "/",
-          "headers": {}
+          "headers": {
+            "Host": "api.85s.me"
+          }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "likejennie.pages.dev",
+          "serverName": "api.85s.me",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-033",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "179.255.102.237",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-034",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "179.255.103.84",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-035",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "47.75.104.211",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-036",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "47.75.104.211",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-037",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "47.75.104.211",
+            "port": 443,
+            "password": "8deb189a-3aed-4865-843b-b72dae954c46"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "api.85s.me"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api.85s.me",
           "fingerprint": "safari"
         }
       }
