@@ -43,13 +43,33 @@
 
 <h2><code> TOPIC №1 </code></h2>
 
-### Подписывайтесь на Telegram-канал: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+### ОБРАТИТЕ ВНИМАНИЕ!
 
-### `Новые рабочие ссылки для Белых Списков находятся в Telegram-канале! BitBucket пока что недоступен!`
+**Что сейчас происходит с публичными подписками VPN в России?**
+
+Публичные подписки Черных Списков VPN/Tor в России стали либо плохо работать, либо не работают вообще!
+
+**Какая причина и есть ли решение?**
+
+**Причина:** очень агрессивная фильтрация ТСПУ Роскомнадзора.
+
+**Решение:** ПРОГРАММА **[IGARECK ANTI-DPI](https://github.com/igareck/anti-dpi-for-russia)** ДЛЯ ВОССТАНОВЛЕНИЯ РАБОТЫ ЧЕРНЫХ СПИСКОВ VPN + TOR В РОССИИ!
+
+**Переходите по ссылке, запускайте и пользуйтесь VPN/Tor дальше!**
+
+**https://github.com/igareck/anti-dpi-for-russia**
+
+Анонс программы в Telegram-канале: https://t.me/igareq/31
 
 ---
 
 <h2><code> TOPIC №2 </code></h2>
+
+### Подписывайтесь на Telegram-канал: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+
+---
+
+<h2><code> TOPIC №3 </code></h2>
 
 ### Дорогие друзья!
 ### В связи с перспективой блокировки GitHub в России - просьба сохранить ссылки на зеркала! 
@@ -102,7 +122,7 @@
 
 ---
 
-<h2><code> TOPIC №3 </code></h2>
+<h2><code> TOPIC №4 </code></h2>
 
 ### Для тех, кто здесь впервые и не понимает, какой клиент и подписку VPN выбрать на старте
 
@@ -172,7 +192,7 @@ VPN-подписки с 1 сентября стали работать очен�
 
 ---
 
-<h2><code> TOPIC №4 </code></h2>
+<h2><code> TOPIC №5 </code></h2>
 
 **Внимание тем пользователям, у кого НЕ Белые Списки (кабельный и мобильный интернет без ограничений), и вам дома или на работе нужна бесплатная альтернатива Черных Списков VPN - используйте связку** <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Tor_Browser_icon_%28New%29.png" width="20" align="absmiddle"> `Tor Bridges` **+** `Tor-клиент OnionHop V3` или `Tor-клиент OnionFruit` или `Tor Browser` **(подробности в разделе** `В чем разница между черными и белыми списками` ➞ `При обычных черных списках` ➞ `TOR BRIDGES`).
 
@@ -186,7 +206,7 @@ VPN конфигурации, начиная с 1 сентября, с Поне�
 
 ---
 
-<h2><code> TOPIC №5 </code></h2>
+<h2><code> TOPIC №6 </code></h2>
 
 ### Важные заметки про DNS
 
@@ -284,7 +304,7 @@ https://dns.google/dns-query,https://dns.quad9.net/dns-query,https://dns.adguard
 
 ---
 
-<h2><code> TOPIC №6 </code></h2>
+<h2><code> TOPIC №7 </code></h2>
 
 ### ЭТО ВАЖНАЯ НОВОСТЬ ДЛЯ ВСЕХ, КТО ПОЛЬЗУЕТСЯ VPN НА СМАРТФОНЕ
 
