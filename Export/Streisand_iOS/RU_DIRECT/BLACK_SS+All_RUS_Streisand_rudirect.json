@@ -332,28 +332,31 @@
   "outbounds": [
     {
       "tag": "igareck-node-001",
-      "protocol": "hysteria",
+      "protocol": "vmess",
       "settings": {
-        "version": 2,
-        "address": "31.76.62.148",
-        "port": 4444
+        "vnext": [
+          {
+            "address": "39.108.113.127",
+            "port": 10086,
+            "users": [
+              {
+                "id": "4fc543d5-23ce-4556-ae2b-01685edd4397",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
       },
       "streamSettings": {
-        "network": "hysteria",
-        "security": "tls",
-        "hysteriaSettings": {
-          "version": 2,
-          "auth": "a35c508f-4d5d-4531-842e-6e9d43c762c0"
-        },
-        "tlsSettings": {
-          "serverName": "lv2.nexfile.net",
-          "alpn": [
-            "h3"
-          ]
-        },
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
         }
       }
     },
@@ -423,11 +426,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "de.zhou-yufan.com",
-            "port": 443,
+            "address": "120.48.133.162",
+            "port": 10086,
             "users": [
               {
-                "id": "f38e591d-d13a-4c30-9763-6be3ad65f3ec",
+                "id": "f81d0fc9-c6b0-4dab-a270-6e697e0a367f",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -436,20 +439,14 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "de.zhou-yufan.com"
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
         }
       }
     },
@@ -459,11 +456,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "de.zhou-yufan.com",
-            "port": 443,
+            "address": "120.48.133.162",
+            "port": 10086,
             "users": [
               {
-                "id": "f38e591d-d13a-4c30-9763-6be3ad65f3ec",
+                "id": "f81d0fc9-c6b0-4dab-a270-6e697e0a367f",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -472,19 +469,15 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {}
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
+        }
       }
     },
     {
@@ -493,11 +486,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "de.zhou-yufan.com",
-            "port": 443,
+            "address": "39.108.113.127",
+            "port": 10086,
             "users": [
               {
-                "id": "f38e591d-d13a-4c30-9763-6be3ad65f3ec",
+                "id": "fccbad0f-eb6c-4bdd-80ed-145409e2f761",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -506,19 +499,15 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {}
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
+        }
       }
     },
     {
@@ -561,11 +550,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "de.zhou-yufan.com",
-            "port": 443,
+            "address": "getnet.serversubasli.top",
+            "port": 8080,
             "users": [
               {
-                "id": "f38e591d-d13a-4c30-9763-6be3ad65f3ec",
+                "id": "d2b67e48-c341-47ba-8caa-5658df693ac4",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -574,20 +563,24 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "getnet.serversubasli.top"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "de.zhou-yufan.com"
+          "serverName": "getnet.serversubasli.top",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -668,7 +661,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "rib9jxayoqjgn2kw.v.3dns.vip",
+            "address": "Rib9JXAYoqjGN2KW.v.3dns.vip",
             "port": 443,
             "users": [
               {
@@ -689,49 +682,16 @@
         },
         "wsSettings": {
           "path": "/ws-vmess",
-          "headers": {}
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "rib9jxayoqjgn2kw.v.3dns.vip"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-012",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "rib9jxayoqjgn2kw.v.3dns.vip",
-            "port": 443,
-            "users": [
-              {
-                "id": "9b31490d-190e-4ef1-af0a-7ccab3e7c3b5",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
+          "headers": {
+            "Host": "Rib9JXAYoqjGN2KW.v.3dns.vip"
           }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws-vmess",
-          "headers": {}
         },
         "security": "tls",
         "tlsSettings": {}
       }
     },
     {
-      "tag": "igareck-node-013",
+      "tag": "igareck-node-012",
       "protocol": "vmess",
       "settings": {
         "vnext": [
@@ -768,16 +728,16 @@
       }
     },
     {
-      "tag": "igareck-node-014",
+      "tag": "igareck-node-013",
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "43.173.67.42",
-            "port": 47116,
+            "address": "rib9jxayoqjgn2kw.v.3dns.vip",
+            "port": 443,
             "users": [
               {
-                "id": "fc3347e2-007d-4cad-fe28-3d80672c3ccc",
+                "id": "9b31490d-190e-4ef1-af0a-7ccab3e7c3b5",
                 "alterId": 0,
                 "security": "auto"
               }
@@ -786,15 +746,192 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/ws-vmess",
+          "headers": {}
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rib9jxayoqjgn2kw.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-014",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "rib9jxayoqjgn2kw.v.3dns.vip",
+            "port": 443,
+            "users": [
+              {
+                "id": "9b31490d-190e-4ef1-af0a-7ccab3e7c3b5",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws-vmess",
+          "headers": {}
+        },
+        "security": "tls",
+        "tlsSettings": {}
+      }
+    },
+    {
+      "tag": "igareck-node-015",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "185.209.179.23",
+            "port": 443,
+            "password": "fa6559bc-f43b-4d86-b7c5-13cca522e3f2"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/Telegram=@AmyraxVPN",
+          "headers": {
+            "Host": "rich-claw.nyc.boxd.sh"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rich-claw.nyc.boxd.sh",
+          "fingerprint": "android",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-016",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "185.209.179.23",
+            "port": 443,
+            "password": "fa6559bc-f43b-4d86-b7c5-13cca522e3f2"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/Telegram=@AmyraxVPN",
+          "headers": {
+            "Host": "rich-claw.nyc.boxd.sh"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rich-claw.nyc.boxd.sh",
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-017",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "185.209.179.23",
+            "port": 443,
+            "password": "fa6559bc-f43b-4d86-b7c5-13cca522e3f2"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/Telegram=@AmyraxVPN",
+          "headers": {
+            "Host": "rich-claw.nyc.boxd.sh"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rich-claw.nyc.boxd.sh",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-018",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "185.209.179.23",
+            "port": 443,
+            "password": "fa6559bc-f43b-4d86-b7c5-13cca522e3f2"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/Telegram=@AmyraxVPN",
+          "headers": {
+            "Host": "rich-claw.nyc.boxd.sh"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "rich-claw.nyc.boxd.sh",
+          "fingerprint": "qq",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
