@@ -57,11 +57,33 @@ THANK YOU FOR YOUR ATTENTION!
 
 <h2><code> TOPIC №1 </code></h2>
 
-### Follow the Telegram channel: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+### PLEASE NOTE!
+
+**What’s happening to public VPN subscriptions in Russia?**
+
+Public VPN/Tor subscriptions in the “Blacklist” category are now unreliable or have stopped working!
+
+**Why is this happening, and is there a solution?**
+
+**Reason:** extremely aggressive traffic filtering by Roskomnadzor’s TSPU systems.
+
+**Solution:** USE **[IGARECK ANTI-DPI](https://github.com/igareck/anti-dpi-for-russia)** TO GET VPN + TOR “BLACKLIST” SUBSCRIPTIONS WORKING AGAIN IN RUSSIA!
+
+**Follow the link, launch the app, and keep using VPN/Tor!**
+
+**https://github.com/igareck/anti-dpi-for-russia**
+
+App announcement on the Telegram channel: https://t.me/igareq/31
 
 ---
 
 <h2><code> TOPIC №2 </code></h2>
+
+### Follow the Telegram channel: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+
+---
+
+<h2><code> TOPIC №3 </code></h2>
 
 ### Dear friends!
 ### Due to the possible blocking of GitHub in Russia, please save mirror links! 
@@ -114,7 +136,7 @@ List of mirrors:
 
 ---
 
-<h2><code> TOPIC №3 </code></h2>
+<h2><code> TOPIC №4 </code></h2>
 
 ### For those who are here for the first time and don’t understand which client and VPN subscription to choose at the start
 
@@ -180,7 +202,7 @@ You will find links and QR codes to all subscriptions, as well as a list of all 
 
 ---
 
-<h2><code> TOPIC №4 </code></h2>
+<h2><code> TOPIC №5 </code></h2>
 
 **Attention to those users who do NOT have White Lists (cable and mobile internet without restrictions), and you need a free VPN Blacklist alternative at home or work - use the bundle** <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Tor_Browser_icon_%28New%29.png" width="20" align="absmiddle"> `Tor Bridges` **+** `Tor client OnionHop V3` or `OnionFruit Tor client` or `Tor Browser` **(details in the section** `What is the difference between black and white lists` ➞ `With regular Black Lists` ➞ `TOR BRIDGES`).
 
@@ -194,7 +216,7 @@ So during the day, use TOR instead, it remains reliable anytime!
 
 ---
 
-<h2><code> TOPIC №5 </code></h2>
+<h2><code> TOPIC №6 </code></h2>
 
 ### Important notes about DNS
 
@@ -292,7 +314,7 @@ Take some time and find a working DoH, it will add stability to your connection.
 
 ---
 
-<h2><code> TOPIC №6 </code></h2>
+<h2><code> TOPIC №7 </code></h2>
 
 ### THIS IS IMPORTANT NEWS FOR EVERYONE WHO USES VPN ON A SMARTPHONE
 
