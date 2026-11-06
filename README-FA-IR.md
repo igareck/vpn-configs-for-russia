@@ -57,11 +57,33 @@
 
 <h2><code> موضوع شماره ۱ </code></h2>
 
-### کانال Telegram را دنبال کنید: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+### توجه!
+
+**چه اتفاقی برای اشتراک‌های عمومی VPN در روسیه افتاده است؟**
+
+اشتراک‌های عمومی VPN/Tor در دستهٔ «فهرست سیاه» اکنون در روسیه یا درست کار نمی‌کنند یا کاملاً از کار افتاده‌اند!
+
+**علت چیست و آیا راه‌حلی وجود دارد؟**
+
+**علت:** فیلترینگ بسیار شدید ترافیک توسط سامانه‌های TSPU متعلق به Roskomnadzor (نهاد ناظر بر ارتباطات روسیه).
+
+**راه‌حل:** از برنامهٔ **[IGARECK ANTI-DPI](https://github.com/igareck/anti-dpi-for-russia)** استفاده کنید تا اشتراک‌های «فهرست سیاه» VPN + TOR در روسیه دوباره کار کنند!
+
+**لینک را باز کنید، برنامه را اجرا کنید و به استفاده از VPN/Tor ادامه دهید!**
+
+**لینک: https://github.com/igareck/anti-dpi-for-russia**
+
+اعلام انتشار برنامه در کانال تلگرام: https://t.me/igareq/31
 
 ---
 
 <h2><code> موضوع شماره ۲ </code></h2>
+
+### کانال Telegram را دنبال کنید: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+
+---
+
+<h2><code> موضوع شماره ۳ </code></h2>
 
 ### دوستان عزیز!
 ### با توجه به احتمال مسدود شدن GitHub در روسیه، لطفاً لینک‌های آینه را ذخیره کنید! 
@@ -114,7 +136,7 @@
 
 ---
 
-<h2><code> موضوع شماره ۳ </code></h2>
+<h2><code> موضوع شماره ۴ </code></h2>
 
 ### برای کسانی که برای اولین بار اینجا هستند و در ابتدا نمی‌دانند کدام کلاینت و اشتراک VPN را انتخاب کنند
 
@@ -181,7 +203,7 @@ BLACK_SS+All_RUS (در قالب استاندارد یا Clash) و به‌ویژ�
 
 ---
 
-<h2><code> موضوع شماره ۴ </code></h2>
+<h2><code> موضوع شماره ۵ </code></h2>
 
 **توجه به کاربرانی که لیست‌های سفید ندارند (اینترنت کابلی و موبایل بدون محدودیت)، و نیاز به جایگزین رایگان VPN Blacklist در خانه یا محل کار دارند - از بسته** <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Tor_Browser_icon_%28New%29.png" width="20" align="absmiddle"> `Tor Bridges` **+** `کلاینت Tor OnionHop V3` یا `OnionFruit کلاینت Tor` یا `Tor Browser` **(جزئیات در بخش** `تفاوت بین لیست‌های سیاه و سفید چیست` ➞ `با لیست‌های سیاه معمولی` ➞ `TOR BRIDGES`).
 
@@ -195,7 +217,7 @@ BLACK_SS+All_RUS (در قالب استاندارد یا Clash) و به‌ویژ�
 
 ---
 
-<h2><code> موضوع شماره ۵ </code></h2>
+<h2><code> موضوع شماره ۶ </code></h2>
 
 ### نکات مهم درباره DNS
 
@@ -293,7 +315,7 @@ Instead of the default value, put: https://dns.google/dns-query
 
 ---
 
-<h2><code> موضوع شماره ۶ </code></h2>
+<h2><code> موضوع شماره ۷ </code></h2>
 
 ### این اخبار مهمی برای همه کسانی است که VPN را روی گوشی هوشمند خود استفاده می‌کنند
 
