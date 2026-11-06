@@ -57,11 +57,33 @@ OpenVPN 和 WireGuard 等传统 VPN 协议早已表现得不够稳定，无论�
 
 <h2><code> 主题 №1 </code></h2>
 
-### 请关注 Telegram 频道: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+### 请注意！
+
+**俄罗斯的公开 VPN 订阅目前出了什么问题？**
+
+在俄罗斯，“黑名单”类别的公开 VPN/Tor 订阅如今要么很不稳定，要么已经完全无法使用！
+
+**原因是什么？有没有解决办法？**
+
+**原因：** Roskomnadzor（俄罗斯通信监管机构）的 TSPU 系统实施了极其严格的流量过滤。
+
+**解决办法：** 使用 **[IGARECK ANTI-DPI](https://github.com/igareck/anti-dpi-for-russia)** 程序，让 VPN + TOR“黑名单”订阅在俄罗斯恢复正常使用！
+
+**点击链接，运行程序，继续使用 VPN/Tor！**
+
+**https://github.com/igareck/anti-dpi-for-russia**
+
+Telegram 频道中的程序发布公告：https://t.me/igareq/31
 
 ---
 
 <h2><code> 主题 №2 </code></h2>
+
+### 请关注 Telegram 频道: https://t.me/igareq <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" width="25" align="absmiddle">
+
+---
+
+<h2><code> 主题 №3 </code></h2>
 
 ### 亲爱的朋友们！
 ### 由于俄罗斯可能封锁 GitHub，请保存镜像链接！ 
@@ -114,7 +136,7 @@ OpenVPN 和 WireGuard 等传统 VPN 协议早已表现得不够稳定，无论�
 
 ---
 
-<h2><code> 主题 №3 </code></h2>
+<h2><code> 主题 №4 </code></h2>
 
 ### 对于第一次来到这里且不清楚一开始选择哪个客户端和 VPN 订阅的人
 
@@ -180,7 +202,7 @@ TOP 150黑名单和白名单订阅轻便、优化且兼容大多数客户，是�
 
 ---
 
-<h2><code> 第4话题 </code></h2>
+<h2><code> 主题 №5 </code></h2>
 
 **注意那些没有白名单（无限制有线和移动网络）的用户，如果您在家或工作需要免费的 VPN 黑名单替代方案 - 使用捆绑** <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Tor_Browser_icon_%28New%29.png" width="20" align="absmiddle"> `Tor Bridges` **+** `Tor 客户端 OnionHop V3` 或 `OnionFruit Tor 客户端` 或 `Tor 浏览器` **（详情见章节** `黑名单与白名单的区别` ➞ `常规黑名单` ➞ `TOR BRIDGES`）。
 
@@ -194,7 +216,7 @@ TOP 150黑名单和白名单订阅轻便、优化且兼容大多数客户，是�
 
 ---
 
-<h2><code> 主题 №5 </code></h2>
+<h2><code> 主题 №6 </code></h2>
 
 ### 关于 DNS 的重要说明
 
@@ -292,7 +314,7 @@ Instead of the default value, put: https://dns.google/dns-query
 
 ---
 
-<h2><code> 第六话题 </code></h2>
+<h2><code> 主题 №7 </code></h2>
 
 ### 这是对所有在智能手机上使用 VPN 的人都很重要的消息
 
