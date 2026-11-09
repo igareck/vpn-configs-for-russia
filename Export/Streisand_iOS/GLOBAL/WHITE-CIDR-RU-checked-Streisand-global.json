@@ -59,7 +59,7 @@
           "domain:local",
           "domain:lan",
           "regexp:^[^.]+$",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -116,7 +116,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -137,7 +137,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -158,7 +158,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -179,7 +179,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -200,7 +200,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -221,7 +221,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -242,7 +242,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -263,7 +263,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -284,7 +284,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -305,7 +305,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -326,7 +326,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -347,7 +347,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:sub-edge-18-1g.whitenw.net"
+          "full:dwedfs.whitenw.net"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -437,32 +437,36 @@
       "settings": {
         "vnext": [
           {
-            "address": "46.243.232.71",
-            "port": 444,
+            "address": "dwedfs.whitenw.net",
+            "port": 8445,
             "users": [
               {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
+                "id": "84a56b88-2f89-4a57-b925-74abd5b7fd87",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
         },
         "security": "reality",
         "realitySettings": {
           "serverName": "passport.yandex.ru",
-          "fingerprint": "firefox",
-          "publicKey": "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
+          "fingerprint": "chrome",
+          "publicKey": "I_0JD13_bJuD6bNhTfb1PFPJUQqEVHl-YFluNwHAPD4",
+          "spiderX": "/"
         }
       }
     },
@@ -472,140 +476,56 @@
       "settings": {
         "vnext": [
           {
-            "address": "46.243.232.71",
-            "port": 444,
+            "address": "158.160.190.15",
+            "port": 8443,
             "users": [
               {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
+                "id": "50ed9601-ebd4-4ba7-a234-ffe642d351cd",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "passport.yandex.ru",
-          "fingerprint": "edge",
-          "publicKey": "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
+          "serverName": "ads.x5.ru",
+          "fingerprint": "chrome",
+          "publicKey": "GtR_ZuUkKAvY22-mOhrGYK0eyzliFCrZkoqFV7BfjHg",
+          "shortId": "335cb6cbe00da58b"
         }
       }
     },
     {
-      "tag": "igareck-node-003",
-      "protocol": "vless",
+      "tag": "fragment",
+      "protocol": "freedom",
       "settings": {
-        "vnext": [
+        "fragment": {
+          "packets": "1-3",
+          "length": "50-100",
+          "interval": "10-20",
+          "maxSplit": "10"
+        },
+        "noises": [
           {
-            "address": "46.243.232.71",
-            "port": 444,
-            "users": [
-              {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
-              }
-            ]
+            "type": "rand",
+            "packet": "50-150",
+            "delay": "10-50"
           }
         ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "passport.yandex.ru",
-          "fingerprint": "ios",
-          "publicKey": "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-004",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "46.243.232.71",
-            "port": 444,
-            "users": [
-              {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "passport.yandex.ru",
-          "fingerprint": "safari",
-          "publicKey": "VHWmCkZwC5XE-ctv0p8BinjoIx4SWgJUIsZPrhNf6TA"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-005",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "sub-edge-18-1g.whitenw.net",
-            "port": 10458,
-            "users": [
-              {
-                "id": "1962ec0b-becc-418b-ada4-b459738e909a",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/aFlS06iNEzhdEdIa",
-          "host": "sub-edge-18-1g.whitenw.net",
-          "mode": "auto"
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "max.ru",
-          "fingerprint": "randomized",
-          "publicKey": "NcusujNOLaj9kiNIAMzg3BKdb3WYXMdkCgfeNHyie1E",
-          "shortId": "67ca97db5f330f5f"
-        }
       }
     },
     {
