@@ -413,36 +413,34 @@
       "settings": {
         "vnext": [
           {
-            "address": "158.160.190.15",
-            "port": 8443,
+            "address": "fst.krevetkabs111.net",
+            "port": 443,
             "users": [
               {
-                "id": "50ed9601-ebd4-4ba7-a234-ffe642d351cd",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "010be6fa-ab5f-404a-9edf-ab2db1f09f0c",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/api/generate",
+          "headers": {
+            "Host": "fst.krevetkabs111.net"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ads.x5.ru",
-          "fingerprint": "random",
-          "publicKey": "GtR_ZuUkKAvY22-mOhrGYK0eyzliFCrZkoqFV7BfjHg",
-          "shortId": "335cb6cbe00da58b"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "fst.krevetkabs111.net",
+          "fingerprint": "firefox"
         }
       }
     },
@@ -479,7 +477,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "fst.krevetkabs111.net",
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
