@@ -2,8 +2,8 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-CIDR-RU-all.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Полная • Full
-# Количество/Quantity: 126
-# Date/Time: 2026-11-12 / 09:45 (Moscow)
+# Количество/Quantity: 127
+# Date/Time: 2026-11-12 / 11:36 (Moscow)
 #
 # Режим / Mode:
 # - Автоматический Выбор лучшего прокси / Igareck Auto Select;
@@ -151,7 +151,32 @@ sniffer:
       ports: [443, 8443]
 
 proxies:
-- name: Igareck Node 001 | 🇱🇹 Lithuania [*CIDR]
+- name: Igareck Node 001 | .𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]
+  type: vless
+  server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
+  port: 443
+  uuid: "\x33\x38\x33\x30\x38\x66\x66\x31\x2d\x35\x61\x61\x39\x2d\x34\x39\x34\x66\x2d\x61\x32\x35\x61\x2d\x30\x66\x32\x38\x37\x30\x64\x35\x36\x62\x33\x65"
+  udp: true
+  tls: true
+  servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: Igareck Node 002 | .𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR]
+  type: vless
+  server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
+  port: 443
+  uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
+  udp: true
+  tls: true
+  servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
+  client-fingerprint: qq
+  network: xhttp
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+- name: Igareck Node 003 | 🇱🇹 Lithuania [*CIDR]
   type: vless
   server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   port: 443
@@ -163,7 +188,7 @@ proxies:
   network: ws
   ws-opts:
     path: /blog/posts
-- name: Igareck Node 002 | 🇱🇹 Lithuania [*CIDR]
+- name: Igareck Node 004 | 🇱🇹 Lithuania [*CIDR]
   type: vless
   server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   port: 443
@@ -175,30 +200,6 @@ proxies:
   network: ws
   ws-opts:
     path: /blog/posts
-- name: Igareck Node 003 | 🇱🇹 Lithuania [*CIDR]
-  type: vless
-  server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  port: 443
-  uuid: "\x32\x32\x33\x32\x64\x39\x30\x34\x2d\x38\x65\x36\x61\x2d\x34\x32\x30\x32\x2d\x38\x32\x34\x30\x2d\x36\x65\x66\x64\x38\x61\x65\x63\x30\x32\x65\x39"
-  udp: true
-  tls: true
-  servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  network: ws
-  ws-opts:
-    path: /blog/posts
-- name: Igareck Node 004 | 🇱🇹 Lithuania [*CIDR]
-  type: vless
-  server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  port: 443
-  uuid: "\x32\x32\x33\x32\x64\x39\x30\x34\x2d\x38\x65\x36\x61\x2d\x34\x32\x30\x32\x2d\x38\x32\x34\x30\x2d\x36\x65\x66\x64\x38\x61\x65\x63\x30\x32\x65\x39"
-  udp: true
-  tls: true
-  servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  alpn:
-  - http%25252525252525252525252525252F1.1
-  network: ws
-  ws-opts:
-    path: /blog/posts
 - name: Igareck Node 005 | 🇱🇹 Lithuania [*CIDR]
   type: vless
   server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
@@ -207,8 +208,6 @@ proxies:
   udp: true
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  alpn:
-  - http%252525252525252525252525252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -221,7 +220,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%2525252525252525252525252F1.1
+  - http%25252525252525252525252525252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -234,7 +233,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%25252525252525252525252F1.1
+  - http%252525252525252525252525252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -247,8 +246,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%25252525252525252525252F1.1
-  client-fingerprint: ios
+  - http%2525252525252525252525252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -262,7 +260,6 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%25252525252525252525252F1.1
-  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /blog/posts
@@ -275,7 +272,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%252525252525252525252F1.1
+  - http%25252525252525252525252F1.1
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /blog/posts
@@ -289,7 +287,6 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%252525252525252525252F1.1
-  client-fingerprint: android
   network: ws
   ws-opts:
     path: /blog/posts
@@ -303,7 +300,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%252525252525252525252F1.1
-  client-fingerprint: edge
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /blog/posts
@@ -317,7 +314,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%252525252525252525252F1.1
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /blog/posts
@@ -330,7 +327,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%2525252525252525252F1.1
+  - http%252525252525252525252F1.1
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /blog/posts
@@ -344,7 +342,6 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%2525252525252525252F1.1
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /blog/posts
@@ -358,7 +355,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%2525252525252525252F1.1
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /blog/posts
@@ -372,7 +369,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%2525252525252525252F1.1
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /blog/posts
@@ -385,7 +382,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%25252525252525252F1.1
+  - http%2525252525252525252F1.1
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /blog/posts
@@ -591,8 +589,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%25252525252F1.1
-  client-fingerprint: ios
+  - http%252525252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -606,6 +603,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%252525252F1.1
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /blog/posts
@@ -619,7 +617,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%252525252F1.1
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /blog/posts
@@ -632,8 +630,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%252525252F1.1
-  client-fingerprint: qq
+  - http%2525252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -646,8 +643,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%252525252F1.1
-  client-fingerprint: safari
+  - http%2525252F1.1
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /blog/posts
@@ -661,7 +658,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%2525252F1.1
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /blog/posts
@@ -674,8 +671,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%2525252F1.1
-  client-fingerprint: ios
+  - http%25252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -688,8 +684,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%2525252F1.1
-  client-fingerprint: safari
+  - http%25252F1.1
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /blog/posts
@@ -703,6 +699,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%25252F1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /blog/posts
@@ -716,7 +713,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%25252F1.1
-  client-fingerprint: android
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /blog/posts
@@ -730,7 +727,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%25252F1.1
-  client-fingerprint: chrome
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /blog/posts
@@ -743,8 +740,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%25252F1.1
-  client-fingerprint: edge
+  - http%252F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -757,8 +753,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%25252F1.1
-  client-fingerprint: qq
+  - http%252F1.1
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /blog/posts
@@ -772,6 +768,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%252F1.1
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /blog/posts
@@ -784,8 +781,7 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%252F1.1
-  client-fingerprint: android
+  - http%2F1.1
   network: ws
   ws-opts:
     path: /blog/posts
@@ -798,8 +794,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%252F1.1
-  client-fingerprint: edge
+  - http%2F1.1
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /blog/posts
@@ -812,8 +808,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%252F1.1
-  client-fingerprint: ios
+  - http%2F1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /blog/posts
@@ -827,7 +823,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%2F1.1
-  client-fingerprint: android
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /blog/posts
@@ -841,7 +837,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http%2F1.1
-  client-fingerprint: chrome
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /blog/posts
@@ -854,8 +850,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%2F1.1
-  client-fingerprint: edge
+  - http/1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /blog/posts
@@ -868,8 +864,8 @@ proxies:
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
-  - http%2F1.1
-  client-fingerprint: qq
+  - http/1.1
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /blog/posts
@@ -883,7 +879,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http/1.1
-  client-fingerprint: chrome
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /blog/posts
@@ -897,7 +893,7 @@ proxies:
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   alpn:
   - http/1.1
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /blog/posts
@@ -909,39 +905,11 @@ proxies:
   udp: true
   tls: true
   servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  alpn:
-  - http/1.1
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /blog/posts
-- name: Igareck Node 057 | 🇱🇹 Lithuania [*CIDR]
-  type: vless
-  server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  port: 443
-  uuid: "\x32\x32\x33\x32\x64\x39\x30\x34\x2d\x38\x65\x36\x61\x2d\x34\x32\x30\x32\x2d\x38\x32\x34\x30\x2d\x36\x65\x66\x64\x38\x61\x65\x63\x30\x32\x65\x39"
-  udp: true
-  tls: true
-  servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  alpn:
-  - http/1.1
-  client-fingerprint: safari
-  network: ws
-  ws-opts:
-    path: /blog/posts
-- name: Igareck Node 058 | 🇱🇹 Lithuania [*CIDR]
-  type: vless
-  server: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
-  port: 443
-  uuid: "\x32\x32\x33\x32\x64\x39\x30\x34\x2d\x38\x65\x36\x61\x2d\x34\x32\x30\x32\x2d\x38\x32\x34\x30\x2d\x36\x65\x66\x64\x38\x61\x65\x63\x30\x32\x65\x39"
-  udp: true
-  tls: true
-  servername: "\x6c\x6f\x72\x65\x74\x74\x6d\x61\x79\x2e\x74\x6f\x70"
   client-fingerprint: qq
   network: ws
   ws-opts:
     path: /blog/posts
-- name: Igareck Node 059 | 🇳🇱 The Netherlands [*CIDR]
+- name: Igareck Node 057 | 🇳🇱 The Netherlands [*CIDR]
   type: vless
   server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   port: 443
@@ -952,6 +920,34 @@ proxies:
   alpn:
   - http/1.1
   client-fingerprint: android
+  network: ws
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: Igareck Node 058 | 🇳🇱 The Netherlands [*CIDR]
+  type: vless
+  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  port: 443
+  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  udp: true
+  tls: true
+  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  alpn:
+  - http/1.1
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: Igareck Node 059 | 🇳🇱 The Netherlands [*CIDR]
+  type: vless
+  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  port: 443
+  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  udp: true
+  tls: true
+  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -965,7 +961,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http/1.1
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -979,7 +975,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http/1.1
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -993,39 +989,11 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http/1.1
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: Igareck Node 063 | 🇳🇱 The Netherlands [*CIDR]
-  type: vless
-  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  port: 443
-  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
-  udp: true
-  tls: true
-  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  alpn:
-  - http/1.1
-  client-fingerprint: safari
-  network: ws
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: Igareck Node 064 | 🇳🇱 The Netherlands [*CIDR]
-  type: vless
-  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  port: 443
-  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
-  udp: true
-  tls: true
-  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  alpn:
-  - http/1.1
   client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: Igareck Node 065 | 🇳🇱 The Netherlands [*CIDR]
+- name: Igareck Node 063 | 🇳🇱 The Netherlands [*CIDR]
   type: vless
   server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   port: 443
@@ -1038,6 +1006,30 @@ proxies:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
     headers:
       Host: chat.gpt.prem-ai.shop
+- name: Igareck Node 064 | 🇳🇱 The Netherlands [*CIDR]
+  type: vless
+  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  port: 443
+  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  udp: true
+  tls: true
+  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  network: ws
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+- name: Igareck Node 065 | 🇳🇱 The Netherlands [*CIDR]
+  type: vless
+  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  port: 443
+  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  udp: true
+  tls: true
+  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  alpn:
+  - http%252525252F1.1
+  network: ws
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
 - name: Igareck Node 066 | 🇳🇱 The Netherlands [*CIDR]
   type: vless
   server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
@@ -1046,6 +1038,8 @@ proxies:
   udp: true
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  alpn:
+  - http%2525252F1.1
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1058,7 +1052,8 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%252525252F1.1
+  - http%2525252F1.1
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1072,6 +1067,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http%2525252F1.1
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1084,8 +1080,7 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%2525252F1.1
-  client-fingerprint: android
+  - http%25252F1.1
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1098,8 +1093,8 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%2525252F1.1
-  client-fingerprint: firefox
+  - http%25252F1.1
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1113,6 +1108,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http%25252F1.1
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1125,8 +1121,7 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%25252F1.1
-  client-fingerprint: android
+  - http%252F1.1
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1139,8 +1134,8 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%25252F1.1
-  client-fingerprint: edge
+  - http%252F1.1
+  client-fingerprint: android
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1154,6 +1149,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http%252F1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1167,7 +1163,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http%252F1.1
-  client-fingerprint: android
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1180,8 +1176,7 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%252F1.1
-  client-fingerprint: chrome
+  - http%2F1.1
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1194,8 +1189,8 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%252F1.1
-  client-fingerprint: firefox
+  - http%2F1.1
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1209,6 +1204,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http%2F1.1
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1222,7 +1218,7 @@ proxies:
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
   - http%2F1.1
-  client-fingerprint: chrome
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1235,8 +1231,7 @@ proxies:
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   alpn:
-  - http%2F1.1
-  client-fingerprint: edge
+  - http/1.1
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1248,9 +1243,7 @@ proxies:
   udp: true
   tls: true
   servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  alpn:
-  - http%2F1.1
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1267,34 +1260,9 @@ proxies:
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: Igareck Node 083 | 🇳🇱 The Netherlands [*CIDR]
-  type: vless
-  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  port: 443
-  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
-  udp: true
-  tls: true
-  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  client-fingerprint: edge
-  network: ws
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-- name: Igareck Node 084 | 🇳🇱 The Netherlands [*CIDR]
-  type: vless
-  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  port: 443
-  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
-  udp: true
-  tls: true
-  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
     headers:
       Host: chat.gpt.prem-ai.shop
-- name: Igareck Node 085 | 🇳🇱 The Netherlands [*CIDR]
+- name: Igareck Node 083 | 🇳🇱 The Netherlands [*CIDR]
   type: vless
   server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   port: 443
@@ -1310,7 +1278,7 @@ proxies:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
     headers:
       Host: chat.gpt.prem-ai.shop
-- name: Igareck Node 086 | 🇳🇱 The Netherlands [*CIDR]
+- name: Igareck Node 084 | 🇳🇱 The Netherlands [*CIDR]
   type: vless
   server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
   port: 443
@@ -1321,6 +1289,34 @@ proxies:
   alpn:
   - http/1.1
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+    headers:
+      Host: chat.gpt.prem-ai.shop
+- name: Igareck Node 085 | 🇳🇱 The Netherlands [*CIDR]
+  type: vless
+  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  port: 443
+  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  udp: true
+  tls: true
+  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+    headers:
+      Host: chat.gpt.prem-ai.shop
+- name: Igareck Node 086 | 🇳🇱 The Netherlands [*CIDR]
+  type: vless
+  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  port: 443
+  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  udp: true
+  tls: true
+  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
@@ -1338,34 +1334,33 @@ proxies:
   network: ws
   ws-opts:
     path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-    headers:
-      Host: chat.gpt.prem-ai.shop
 - name: Igareck Node 088 | 🇳🇱 The Netherlands [*CIDR]
   type: vless
-  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
   port: 443
-  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
   udp: true
   tls: true
-  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  client-fingerprint: safari
-  network: ws
-  ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
-    headers:
-      Host: chat.gpt.prem-ai.shop
-- name: Igareck Node 089 | 🇳🇱 The Netherlands [*CIDR]
+  servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+- name: Igareck Node 089 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
-  server: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
+  server: "\x31\x37\x38\x2e\x32\x35\x30\x2e\x32\x34\x32\x2e\x32\x32\x39"
   port: 443
-  uuid: "\x39\x35\x66\x38\x35\x39\x33\x37\x2d\x37\x62\x39\x35\x2d\x34\x35\x63\x34\x2d\x38\x64\x36\x39\x2d\x39\x35\x64\x61\x36\x61\x39\x37\x38\x35\x36\x39"
+  uuid: "\x64\x38\x64\x39\x64\x39\x39\x65\x2d\x36\x36\x32\x32\x2d\x34\x36\x32\x30\x2d\x39\x32\x64\x63\x2d\x32\x33\x61\x63\x32\x62\x36\x64\x33\x30\x66\x36"
   udp: true
   tls: true
-  servername: "\x63\x68\x61\x74\x2e\x67\x70\x74\x2e\x70\x72\x65\x6d\x2d\x61\x69\x2e\x73\x68\x6f\x70"
-  client-fingerprint: chrome
+  servername: "\x65\x64\x67\x65\x2d\x6d\x61\x6a\x6f\x72\x2e\x67\x72\x75\x7a\x69\x74\x2e\x6d\x79"
+  client-fingerprint: firefox
   network: ws
   ws-opts:
-    path: /gateway/v1/ws/791f9a4d19f715c2ffaedfbaf99d88bd
+    path: /assets/g/c6c4a58bfc8c46fa18a6/
+    headers:
+      Host: edge-major.gruzit.my
 - name: Igareck Node 090 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x31\x37\x38\x2e\x32\x35\x30\x2e\x32\x34\x32\x2e\x32\x32\x39"
@@ -1470,26 +1465,13 @@ proxies:
   udp: true
   tls: true
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /assets/api/v3/connect/
-    host: ru1.cdn-space.org
-- name: Igareck Node 097 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
-  type: vless
-  server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
-  port: 443
-  uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
-  udp: true
-  tls: true
-  servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
   client-fingerprint: safari
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
     host: ru1.cdn-space.org
     mode: auto
-- name: Igareck Node 098 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+- name: Igareck Node 097 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
   port: 443
@@ -1501,7 +1483,7 @@ proxies:
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
-- name: Igareck Node 099 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+- name: Igareck Node 098 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
   port: 443
@@ -1513,7 +1495,7 @@ proxies:
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
-- name: Igareck Node 100 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+- name: Igareck Node 099 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
   port: 443
@@ -1526,7 +1508,7 @@ proxies:
   xhttp-opts:
     path: /assets/api/v3/connect/
     host: ru1.cdn-space.org
-- name: Igareck Node 101 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+- name: Igareck Node 100 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
   port: 443
@@ -1539,7 +1521,7 @@ proxies:
   xhttp-opts:
     path: /assets/api/v3/connect/
     host: ru1.cdn-space.org
-- name: Igareck Node 102 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+- name: Igareck Node 101 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
   port: 443
@@ -1552,19 +1534,37 @@ proxies:
   xhttp-opts:
     path: /assets/api/v3/connect/
     host: ru1.cdn-space.org
-- name: Igareck Node 103 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+- name: Igareck Node 102 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
-  server: "\x31\x38\x35\x2e\x31\x37\x33\x2e\x31\x37\x39\x2e\x32\x31\x38"
+  server: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
   port: 443
   uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
   udp: true
   tls: true
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  client-fingerprint: qq
+  alpn:
+  - h2
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
     host: ru1.cdn-space.org
+    mode: auto
+- name: Igareck Node 103 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
+  type: vless
+  server: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
+  port: 443
+  uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
+  udp: true
+  tls: true
+  servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
+  alpn:
+  - h2
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+    mode: auto
 - name: Igareck Node 104 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
   type: vless
   server: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
@@ -1575,6 +1575,7 @@ proxies:
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
   alpn:
   - h2
+  client-fingerprint: edge
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
@@ -1590,7 +1591,7 @@ proxies:
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
   alpn:
   - h2
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
@@ -1606,7 +1607,7 @@ proxies:
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
   alpn:
   - h2
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: xhttp
   xhttp-opts:
     path: /assets/api/v3/connect/
@@ -1620,8 +1621,6 @@ proxies:
   udp: true
   tls: true
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  alpn:
-  - h2
   client-fingerprint: firefox
   network: xhttp
   xhttp-opts:
@@ -1636,42 +1635,37 @@ proxies:
   udp: true
   tls: true
   servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
+  client-fingerprint: edge
+  network: xhttp
+  xhttp-opts:
+    path: /assets/api/v3/connect/
+    host: ru1.cdn-space.org
+    mode: auto
+- name: Igareck Node 109 | 🇷🇺 Russia [*CIDR]
+  type: vless
+  server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
+  port: 443
+  uuid: "\x33\x38\x33\x30\x38\x66\x66\x31\x2d\x35\x61\x61\x39\x2d\x34\x39\x34\x66\x2d\x61\x32\x35\x61\x2d\x30\x66\x32\x38\x37\x30\x64\x35\x36\x62\x33\x65"
+  udp: true
+  tls: true
+  servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
+- name: Igareck Node 110 | 🇷🇺 Russia [*CIDR]
+  type: vless
+  server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
+  port: 443
+  uuid: "\x33\x38\x33\x30\x38\x66\x66\x31\x2d\x35\x61\x61\x39\x2d\x34\x39\x34\x66\x2d\x61\x32\x35\x61\x2d\x30\x66\x32\x38\x37\x30\x64\x35\x36\x62\x33\x65"
+  udp: true
+  tls: true
+  servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
   alpn:
   - h2
   client-fingerprint: ios
-  network: xhttp
-  xhttp-opts:
-    path: /assets/api/v3/connect/
-    host: ru1.cdn-space.org
-    mode: auto
-- name: Igareck Node 109 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
-  type: vless
-  server: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  port: 443
-  uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
-  udp: true
-  tls: true
-  servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /assets/api/v3/connect/
-    host: ru1.cdn-space.org
-    mode: auto
-- name: Igareck Node 110 | 🇳🇱 The Netherlands | 🌐 [*CIDR]
-  type: vless
-  server: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  port: 443
-  uuid: "\x66\x32\x31\x39\x66\x66\x65\x32\x2d\x62\x63\x33\x36\x2d\x34\x39\x35\x66\x2d\x61\x38\x33\x64\x2d\x38\x66\x39\x61\x63\x34\x61\x66\x30\x35\x66\x64"
-  udp: true
-  tls: true
-  servername: "\x72\x75\x31\x2e\x63\x64\x6e\x2d\x73\x70\x61\x63\x65\x2e\x6f\x72\x67"
-  client-fingerprint: ios
-  network: xhttp
-  xhttp-opts:
-    path: /assets/api/v3/connect/
-    host: ru1.cdn-space.org
-    mode: auto
+  network: grpc
+  grpc-opts:
+    grpc-service-name: mobile.api.Event
 - name: Igareck Node 111 | 🇷🇺 Russia [*CIDR]
   type: vless
   server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
@@ -1680,6 +1674,8 @@ proxies:
   udp: true
   tls: true
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
+  alpn:
+  - h2
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
@@ -1693,7 +1689,7 @@ proxies:
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
   alpn:
   - h2
-  client-fingerprint: ios
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
@@ -1707,6 +1703,7 @@ proxies:
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
   alpn:
   - h2
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
@@ -1718,7 +1715,9 @@ proxies:
   udp: true
   tls: true
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  client-fingerprint: chrome
+  alpn:
+  - h2
+  client-fingerprint: safari
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
@@ -1730,9 +1729,7 @@ proxies:
   udp: true
   tls: true
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  alpn:
-  - h2
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
@@ -1744,9 +1741,7 @@ proxies:
   udp: true
   tls: true
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  alpn:
-  - h2
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
@@ -1758,49 +1753,11 @@ proxies:
   udp: true
   tls: true
   servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  alpn:
-  - h2
-  client-fingerprint: safari
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: Igareck Node 118 | 🇷🇺 Russia [*CIDR]
-  type: vless
-  server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  port: 443
-  uuid: "\x33\x38\x33\x30\x38\x66\x66\x31\x2d\x35\x61\x61\x39\x2d\x34\x39\x34\x66\x2d\x61\x32\x35\x61\x2d\x30\x66\x32\x38\x37\x30\x64\x35\x36\x62\x33\x65"
-  udp: true
-  tls: true
-  servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: Igareck Node 119 | 🇷🇺 Russia [*CIDR]
-  type: vless
-  server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  port: 443
-  uuid: "\x33\x38\x33\x30\x38\x66\x66\x31\x2d\x35\x61\x61\x39\x2d\x34\x39\x34\x66\x2d\x61\x32\x35\x61\x2d\x30\x66\x32\x38\x37\x30\x64\x35\x36\x62\x33\x65"
-  udp: true
-  tls: true
-  servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  client-fingerprint: edge
-  network: grpc
-  grpc-opts:
-    grpc-service-name: mobile.api.Event
-- name: Igareck Node 120 | 🇷🇺 Russia [*CIDR]
-  type: vless
-  server: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
-  port: 443
-  uuid: "\x33\x38\x33\x30\x38\x66\x66\x31\x2d\x35\x61\x61\x39\x2d\x34\x39\x34\x66\x2d\x61\x32\x35\x61\x2d\x30\x66\x32\x38\x37\x30\x64\x35\x36\x62\x33\x65"
-  udp: true
-  tls: true
-  servername: "\x76\x70\x73\x33\x2e\x6e\x65\x6d\x6e\x6f\x67\x6f\x67\x6f\x2e\x63\x6f\x6d"
   client-fingerprint: qq
   network: grpc
   grpc-opts:
     grpc-service-name: mobile.api.Event
-- name: Igareck Node 121 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
+- name: Igareck Node 118 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
   type: vless
   server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
   port: 443
@@ -1814,31 +1771,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
-- name: Igareck Node 122 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
-  type: vless
-  server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
-  port: 443
-  uuid: "\x34\x62\x35\x30\x32\x37\x30\x62\x2d\x35\x63\x61\x66\x2d\x34\x63\x33\x34\x2d\x62\x33\x64\x61\x2d\x31\x37\x62\x34\x35\x32\x35\x36\x30\x34\x61\x36"
-  udp: true
-  tls: true
-  servername: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de1.v1
-- name: Igareck Node 123 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
-  type: vless
-  server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
-  port: 443
-  uuid: "\x34\x62\x35\x30\x32\x37\x30\x62\x2d\x35\x63\x61\x66\x2d\x34\x63\x33\x34\x2d\x62\x33\x64\x61\x2d\x31\x37\x62\x34\x35\x32\x35\x36\x30\x34\x61\x36"
-  udp: true
-  tls: true
-  servername: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
-  alpn:
-  - h2
-  network: grpc
-  grpc-opts:
-    grpc-service-name: glush.de1.v1
-- name: Igareck Node 124 | 🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]
+- name: Igareck Node 119 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
   type: vless
   server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
   port: 443
@@ -1850,7 +1783,31 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
-- name: Igareck Node 125 | 🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]
+- name: Igareck Node 120 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
+  type: vless
+  server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
+  port: 443
+  uuid: "\x34\x62\x35\x30\x32\x37\x30\x62\x2d\x35\x63\x61\x66\x2d\x34\x63\x33\x34\x2d\x62\x33\x64\x61\x2d\x31\x37\x62\x34\x35\x32\x35\x36\x30\x34\x61\x36"
+  udp: true
+  tls: true
+  servername: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de1.v1
+- name: Igareck Node 121 | 🌐 Anycast-IP | 🇩🇪 [*CIDR]
+  type: vless
+  server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
+  port: 443
+  uuid: "\x34\x62\x35\x30\x32\x37\x30\x62\x2d\x35\x63\x61\x66\x2d\x34\x63\x33\x34\x2d\x62\x33\x64\x61\x2d\x31\x37\x62\x34\x35\x32\x35\x36\x30\x34\x61\x36"
+  udp: true
+  tls: true
+  servername: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
+  alpn:
+  - h2
+  network: grpc
+  grpc-opts:
+    grpc-service-name: glush.de1.v1
+- name: Igareck Node 122 | 🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]
   type: vless
   server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
   port: 443
@@ -1864,7 +1821,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
-- name: Igareck Node 126 | 🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]
+- name: Igareck Node 123 | 🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR]
   type: vless
   server: "\x61\x73\x74\x72\x61\x76\x65\x6c\x6c\x69\x6f\x6e\x2e\x78\x79\x7a"
   port: 443
@@ -1876,6 +1833,58 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: glush.de1.v1
+- name: Igareck Node 124 | 🇪🇪 Estonia [*CIDR]
+  type: trojan
+  server: "\x73\x74\x72\x65\x61\x6d\x2e\x79\x61\x62\x65\x6e\x7a\x69\x6e\x2e\x61\x70\x70"
+  port: 443
+  password: duJyVGgB2y0tCFs37Y89NE1fMHXk8C5j
+  udp: true
+  sni: cdn6.yabenzin.app
+  alpn:
+  - h2
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TrojanGRPC
+- name: Igareck Node 125 | 🇪🇪 Estonia [*CIDR]
+  type: trojan
+  server: "\x73\x74\x72\x65\x61\x6d\x2e\x79\x61\x62\x65\x6e\x7a\x69\x6e\x2e\x61\x70\x70"
+  port: 443
+  password: duJyVGgB2y0tCFs37Y89NE1fMHXk8C5j
+  udp: true
+  sni: cdn6.yabenzin.app
+  alpn:
+  - h2
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TrojanGRPC
+- name: Igareck Node 126 | 🇵🇱 Poland | 🌐 [*CIDR]
+  type: trojan
+  server: "\x73\x74\x72\x65\x61\x6d\x2e\x79\x61\x62\x65\x6e\x7a\x69\x6e\x2e\x61\x70\x70"
+  port: 443
+  password: duJyVGgB2y0tCFs37Y89NE1fMHXk8C5j
+  udp: true
+  sni: cdn12.yabenzin.app
+  alpn:
+  - h2
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TrojanGRPC
+- name: Igareck Node 127 | 🇵🇱 Poland | 🌐 [*CIDR]
+  type: trojan
+  server: "\x73\x74\x72\x65\x61\x6d\x2e\x79\x61\x62\x65\x6e\x7a\x69\x6e\x2e\x61\x70\x70"
+  port: 443
+  password: duJyVGgB2y0tCFs37Y89NE1fMHXk8C5j
+  udp: true
+  sni: cdn12.yabenzin.app
+  alpn:
+  - h2
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TrojanGRPC
 
 proxy-groups:
   - name: "Igareck Auto Select (Автоподключение)"
