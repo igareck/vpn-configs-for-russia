@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — Happ Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "11 proxies",
+      "15 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "Happ",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-14 23:32 Moscow"
+    "source_datetime": "2026-11-15 01:40 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -450,7 +450,10 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "edge"
+          "fingerprint": "ios",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -484,7 +487,10 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "firefox"
+          "fingerprint": "random",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -518,7 +524,10 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "ios"
+          "fingerprint": "safari",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -552,7 +561,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "random"
+          "fingerprint": "edge"
         }
       }
     },
@@ -586,7 +595,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -620,10 +629,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "firefox",
-          "alpn": [
-            "h2"
-          ]
+          "fingerprint": "ios"
         }
       }
     },
@@ -633,36 +639,31 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.90.78",
-            "port": 443,
+            "address": "185.86.145.55",
+            "port": 10470,
             "users": [
               {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "grpc",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "grpcSettings": {
+          "serviceName": "wn-adaptcloud",
+          "multiMode": false
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "chrome",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "wn-pl4.static-s3.org",
+          "fingerprint": "random"
         }
       }
     },
@@ -672,37 +673,31 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.90.78",
-            "port": 443,
+            "address": "185.86.145.55",
+            "port": 10470,
             "users": [
               {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "grpc",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "grpcSettings": {
+          "serviceName": "wn-adaptcloud",
+          "multiMode": false
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "edge",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e",
-          "spiderX": "/"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "wn-pl4.static-s3.org",
+          "fingerprint": "safari"
         }
       }
     },
@@ -823,6 +818,164 @@
           "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
           "shortId": "2c6df23e",
           "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-012",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.233.90.78",
+            "port": 443,
+            "users": [
+              {
+                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "birch-ledger.justext.space",
+          "fingerprint": "safari",
+          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
+          "shortId": "2c6df23e",
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-013",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.233.90.78",
+            "port": 443,
+            "users": [
+              {
+                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "birch-ledger.justext.space",
+          "fingerprint": "chrome",
+          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
+          "shortId": "2c6df23e",
+          "spiderX": "/"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-014",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.233.90.78",
+            "port": 443,
+            "users": [
+              {
+                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "birch-ledger.justext.space",
+          "fingerprint": "edge",
+          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
+          "shortId": "2c6df23e"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-015",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.233.90.78",
+            "port": 443,
+            "users": [
+              {
+                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "birch-ledger.justext.space",
+          "fingerprint": "chrome",
+          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
+          "shortId": "2c6df23e"
         }
       }
     },
