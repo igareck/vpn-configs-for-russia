@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — v2rayNG Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "15 proxies",
+      "16 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "v2rayNG",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-15 01:40 Moscow"
+    "source_datetime": "2026-11-15 03:45 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -568,7 +568,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "edge"
+          "fingerprint": "random"
         }
       }
     },
@@ -602,7 +602,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     },
@@ -636,7 +636,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -670,7 +670,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wn-pl4.static-s3.org",
-          "fingerprint": "random"
+          "fingerprint": "ios"
         }
       }
     },
@@ -714,37 +714,34 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.90.78",
-            "port": 443,
+            "address": "185.86.145.55",
+            "port": 10470,
             "users": [
               {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "grpc",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "grpcSettings": {
+          "serviceName": "wn-adaptcloud",
+          "multiMode": false
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "wn-pl4.static-s3.org",
           "fingerprint": "firefox",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e",
-          "spiderX": "/"
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -941,7 +938,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "birch-ledger.justext.space",
-          "fingerprint": "edge",
+          "fingerprint": "firefox",
           "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
           "shortId": "2c6df23e"
         }
@@ -949,6 +946,45 @@
     },
     {
       "tag": "igareck-node-015",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "212.233.90.78",
+            "port": 443,
+            "users": [
+              {
+                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "birch-ledger.justext.space",
+          "fingerprint": "edge",
+          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
+          "shortId": "2c6df23e"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-016",
       "protocol": "vless",
       "settings": {
         "vnext": [
