@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — Happ Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "25 proxies",
+      "15 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "Happ",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-15 20:57 Moscow"
+    "source_datetime": "2026-11-15 23:10 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -439,34 +439,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "0yw3zvxfyy.hat.autos",
-            "port": 8888,
+            "address": "84.201.159.237",
+            "port": 443,
             "users": [
               {
-                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
-                "encryption": "none"
+                "id": "36af12e2-40fe-5f85-8b01-7de182dbcc9e",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "lx.sync.v1.Relay",
-          "multiMode": false
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
         },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "g-fr1.absolute.beer",
-          "fingerprint": "firefox",
-          "alpn": [
-            "h2"
-          ]
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "cdn.mislii.ru",
+          "fingerprint": "chrome",
+          "publicKey": "SldmtPjMF2e1VIHIV8xtKeJegHkYrVEiweFLrtpeNCs",
+          "shortId": "9d87ec0065d30fa6",
+          "spiderX": "/"
         }
       }
     },
@@ -500,7 +503,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "g-fr1.absolute.beer",
-          "fingerprint": "qq",
+          "fingerprint": "firefox",
           "alpn": [
             "h2"
           ]
@@ -513,44 +516,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "46.243.232.61",
-            "port": 8888,
-            "users": [
-              {
-                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "grpcSettings": {
-          "serviceName": "lx.sync.v1.Relay",
-          "multiMode": false
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "g-fr1.absolute.beer",
-          "fingerprint": "chrome",
-          "alpn": [
-            "h2"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-004",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "46.243.232.61",
+            "address": "0yw3zvxfyy.hat.autos",
             "port": 8888,
             "users": [
               {
@@ -582,93 +548,13 @@
       }
     },
     {
-      "tag": "igareck-node-005",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "84.201.159.237",
-            "port": 443,
-            "users": [
-              {
-                "id": "IMBAVPN_0324997b_6",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "cdn.mislii.ru",
-          "fingerprint": "chrome",
-          "publicKey": "SldmtPjMF2e1VIHIV8xtKeJegHkYrVEiweFLrtpeNCs",
-          "shortId": "9d87ec0065d30fa6",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-006",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "84.201.159.237",
-            "port": 443,
-            "users": [
-              {
-                "id": "IMBAVPN_0324997b_6",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "cdn.mislii.ru",
-          "fingerprint": "firefox",
-          "publicKey": "SldmtPjMF2e1VIHIV8xtKeJegHkYrVEiweFLrtpeNCs",
-          "shortId": "9d87ec0065d30fa6",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-007",
+      "tag": "igareck-node-004",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
             "address": "0yw3zvxfyy.hat.autos",
-            "port": 8887,
+            "port": 8888,
             "users": [
               {
                 "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
@@ -690,8 +576,113 @@
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "g-de1.absolute.beer",
+          "serverName": "g-fr1.absolute.beer",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-005",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "46.243.232.61",
+            "port": 8888,
+            "users": [
+              {
+                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "grpcSettings": {
+          "serviceName": "lx.sync.v1.Relay",
+          "multiMode": false
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "g-fr1.absolute.beer",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-006",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "46.243.232.61",
+            "port": 8888,
+            "users": [
+              {
+                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "grpcSettings": {
+          "serviceName": "lx.sync.v1.Relay",
+          "multiMode": false
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "g-fr1.absolute.beer",
           "fingerprint": "chrome",
+          "alpn": [
+            "h2"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-007",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "46.243.232.61",
+            "port": 8888,
+            "users": [
+              {
+                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "grpcSettings": {
+          "serviceName": "lx.sync.v1.Relay",
+          "multiMode": false
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "g-fr1.absolute.beer",
+          "fingerprint": "qq",
           "alpn": [
             "h2"
           ]
@@ -741,7 +732,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "46.243.232.61",
+            "address": "0yw3zvxfyy.hat.autos",
             "port": 8887,
             "users": [
               {
@@ -765,10 +756,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "g-de1.absolute.beer",
-          "fingerprint": "android",
-          "alpn": [
-            "h2"
-          ]
+          "fingerprint": "qq"
         }
       }
     },
@@ -802,10 +790,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "g-de1.absolute.beer",
-          "fingerprint": "qq",
-          "alpn": [
-            "h2"
-          ]
+          "fingerprint": "qq"
         }
       }
     },
@@ -816,7 +801,7 @@
         "vnext": [
           {
             "address": "0yw3zvxfyy.hat.autos",
-            "port": 8881,
+            "port": 8883,
             "users": [
               {
                 "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
@@ -838,7 +823,7 @@
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "g-pl1.absolute.beer",
+          "serverName": "g-uk1.absolute.beer",
           "fingerprint": "firefox",
           "alpn": [
             "h2"
@@ -853,7 +838,7 @@
         "vnext": [
           {
             "address": "0yw3zvxfyy.hat.autos",
-            "port": 8881,
+            "port": 8883,
             "users": [
               {
                 "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
@@ -875,7 +860,7 @@
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "g-pl1.absolute.beer",
+          "serverName": "g-uk1.absolute.beer",
           "fingerprint": "qq",
           "alpn": [
             "h2"
@@ -913,10 +898,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "g-uk1.absolute.beer",
-          "fingerprint": "firefox",
-          "alpn": [
-            "h2"
-          ]
+          "fingerprint": "qq"
         }
       }
     },
@@ -926,7 +908,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "0yw3zvxfyy.hat.autos",
+            "address": "46.243.232.61",
             "port": 8883,
             "users": [
               {
@@ -950,10 +932,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "g-uk1.absolute.beer",
-          "fingerprint": "qq",
-          "alpn": [
-            "h2"
-          ]
+          "fingerprint": "qq"
         }
       }
     },
@@ -964,117 +943,6 @@
         "vnext": [
           {
             "address": "46.243.232.61",
-            "port": 8881,
-            "users": [
-              {
-                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "grpcSettings": {
-          "serviceName": "lx.sync.v1.Relay",
-          "multiMode": false
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "g-pl1.absolute.beer",
-          "fingerprint": "firefox",
-          "alpn": [
-            "h2"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-016",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "46.243.232.61",
-            "port": 8881,
-            "users": [
-              {
-                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "grpcSettings": {
-          "serviceName": "lx.sync.v1.Relay",
-          "multiMode": false
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "g-pl1.absolute.beer",
-          "fingerprint": "qq",
-          "alpn": [
-            "h2"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-017",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "46.243.232.61",
-            "port": 8883,
-            "users": [
-              {
-                "id": "a31b6d17-1c4a-44e3-9402-ce78f1fb7eb5",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "grpcSettings": {
-          "serviceName": "lx.sync.v1.Relay",
-          "multiMode": false
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "g-uk1.absolute.beer",
-          "fingerprint": "android",
-          "alpn": [
-            "h2"
-          ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-018",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "46.243.232.61",
             "port": 8883,
             "users": [
               {
@@ -1102,282 +970,6 @@
           "alpn": [
             "h2"
           ]
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-019",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "109.120.183.40",
-            "port": 8443,
-            "users": [
-              {
-                "id": "6fb89451-b573-0bb8-b046-d45ab9a6db49",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "109.120.183.40",
-          "fingerprint": "chrome",
-          "publicKey": "vV3mxSgZ-8x3Gp373AXdMDM3FAdmLP0v5zIfI486SDI",
-          "shortId": "f8a8ee8381529673"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-020",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "212.233.90.78",
-            "port": 443,
-            "users": [
-              {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "chrome",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-021",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "212.233.90.78",
-            "port": 443,
-            "users": [
-              {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "firefox",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-022",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "212.233.90.78",
-            "port": 443,
-            "users": [
-              {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "ios",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-023",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "212.233.90.78",
-            "port": 443,
-            "users": [
-              {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "chrome",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-024",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "212.233.90.78",
-            "port": 443,
-            "users": [
-              {
-                "id": "9548ef84-b54d-41dc-b17c-9da21d52ba82",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "birch-ledger.justext.space",
-          "fingerprint": "random",
-          "publicKey": "FwPphm8xGAKY6u74WDRVrcVye3A7GdLDfJoNSDWFsFQ",
-          "shortId": "2c6df23e"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-025",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "109.120.183.40",
-            "port": 8443,
-            "users": [
-              {
-                "id": "6fb89451-b573-0bb8-b046-d45ab9a6db49",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "109.120.183.40",
-          "fingerprint": "firefox",
-          "publicKey": "vV3mxSgZ-8x3Gp373AXdMDM3FAdmLP0v5zIfI486SDI",
-          "shortId": "f8a8ee8381529673"
         }
       }
     },
