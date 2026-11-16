@@ -400,11 +400,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "92.255.58.59",
+            "address": "37.18.14.177",
             "port": 443,
             "users": [
               {
-                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "id": "2232d904-8e6a-4202-8240-6efd8aec02e9",
                 "encryption": "none"
               }
             ]
@@ -412,21 +412,26 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "wsSettings": {
+          "path": "/player/events/8be4cef5ec05/",
+          "headers": {
+            "Host": "l2hbelfbzv.flowersgood.top"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "edge",
-          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "344f83372596eea2"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "exl6vz64yc.deshevayashaurma.icu",
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
         }
       }
     },
@@ -436,11 +441,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "92.255.58.59",
+            "address": "37.18.14.177",
             "port": 443,
             "users": [
               {
-                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "id": "2232d904-8e6a-4202-8240-6efd8aec02e9",
                 "encryption": "none"
               }
             ]
@@ -448,22 +453,41 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "wsSettings": {
+          "path": "/player/events/8be4cef5ec05/",
+          "headers": {
+            "Host": "l2hbelfbzv.flowersgood.top"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "ios",
-          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "344f83372596eea2"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "exl6vz64yc.deshevayashaurma.icu"
         }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "1-3",
+          "length": "50-100",
+          "interval": "10-20",
+          "maxSplit": "10"
+        },
+        "noises": [
+          {
+            "type": "rand",
+            "packet": "50-150",
+            "delay": "10-50"
+          }
+        ]
       }
     },
     {
