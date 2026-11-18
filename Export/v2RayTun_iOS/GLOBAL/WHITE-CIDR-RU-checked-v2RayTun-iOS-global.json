@@ -57,7 +57,8 @@
           "full:localhost",
           "domain:local",
           "domain:lan",
-          "regexp:^[^.]+$"
+          "regexp:^[^.]+$",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -113,7 +114,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -133,7 +135,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -153,7 +156,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -173,7 +177,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -193,7 +198,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -213,7 +219,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -233,7 +240,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -253,7 +261,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -273,7 +282,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -293,7 +303,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -313,7 +324,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -333,7 +345,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:r0xnfzk9ud.newwl.pro"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -400,11 +413,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "92.255.58.59",
+            "address": "r0xnfzk9ud.newwl.pro",
             "port": 443,
             "users": [
               {
-                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "id": "7955bf18-35c4-412d-aabd-c0b36c793063",
                 "encryption": "none"
               }
             ]
@@ -412,21 +425,25 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "wsSettings": {
+          "path": "/service/telemetry/045d381f1166/",
+          "headers": {
+            "Host": "r0xnfzk9ud.newwl.pro"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "edge",
-          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "344f83372596eea2"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "r0xnfzk9ud.newwl.pro",
+          "fingerprint": "safari",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -436,11 +453,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "92.255.58.59",
+            "address": "r0xnfzk9ud.newwl.pro",
             "port": 443,
             "users": [
               {
-                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "id": "7955bf18-35c4-412d-aabd-c0b36c793063",
                 "encryption": "none"
               }
             ]
@@ -448,21 +465,24 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "wsSettings": {
+          "path": "/service/telemetry/045d381f1166/",
+          "headers": {
+            "Host": "r0xnfzk9ud.newwl.pro"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "ios",
-          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "344f83372596eea2"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "r0xnfzk9ud.newwl.pro",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -472,11 +492,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "92.255.58.59",
+            "address": "r0xnfzk9ud.newwl.pro",
             "port": 443,
             "users": [
               {
-                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "id": "7955bf18-35c4-412d-aabd-c0b36c793063",
                 "encryption": "none"
               }
             ]
@@ -484,21 +504,22 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "wsSettings": {
+          "path": "/service/telemetry/045d381f1166/",
+          "headers": {
+            "Host": "r0xnfzk9ud.newwl.pro"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "edge",
-          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "344f83372596eea2"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "r0xnfzk9ud.newwl.pro",
+          "fingerprint": "firefox"
         }
       }
     },
@@ -508,11 +529,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "92.255.58.59",
+            "address": "r0xnfzk9ud.newwl.pro",
             "port": 443,
             "users": [
               {
-                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "id": "7955bf18-35c4-412d-aabd-c0b36c793063",
                 "encryption": "none"
               }
             ]
@@ -520,21 +541,20 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "grpcSettings": {
-          "serviceName": "grpc",
-          "multiMode": false
+        "wsSettings": {
+          "path": "/service/telemetry/045d381f1166/",
+          "headers": {}
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "ios",
-          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "344f83372596eea2"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "r0xnfzk9ud.newwl.pro",
+          "fingerprint": "firefox"
         }
       }
     },
@@ -568,7 +588,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "safari",
+          "fingerprint": "edge",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "344f83372596eea2"
         }
@@ -604,7 +624,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "chrome",
+          "fingerprint": "ios",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "344f83372596eea2"
         }
@@ -640,7 +660,6 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "random",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "344f83372596eea2"
         }
@@ -676,7 +695,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "safari",
+          "fingerprint": "edge",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "344f83372596eea2"
         }
@@ -712,7 +731,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "api-gw-cfg.galioncc.com",
-          "fingerprint": "firefox",
+          "fingerprint": "ios",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "344f83372596eea2"
         }
@@ -724,7 +743,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "94.139.250.226",
+            "address": "92.255.58.59",
             "port": 443,
             "users": [
               {
@@ -736,23 +755,21 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "grpc",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "grpcSettings": {
+          "serviceName": "grpc",
+          "multiMode": false
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "net-api-ctl.galioncc.com",
-          "fingerprint": "firefox",
+          "serverName": "api-gw-cfg.galioncc.com",
+          "fingerprint": "safari",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "6d2f8a41c9e705b3"
+          "shortId": "344f83372596eea2"
         }
       }
     },
@@ -762,7 +779,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "94.139.250.226",
+            "address": "92.255.58.59",
             "port": 443,
             "users": [
               {
@@ -774,23 +791,21 @@
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "grpc",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "grpcSettings": {
+          "serviceName": "grpc",
+          "multiMode": false
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "net-api-ctl.galioncc.com",
+          "serverName": "api-gw-cfg.galioncc.com",
           "fingerprint": "chrome",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
-          "shortId": "6d2f8a41c9e705b3"
+          "shortId": "344f83372596eea2"
         }
       }
     },
@@ -864,7 +879,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "net-api-ctl.galioncc.com",
-          "fingerprint": "edge",
+          "fingerprint": "chrome",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "6d2f8a41c9e705b3"
         }
@@ -902,7 +917,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "net-api-ctl.galioncc.com",
-          "fingerprint": "safari",
+          "fingerprint": "firefox",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "6d2f8a41c9e705b3"
         }
@@ -940,7 +955,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "net-api-ctl.galioncc.com",
-          "fingerprint": "ios",
+          "fingerprint": "edge",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "6d2f8a41c9e705b3"
         }
@@ -978,7 +993,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "net-api-ctl.galioncc.com",
-          "fingerprint": "ios",
+          "fingerprint": "safari",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "6d2f8a41c9e705b3"
         }
@@ -1016,7 +1031,7 @@
         "security": "reality",
         "realitySettings": {
           "serverName": "net-api-ctl.galioncc.com",
-          "fingerprint": "safari",
+          "fingerprint": "edge",
           "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
           "shortId": "6d2f8a41c9e705b3"
         }
@@ -1024,6 +1039,82 @@
     },
     {
       "tag": "igareck-node-018",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "94.139.250.226",
+            "port": 443,
+            "users": [
+              {
+                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "net-api-ctl.galioncc.com",
+          "fingerprint": "ios",
+          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "shortId": "6d2f8a41c9e705b3"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-019",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "94.139.250.226",
+            "port": 443,
+            "users": [
+              {
+                "id": "a30903dc-1bf0-0001-8b1b-603a3a56211c",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "net-api-ctl.galioncc.com",
+          "fingerprint": "safari",
+          "publicKey": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "shortId": "6d2f8a41c9e705b3"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-020",
       "protocol": "vless",
       "settings": {
         "vnext": [
