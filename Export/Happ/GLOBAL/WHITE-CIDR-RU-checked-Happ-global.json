@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — Happ Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "6 proxies",
+      "7 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "Happ",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-21 14:59 Moscow"
+    "source_datetime": "2026-11-21 16:29 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -439,7 +439,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "46.243.233.194",
+            "address": "pssdwynorv.newwl.pro",
             "port": 443,
             "users": [
               {
@@ -466,7 +466,10 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "pssdwynorv.newwl.pro",
-          "fingerprint": "firefox"
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -503,7 +506,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "pssdwynorv.newwl.pro",
-          "fingerprint": "firefox",
+          "fingerprint": "qq",
           "alpn": [
             "http/1.1"
           ]
@@ -516,11 +519,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.86.145.173",
+            "address": "pssdwynorv.newwl.pro",
             "port": 443,
             "users": [
               {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "id": "7955bf18-35c4-412d-aabd-c0b36c793063",
                 "encryption": "none"
               }
             ]
@@ -528,19 +531,25 @@
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "wholebeam.com"
+        "wsSettings": {
+          "path": "/service/telemetry/0294da469190/",
+          "headers": {
+            "Host": "pssdwynorv.newwl.pro"
+          }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "wholebeam.com",
-          "fingerprint": "firefox"
+          "serverName": "pssdwynorv.newwl.pro",
+          "fingerprint": "safari",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -568,13 +577,12 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "wholebeam.com",
-          "mode": "auto"
+          "path": "/api/v1/upload"
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "wholebeam.com"
+          "serverName": "wholebeam.com",
+          "fingerprint": "chrome"
         }
       }
     },
@@ -607,7 +615,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
@@ -641,6 +649,39 @@
         "tlsSettings": {
           "serverName": "wholebeam.com",
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-007",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.86.145.173",
+            "port": 443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "wholebeam.com",
+          "fingerprint": "ios"
         }
       }
     },
