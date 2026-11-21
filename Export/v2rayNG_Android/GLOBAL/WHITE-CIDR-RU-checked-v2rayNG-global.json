@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — v2rayNG Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "4 proxies",
+      "5 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "v2rayNG",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-21 11:48 Moscow"
+    "source_datetime": "2026-11-21 13:25 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -433,6 +433,43 @@
       "settings": {
         "vnext": [
           {
+            "address": "46.243.233.194",
+            "port": 443,
+            "users": [
+              {
+                "id": "7955bf18-35c4-412d-aabd-c0b36c793063",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/service/telemetry/0294da469190/",
+          "headers": {
+            "Host": "pssdwynorv.newwl.pro"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "pssdwynorv.newwl.pro",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-002",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
             "address": "185.86.145.173",
             "port": 443,
             "users": [
@@ -462,39 +499,6 @@
       }
     },
     {
-      "tag": "igareck-node-002",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.173",
-            "port": 443,
-            "users": [
-              {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/api/v1/upload"
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "wholebeam.com",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "igareck-node-003",
       "protocol": "vless",
       "settings": {
@@ -518,12 +522,13 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/api/v1/upload"
+          "path": "/api/v1/upload",
+          "host": "wholebeam.com",
+          "mode": "auto"
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "wholebeam.com",
-          "fingerprint": "firefox"
+          "serverName": "wholebeam.com"
         }
       }
     },
@@ -556,8 +561,60 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "igareck-node-005",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.86.145.173",
+            "port": 443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "wholebeam.com",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "1-3",
+          "length": "50-100",
+          "interval": "10-20",
+          "maxSplit": "10"
+        },
+        "noises": [
+          {
+            "type": "rand",
+            "packet": "50-150",
+            "delay": "10-50"
+          }
+        ]
       }
     },
     {
