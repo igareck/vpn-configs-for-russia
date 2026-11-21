@@ -2,8 +2,8 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-CIDR-RU-checked.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
-# Количество/Quantity: 16
-# Date/Time: 2026-11-21 / 13:25 (Moscow)
+# Количество/Quantity: 18
+# Date/Time: 2026-11-21 / 14:59 (Moscow)
 #
 # Режим / Mode:
 # - Автоматический Выбор лучшего прокси / Igareck Auto Select;
@@ -165,23 +165,22 @@ proxies:
     path: /service/telemetry/0294da469190/
     headers:
       Host: pssdwynorv.newwl.pro
-- name: Igareck Node 002 | 🇷🇺 Russia | 🌐 [*CIDR] VK
+- name: Igareck Node 002 | 🇮🇷 Iran [*CIDR] CDN
   type: vless
-  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
+  server: "\x70\x73\x73\x64\x77\x79\x6e\x6f\x72\x76\x2e\x6e\x65\x77\x77\x6c\x2e\x70\x72\x6f"
   port: 443
-  uuid: "\x33\x37\x61\x66\x30\x31\x38\x31\x2d\x35\x35\x39\x38\x2d\x34\x61\x61\x64\x2d\x61\x30\x34\x30\x2d\x64\x39\x32\x36\x62\x63\x62\x36\x35\x37\x35\x37"
+  uuid: "\x37\x39\x35\x35\x62\x66\x31\x38\x2d\x33\x35\x63\x34\x2d\x34\x31\x32\x64\x2d\x61\x61\x62\x64\x2d\x63\x30\x62\x33\x36\x63\x37\x39\x33\x30\x36\x33"
   udp: true
   tls: true
-  servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
+  servername: "\x70\x73\x73\x64\x77\x79\x6e\x6f\x72\x76\x2e\x6e\x65\x77\x77\x6c\x2e\x70\x72\x6f"
   alpn:
-  - h2
   - http/1.1
   client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /api/v1/upload
-    host: wholebeam.com
-    mode: auto
+  network: ws
+  ws-opts:
+    path: /service/telemetry/0294da469190/
+    headers:
+      Host: pssdwynorv.newwl.pro
 - name: Igareck Node 003 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
@@ -193,7 +192,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -210,7 +209,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -227,7 +226,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -244,7 +243,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-  client-fingerprint: random
+  client-fingerprint: ios
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -258,7 +257,10 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
-  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: random
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -272,11 +274,15 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
-  client-fingerprint: edge
+  alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: safari
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
     host: wholebeam.com
+    mode: auto
 - name: Igareck Node 009 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
@@ -285,10 +291,12 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
-  client-fingerprint: edge
+  client-fingerprint: chrome
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
+    host: wholebeam.com
+    mode: auto
 - name: Igareck Node 010 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
@@ -297,10 +305,11 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
+    host: wholebeam.com
 - name: Igareck Node 011 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
@@ -309,11 +318,10 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
-  client-fingerprint: qq
+  client-fingerprint: edge
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
-    host: wholebeam.com
 - name: Igareck Node 012 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
@@ -326,8 +334,6 @@ proxies:
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
-    host: wholebeam.com
-    mode: auto
 - name: Igareck Node 013 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
@@ -336,7 +342,7 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -349,6 +355,7 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
+  client-fingerprint: ios
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
@@ -362,11 +369,37 @@ proxies:
   udp: true
   tls: true
   servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/upload
+    host: wholebeam.com
+- name: Igareck Node 016 | 🇷🇺 Russia | 🌐 [*CIDR] VK
+  type: vless
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
+  port: 443
+  uuid: "\x33\x37\x61\x66\x30\x31\x38\x31\x2d\x35\x35\x39\x38\x2d\x34\x61\x61\x64\x2d\x61\x30\x34\x30\x2d\x64\x39\x32\x36\x62\x63\x62\x36\x35\x37\x35\x37"
+  udp: true
+  tls: true
+  servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
+  network: xhttp
+  xhttp-opts:
+    path: /api/v1/upload
+    host: wholebeam.com
+    mode: auto
+- name: Igareck Node 017 | 🇷🇺 Russia | 🌐 [*CIDR] VK
+  type: vless
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
+  port: 443
+  uuid: "\x33\x37\x61\x66\x30\x31\x38\x31\x2d\x35\x35\x39\x38\x2d\x34\x61\x61\x64\x2d\x61\x30\x34\x30\x2d\x64\x39\x32\x36\x62\x63\x62\x36\x35\x37\x35\x37"
+  udp: true
+  tls: true
+  servername: "\x77\x68\x6f\x6c\x65\x62\x65\x61\x6d\x2e\x63\x6f\x6d"
   client-fingerprint: chrome
   network: xhttp
   xhttp-opts:
     path: /api/v1/upload
-- name: Igareck Node 016 | 🇷🇺 Russia | 🌐 [*CIDR] VK
+- name: Igareck Node 018 | 🇷🇺 Russia | 🌐 [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x37\x33"
   port: 443
