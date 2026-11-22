@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — Happ Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "9 proxies",
+      "7 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "Happ",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-23 00:33 Moscow"
+    "source_datetime": "2026-11-23 02:09 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -426,36 +426,31 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.86.147.77",
-            "port": 10020,
+            "address": "185.86.145.173",
+            "port": 443,
             "users": [
               {
-                "id": "b80e9046-5bb9-4040-bd96-b7e2f78b5c5b",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "api/v1/upload",
+          "host": "wholebeam.com"
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "2gis.ru",
-          "fingerprint": "chrome",
-          "publicKey": "SraiH4q6X-jSm6Ru2FHcGjhoClg6gI0b9CWjdyu0rxA",
-          "shortId": "c68d384ac0fb220a"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "wholebeam.com",
+          "fingerprint": "ios"
         }
       }
     },
@@ -489,7 +484,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
@@ -517,13 +512,12 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "api/v1/upload",
-          "host": "wholebeam.com"
+          "path": "/api/v1/upload"
         },
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "ios"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -557,7 +551,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -585,13 +579,12 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "api/v1/upload",
-          "host": "wholebeam.com"
+          "path": "/api/v1/upload"
         },
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     },
@@ -619,13 +612,12 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "wholebeam.com",
-          "mode": "auto"
+          "path": "/api/v1/upload"
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "wholebeam.com"
+          "serverName": "wholebeam.com",
+          "fingerprint": "firefox"
         }
       }
     },
@@ -653,101 +645,13 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "185.86.145.173"
+          "path": "/api/v1/upload"
         },
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
           "fingerprint": "ios"
         }
-      }
-    },
-    {
-      "tag": "igareck-node-008",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.173",
-            "port": 443,
-            "users": [
-              {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/api/v1/upload",
-          "host": "wholebeam.com",
-          "mode": "auto"
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "wholebeam.com",
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-009",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "185.86.145.173",
-            "port": 443,
-            "users": [
-              {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "xhttpSettings": {
-          "path": "/api/v1/upload"
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "wholebeam.com",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "fragment",
-      "protocol": "freedom",
-      "settings": {
-        "fragment": {
-          "packets": "1-3",
-          "length": "50-100",
-          "interval": "10-20",
-          "maxSplit": "10"
-        },
-        "noises": [
-          {
-            "type": "rand",
-            "packet": "50-150",
-            "delay": "10-50"
-          }
-        ]
       }
     },
     {
