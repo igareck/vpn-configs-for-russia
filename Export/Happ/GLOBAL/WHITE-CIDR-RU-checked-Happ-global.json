@@ -8,7 +8,7 @@
     ],
     "client": "Happ",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-23 10:19 Moscow"
+    "source_datetime": "2026-11-23 11:56 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -453,7 +453,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "for.quick-frost.ru",
-          "fingerprint": "android",
+          "fingerprint": "qq",
           "alpn": [
             "http/1.1"
           ]
@@ -493,7 +493,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "for.quick-frost.ru",
-          "fingerprint": "edge",
+          "fingerprint": "android",
           "alpn": [
             "http/1.1"
           ]
@@ -506,11 +506,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "185.86.145.173",
+            "address": "185.86.145.183",
             "port": 443,
             "users": [
               {
-                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "id": "0b85ab23-c394-40a3-8a46-71ae8f74cf7c",
                 "encryption": "none"
               }
             ]
@@ -518,19 +518,25 @@
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "xhttpSettings": {
-          "path": "api/v1/upload",
-          "host": "wholebeam.com"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "for.quick-frost.ru"
+          }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "wholebeam.com",
-          "fingerprint": "chrome"
+          "serverName": "for.quick-frost.ru",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -558,13 +564,13 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "api/v1/upload",
-          "host": "wholebeam.com"
+          "path": "/api/v1/upload",
+          "host": "185.86.145.173"
         },
         "security": "tls",
         "tlsSettings": {
           "serverName": "wholebeam.com",
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -592,8 +598,8 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "api/v1/upload",
-          "host": "wholebeam.com"
+          "path": "/api/v1/upload",
+          "host": "185.86.145.173"
         },
         "security": "tls",
         "tlsSettings": {
@@ -626,8 +632,8 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "api/v1/upload",
-          "host": "wholebeam.com"
+          "path": "/api/v1/upload",
+          "host": "185.86.145.173"
         },
         "security": "tls",
         "tlsSettings": {
