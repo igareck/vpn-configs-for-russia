@@ -8,7 +8,7 @@
     ],
     "client": "Happ",
     "source": "BLACK_SS+All_RUS.txt",
-    "source_datetime": "2026-11-24 21:08 Moscow"
+    "source_datetime": "2026-11-24 22:59 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -334,28 +334,38 @@
   "outbounds": [
     {
       "tag": "igareck-node-001",
-      "protocol": "hysteria",
+      "protocol": "vmess",
       "settings": {
-        "version": 2,
-        "address": "ee.chick-chirik.com",
-        "port": 443
+        "vnext": [
+          {
+            "address": "104.17.136.198",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
       },
       "streamSettings": {
-        "network": "hysteria",
-        "security": "tls",
-        "hysteriaSettings": {
-          "version": 2,
-          "auth": "7cbd9bf9-a3b1-4257-8406-df6109cd882f"
-        },
-        "tlsSettings": {
-          "serverName": "nl.chick-chirik.com",
-          "alpn": [
-            "h3"
-          ]
-        },
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org"
         }
       }
     },
@@ -365,326 +375,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.133.135.238",
-            "port": 10086,
-            "users": [
-              {
-                "id": "b831381d-6324-4d53-ad4f-8cda48b30811",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-003",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.17.136.198",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "vmess.lbw666.dpdns.org"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-004",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.17.136.198",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "vmess.lbw666.dpdns.org"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-005",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "162.159.135.234",
-            "port": 2083,
-            "users": [
-              {
-                "id": "ac251237-576f-40c8-a543-554960c958b1",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/or3",
-          "headers": {
-            "Host": "or3.sfacg.uk"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "cdn.sfacg.uk"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-006",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cf.090227.xyz",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws?ed=2048",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {}
-      }
-    },
-    {
-      "tag": "igareck-node-007",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cf.090227.xyz",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws?ed=2048",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {}
-      }
-    },
-    {
-      "tag": "igareck-node-008",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.21.7.133",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws?ed=2048",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {}
-      }
-    },
-    {
-      "tag": "igareck-node-009",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "172.64.229.21",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws",
-          "headers": {}
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "vmess.lbw666.dpdns.org"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-010",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "172.66.0.1",
-            "port": 443,
-            "users": [
-              {
-                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/ws",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "vmess.lbw666.dpdns.org"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-011",
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "104.17.136.198",
+            "address": "104.27.0.1",
             "port": 443,
             "users": [
               {
@@ -720,12 +411,86 @@
       }
     },
     {
-      "tag": "igareck-node-012",
+      "tag": "igareck-node-003",
       "protocol": "vmess",
       "settings": {
         "vnext": [
           {
-            "address": "172.66.0.1",
+            "address": "or3.sfacg.uk",
+            "port": 2083,
+            "users": [
+              {
+                "id": "ac251237-576f-40c8-a543-554960c958b1",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/or3",
+          "headers": {
+            "Host": "or3.sfacg.uk"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.sfacg.uk"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-004",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "162.159.130.234",
+            "port": 2083,
+            "users": [
+              {
+                "id": "ac251237-576f-40c8-a543-554960c958b1",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/or3",
+          "headers": {
+            "Host": "or3.sfacg.uk"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.sfacg.uk"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-005",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.27.0.1",
             "port": 443,
             "users": [
               {
@@ -746,7 +511,274 @@
         },
         "wsSettings": {
           "path": "/ws",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org",
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-006",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.17.136.198",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws?ed=2048",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-007",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.64.229.21",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws?ed=2048",
           "headers": {}
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org",
+          "alpn": [
+            "null"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-008",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.64.229.21",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws?ed=2048",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org",
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-009",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "cf.090227.xyz",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws?ed=2048",
+          "headers": {}
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org",
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-010",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "cf.090227.xyz",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws?ed=2048",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {}
+      }
+    },
+    {
+      "tag": "igareck-node-011",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.27.0.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-012",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.114.99.137",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
         },
         "security": "tls",
         "tlsSettings": {
@@ -780,8 +812,10 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/ws",
-          "headers": {}
+          "path": "/ws?ed=2048",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
         },
         "security": "tls",
         "tlsSettings": {
@@ -795,7 +829,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.17.136.198",
+            "address": "172.66.0.1",
             "port": 443,
             "users": [
               {
@@ -830,7 +864,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "104.17.136.198",
+            "address": "188.114.99.137",
             "port": 443,
             "users": [
               {
@@ -851,12 +885,12 @@
         },
         "wsSettings": {
           "path": "/ws",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
+          "headers": {}
         },
         "security": "tls",
-        "tlsSettings": {}
+        "tlsSettings": {
+          "serverName": "vmess.lbw666.dpdns.org"
+        }
       }
     },
     {
@@ -865,7 +899,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "cf.877771.xyz",
+            "address": "cf.0sm.com",
             "port": 443,
             "users": [
               {
@@ -886,9 +920,7 @@
         },
         "wsSettings": {
           "path": "/ws",
-          "headers": {
-            "Host": "vmess.lbw666.dpdns.org"
-          }
+          "headers": {}
         },
         "security": "tls",
         "tlsSettings": {
@@ -928,9 +960,7 @@
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "vmess.lbw666.dpdns.org"
-        }
+        "tlsSettings": {}
       }
     },
     {
@@ -939,7 +969,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "cf.0sm.com",
+            "address": "104.17.136.198",
             "port": 443,
             "users": [
               {
@@ -974,7 +1004,42 @@
       "settings": {
         "vnext": [
           {
-            "address": "cf.0sm.com",
+            "address": "172.66.0.1",
+            "port": 443,
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/ws",
+          "headers": {
+            "Host": "vmess.lbw666.dpdns.org"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {}
+      }
+    },
+    {
+      "tag": "igareck-node-020",
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.66.0.1",
             "port": 443,
             "users": [
               {
@@ -1006,46 +1071,20 @@
       }
     },
     {
-      "tag": "igareck-node-020",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "104.25.224.90",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
       "tag": "igareck-node-021",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.25.224.90",
+            "address": "172.66.203.67",
             "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1057,27 +1096,30 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/ws",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "vmess.lbw666.dpdns.org"
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "firefox"
-        }
+        "tlsSettings": {}
       }
     },
     {
       "tag": "igareck-node-022",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.16.114.7",
+            "address": "cf.0sm.com",
             "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1089,27 +1131,30 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/ws",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "vmess.lbw666.dpdns.org"
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "firefox"
-        }
+        "tlsSettings": {}
       }
     },
     {
       "tag": "igareck-node-023",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.16.114.7",
+            "address": "cf.090227.xyz",
             "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1121,27 +1166,32 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/ws",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "vmess.lbw666.dpdns.org"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "safari"
+          "serverName": "vmess.lbw666.dpdns.org"
         }
       }
     },
     {
       "tag": "igareck-node-024",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.16.242.176",
+            "address": "cf.090227.xyz",
             "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "users": [
+              {
+                "id": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1153,27 +1203,30 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/ws",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "vmess.lbw666.dpdns.org"
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "android"
-        }
+        "tlsSettings": {}
       }
     },
     {
       "tag": "igareck-node-025",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.16.242.176",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "address": "104.17.77.77",
+            "port": 8443,
+            "users": [
+              {
+                "id": "60441548-b68e-43b2-8191-e3b884be4b3c",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1185,27 +1238,30 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/lMnsZUN4/",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "v2ray1.dozapp.xyz"
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "ios"
-        }
+        "tlsSettings": {}
       }
     },
     {
       "tag": "igareck-node-026",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.16.26.10",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "address": "172.64.155.209",
+            "port": 8443,
+            "users": [
+              {
+                "id": "60441548-b68e-43b2-8191-e3b884be4b3c",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1217,27 +1273,30 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/lMnsZUN4/",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "v2ray1.dozapp.xyz"
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "chrome"
-        }
+        "tlsSettings": {}
       }
     },
     {
       "tag": "igareck-node-027",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.16.26.10",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "address": "162.159.130.234",
+            "port": 2083,
+            "users": [
+              {
+                "id": "ac251237-576f-40c8-a543-554960c958b1",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1249,27 +1308,32 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/or3",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "or3.sfacg.uk"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "qq"
+          "serverName": "or3.sfacg.uk"
         }
       }
     },
     {
       "tag": "igareck-node-028",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.19.70.201",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "address": "cdn.sfacg.uk",
+            "port": 2083,
+            "users": [
+              {
+                "id": "ac251237-576f-40c8-a543-554960c958b1",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1281,27 +1345,32 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/or3",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "or3.sfacg.uk"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "edge"
+          "serverName": "cdn.sfacg.uk"
         }
       }
     },
     {
       "tag": "igareck-node-029",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.19.70.201",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "address": "or3.sfacg.uk",
+            "port": 2083,
+            "users": [
+              {
+                "id": "ac251237-576f-40c8-a543-554960c958b1",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1313,27 +1382,30 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/or3",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "or3.sfacg.uk"
           }
         },
         "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "safari"
-        }
+        "tlsSettings": {}
       }
     },
     {
       "tag": "igareck-node-030",
-      "protocol": "trojan",
+      "protocol": "vmess",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "104.24.137.130",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
+            "address": "cdn.sfacg.uk",
+            "port": 2083,
+            "users": [
+              {
+                "id": "ac251237-576f-40c8-a543-554960c958b1",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
           }
         ]
       },
@@ -1345,15 +1417,14 @@
           "dialerProxy": "fragment"
         },
         "wsSettings": {
-          "path": "/trojan-ws",
+          "path": "/or3",
           "headers": {
-            "Host": "mhpanel.kigaping.com"
+            "Host": "or3.sfacg.uk"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "android"
+          "serverName": "cdn.sfacg.uk"
         }
       }
     },
@@ -1363,7 +1434,7 @@
       "settings": {
         "servers": [
           {
-            "address": "104.24.137.130",
+            "address": "104.16.106.252",
             "port": 443,
             "password": "1vkFHbQX_gN1U8V8jVc"
           }
@@ -1395,7 +1466,7 @@
       "settings": {
         "servers": [
           {
-            "address": "104.25.211.29",
+            "address": "104.16.106.252",
             "port": 443,
             "password": "1vkFHbQX_gN1U8V8jVc"
           }
@@ -1417,7 +1488,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
@@ -1427,231 +1498,7 @@
       "settings": {
         "servers": [
           {
-            "address": "104.25.211.29",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-034",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "104.25.39.241",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-035",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "104.25.39.241",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-036",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "141.11.202.143",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-037",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "141.11.202.143",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-038",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "159.246.55.228",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-039",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "159.246.55.228",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-040",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "162.159.144.209",
+            "address": "104.16.106.252",
             "port": 443,
             "password": "1vkFHbQX_gN1U8V8jVc"
           }
@@ -1678,12 +1525,12 @@
       }
     },
     {
-      "tag": "igareck-node-041",
+      "tag": "igareck-node-034",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "162.159.144.209",
+            "address": "104.19.70.201",
             "port": 443,
             "password": "1vkFHbQX_gN1U8V8jVc"
           }
@@ -1705,17 +1552,81 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "igareck-node-042",
+      "tag": "igareck-node-035",
       "protocol": "trojan",
       "settings": {
         "servers": [
           {
-            "address": "172.64.150.28",
+            "address": "104.19.70.201",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-036",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.19.70.201",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-037",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.242.176",
             "port": 443,
             "password": "1vkFHbQX_gN1U8V8jVc"
           }
@@ -1738,6 +1649,166 @@
         "tlsSettings": {
           "serverName": "mhpanel.kigaping.com",
           "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-038",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.242.176",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-039",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.242.176",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-040",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "159.246.55.228",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-041",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "159.246.55.228",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-042",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "159.246.55.228",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "ios"
         }
       }
     },
@@ -1769,7 +1840,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       }
     },
@@ -1779,7 +1850,39 @@
       "settings": {
         "servers": [
           {
-            "address": "172.66.193.96",
+            "address": "172.64.150.28",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-045",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "172.64.150.28",
             "port": 443,
             "password": "1vkFHbQX_gN1U8V8jVc"
           }
@@ -1802,38 +1905,6 @@
         "tlsSettings": {
           "serverName": "mhpanel.kigaping.com",
           "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-045",
-      "protocol": "trojan",
-      "settings": {
-        "servers": [
-          {
-            "address": "172.66.193.96",
-            "port": 443,
-            "password": "1vkFHbQX_gN1U8V8jVc"
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "wsSettings": {
-          "path": "/trojan-ws",
-          "headers": {
-            "Host": "mhpanel.kigaping.com"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "safari"
         }
       }
     },
@@ -1897,7 +1968,7 @@
         "security": "tls",
         "tlsSettings": {
           "serverName": "mhpanel.kigaping.com",
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       }
     },
@@ -1907,28 +1978,29 @@
       "settings": {
         "servers": [
           {
-            "address": "win2loxfde0303.gggrelay.org",
-            "port": 34745,
-            "password": "57beeeb0-03fc-4fc9-94da-7604488a7134"
+            "address": "172.66.3.191",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "nu3rb.supertoolify.com",
-          "fingerprint": "chrome"
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "safari"
         }
       }
     },
@@ -1938,28 +2010,29 @@
       "settings": {
         "servers": [
           {
-            "address": "win2loxfde0303.gggrelay.org",
-            "port": 34745,
-            "password": "57beeeb0-03fc-4fc9-94da-7604488a7134"
+            "address": "91.209.253.54",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "nu3rb.supertoolify.com",
-          "fingerprint": "qq"
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "chrome"
         }
       }
     },
@@ -1969,31 +2042,29 @@
       "settings": {
         "servers": [
           {
-            "address": "n1.config7x.new.tg",
-            "port": 8443,
-            "password": "Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X"
+            "address": "91.209.253.54",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ookla.com",
-          "fingerprint": "chrome",
-          "publicKey": "H_Or29gWCYZl8DddjNM6oJYeeAhICfo1mBcdvGW-TTw",
-          "shortId": "fa4e60",
-          "spiderX": "/b62169d768438f0"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "qq"
         }
       }
     },
@@ -2003,31 +2074,29 @@
       "settings": {
         "servers": [
           {
-            "address": "n1.config7x.new.tg",
-            "port": 8443,
-            "password": "Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X"
+            "address": "91.209.253.54",
+            "port": 443,
+            "password": "1vkFHbQX_gN1U8V8jVc"
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/trojan-ws",
+          "headers": {
+            "Host": "mhpanel.kigaping.com"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ookla.com",
-          "fingerprint": "firefox",
-          "publicKey": "H_Or29gWCYZl8DddjNM6oJYeeAhICfo1mBcdvGW-TTw",
-          "shortId": "fa4e60",
-          "spiderX": "/b62169d768438f0"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mhpanel.kigaping.com",
+          "fingerprint": "safari"
         }
       }
     },
