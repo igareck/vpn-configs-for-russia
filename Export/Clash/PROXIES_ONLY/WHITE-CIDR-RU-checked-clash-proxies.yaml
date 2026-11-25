@@ -2,32 +2,90 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-CIDR-RU-checked.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
-# Количество/Quantity: 2
-# Date/Time: 2026-11-25 / 15:50 (Moscow)
+# Количество/Quantity: 5
+# Date/Time: 2026-11-25 / 23:59 (Moscow)
 #
 # Не содержит никаких настроек, только список прокси / No settings, just proxies list;
 # ============================================================
 
 proxies:
-- name: Igareck Node 001 | 🇪🇸 Spain [*CIDR] VK
-  type: trojan
-  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x37\x2e\x31\x37\x31"
-  port: 2223
-  password: zqUo21QF_53vpwrzmZ_xZxFkTF2-aQF9
+- name: Igareck Node 001 | 🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] VK
+  type: vless
+  server: "\x77\x73\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  port: 1443
+  uuid: "\x39\x64\x66\x39\x65\x65\x31\x61\x2d\x30\x36\x37\x31\x2d\x34\x63\x36\x63\x2d\x39\x33\x63\x37\x2d\x36\x35\x35\x39\x38\x66\x62\x39\x34\x36\x66\x37"
   udp: true
-  sni: vkc9.secured-by-tenzo.sbs
+  tls: true
+  servername: "\x63\x64\x6e\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /api/v1/feed/b597b53d57
+    headers:
+      Host: cdn.quantum.vodka
+- name: Igareck Node 002 | 🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] VK
+  type: vless
+  server: "\x77\x73\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  port: 1443
+  uuid: "\x39\x64\x66\x39\x65\x65\x31\x61\x2d\x30\x36\x37\x31\x2d\x34\x63\x36\x63\x2d\x39\x33\x63\x37\x2d\x36\x35\x35\x39\x38\x66\x62\x39\x34\x36\x66\x37"
+  udp: true
+  tls: true
+  servername: "\x63\x64\x6e\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
   alpn:
   - http/1.1
   client-fingerprint: edge
-  network: tcp
-- name: Igareck Node 002 | 🇪🇸 Spain [*CIDR] VK
-  type: trojan
-  server: "\x67\x77\x31\x2e\x73\x65\x63\x75\x72\x65\x64\x2d\x62\x79\x2d\x74\x65\x6e\x7a\x6f\x2e\x73\x62\x73"
-  port: 2223
-  password: zqUo21QF_53vpwrzmZ_xZxFkTF2-aQF9
+  network: ws
+  ws-opts:
+    path: /api/v1/feed/b597b53d57
+    headers:
+      Host: cdn.quantum.vodka
+- name: Igareck Node 003 | 🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] VK
+  type: vless
+  server: "\x77\x73\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  port: 1443
+  uuid: "\x39\x64\x66\x39\x65\x65\x31\x61\x2d\x30\x36\x37\x31\x2d\x34\x63\x36\x63\x2d\x39\x33\x63\x37\x2d\x36\x35\x35\x39\x38\x66\x62\x39\x34\x36\x66\x37"
   udp: true
-  sni: vkc9.secured-by-tenzo.sbs
+  tls: true
+  servername: "\x63\x64\x6e\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
   alpn:
   - http/1.1
-  client-fingerprint: edge
-  network: tcp
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api/v1/feed/b597b53d57
+    headers:
+      Host: cdn.quantum.vodka
+- name: Igareck Node 004 | 🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] VK
+  type: vless
+  server: "\x77\x73\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  port: 1443
+  uuid: "\x39\x64\x66\x39\x65\x65\x31\x61\x2d\x30\x36\x37\x31\x2d\x34\x63\x36\x63\x2d\x39\x33\x63\x37\x2d\x36\x35\x35\x39\x38\x66\x62\x39\x34\x36\x66\x37"
+  udp: true
+  tls: true
+  servername: "\x63\x64\x6e\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  alpn:
+  - http/1.1
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /api/v1/feed/b597b53d57
+    headers:
+      Host: cdn.quantum.vodka
+- name: Igareck Node 005 | 🌐 Anycast-IP | 🇭🇳 🇳🇱 | [*CIDR] VK
+  type: vless
+  server: "\x77\x73\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  port: 1443
+  uuid: "\x39\x64\x66\x39\x65\x65\x31\x61\x2d\x30\x36\x37\x31\x2d\x34\x63\x36\x63\x2d\x39\x33\x63\x37\x2d\x36\x35\x35\x39\x38\x66\x62\x39\x34\x36\x66\x37"
+  udp: true
+  tls: true
+  servername: "\x63\x64\x6e\x2e\x71\x75\x61\x6e\x74\x75\x6d\x2e\x76\x6f\x64\x6b\x61"
+  alpn:
+  - http/1.1
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /api/v1/feed/b597b53d57
+    headers:
+      Host: cdn.quantum.vodka
