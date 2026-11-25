@@ -2,28 +2,78 @@
 # Igareck Mihomo Subscription
 # Источник/Source: WHITE-CIDR-RU-checked.txt
 # 🏳️ БЕЛЫЕ СПИСКИ 🏳️ WHITE LISTS | CIDR | Только VK, Yandex, CDNvideo, Beeline
-# Количество/Quantity: 4
-# Date/Time: 2026-11-25 / 08:46 (Moscow)
+# Количество/Quantity: 10
+# Date/Time: 2026-11-25 / 11:10 (Moscow)
 #
 # Не содержит никаких настроек, только список прокси / No settings, just proxies list;
 # ============================================================
 
 proxies:
-- name: Igareck Node 001 | 🇮🇪 Ireland [*CIDR] VK
+- name: Igareck Node 001 | 🇩🇪 Germany | [*CIDR] CDN
   type: vless
-  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x37\x2e\x31\x37\x35"
+  server: "\x34\x36\x2e\x32\x34\x33\x2e\x32\x33\x32\x2e\x31\x34\x39"
   port: 443
-  uuid: "\x65\x66\x31\x64\x61\x35\x36\x65\x2d\x38\x31\x31\x37\x2d\x34\x32\x62\x34\x2d\x62\x63\x64\x38\x2d\x39\x30\x39\x34\x65\x62\x62\x64\x66\x39\x38\x35"
+  uuid: "\x62\x34\x33\x32\x61\x32\x33\x61\x2d\x61\x63\x66\x66\x2d\x34\x32\x35\x63\x2d\x62\x66\x36\x39\x2d\x37\x30\x34\x38\x30\x63\x64\x36\x65\x64\x30\x39"
   udp: true
-  flow: xtls-rprx-vision
   tls: true
-  servername: "\x74\x79\x70\x65\x77\x72\x69\x74\x65\x72\x2e\x6d\x61\x69\x6c\x2e\x72\x75"
+  servername: "\x64\x65\x76\x63\x64\x6e\x2e\x69\x63\x75"
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      Host: devcdn.icu
+- name: Igareck Node 002 | 🇩🇪 Germany | [*CIDR] CDN
+  type: vless
+  server: "\x34\x36\x2e\x32\x34\x33\x2e\x32\x33\x32\x2e\x31\x34\x39"
+  port: 443
+  uuid: "\x62\x34\x33\x32\x61\x32\x33\x61\x2d\x61\x63\x66\x66\x2d\x34\x32\x35\x63\x2d\x62\x66\x36\x39\x2d\x37\x30\x34\x38\x30\x63\x64\x36\x65\x64\x30\x39"
+  udp: true
+  tls: true
+  servername: "\x64\x65\x76\x63\x64\x6e\x2e\x69\x63\x75"
+  alpn:
+  - http/1.1
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      Host: devcdn.icu
+- name: Igareck Node 003 | 🇩🇪 Germany | [*CIDR] CDN
+  type: vless
+  server: "\x64\x65\x76\x63\x64\x6e\x2e\x69\x63\x75"
+  port: 443
+  uuid: "\x62\x34\x33\x32\x61\x32\x33\x61\x2d\x61\x63\x66\x66\x2d\x34\x32\x35\x63\x2d\x62\x66\x36\x39\x2d\x37\x30\x34\x38\x30\x63\x64\x36\x65\x64\x30\x39"
+  udp: true
+  tls: true
+  servername: "\x64\x65\x76\x63\x64\x6e\x2e\x69\x63\x75"
+  alpn:
+  - http/1.1
   client-fingerprint: chrome
-  reality-opts:
-    public-key: 8AMTGPbrxsJjdXnKnF9Q_FTBE0tQHG-nfE1CeqN7GRs
-    short-id: "17aa0cd6"
-  network: tcp
-- name: Igareck Node 002 | 🇳🇱 The Netherlands [*CIDR] VK
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      Host: devcdn.icu
+- name: Igareck Node 004 | 🇩🇪 Germany | [*CIDR] CDN
+  type: vless
+  server: "\x64\x65\x76\x63\x64\x6e\x2e\x69\x63\x75"
+  port: 443
+  uuid: "\x62\x34\x33\x32\x61\x32\x33\x61\x2d\x61\x63\x66\x66\x2d\x34\x32\x35\x63\x2d\x62\x66\x36\x39\x2d\x37\x30\x34\x38\x30\x63\x64\x36\x65\x64\x30\x39"
+  udp: true
+  tls: true
+  servername: "\x64\x65\x76\x63\x64\x6e\x2e\x69\x63\x75"
+  alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /edge/chunk/b2265efffa29/
+    headers:
+      Host: devcdn.icu
+- name: Igareck Node 005 | 🇳🇱 The Netherlands | [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x37\x2e\x33\x33"
   port: 443
@@ -31,12 +81,27 @@ proxies:
   udp: true
   tls: true
   servername: "\x67\x72\x63\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /b241ws
     headers:
       Host: grc.rtkdvbr.cc
-- name: Igareck Node 003 | 🇳🇱 The Netherlands [*CIDR] VK
+- name: Igareck Node 006 | 🇳🇱 The Netherlands | [*CIDR] VK
+  type: vless
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x37\x2e\x33\x33"
+  port: 443
+  uuid: "\x65\x66\x34\x32\x33\x39\x35\x30\x2d\x62\x36\x65\x32\x2d\x34\x61\x62\x35\x2d\x38\x32\x34\x32\x2d\x35\x39\x31\x61\x37\x62\x37\x63\x34\x64\x36\x38"
+  udp: true
+  tls: true
+  servername: "\x67\x72\x63\x2e\x72\x74\x6b\x64\x76\x62\x72\x2e\x63\x63"
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /b241ws
+    headers:
+      Host: grc.rtkdvbr.cc
+- name: Igareck Node 007 | 🇳🇱 The Netherlands | [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x38\x33"
   port: 443
@@ -52,7 +117,23 @@ proxies:
     path: /nl7ws
     headers:
       Host: new.wytys.ru
-- name: Igareck Node 004 | 🇳🇱 The Netherlands [*CIDR] VK
+- name: Igareck Node 008 | 🇳🇱 The Netherlands | [*CIDR] VK
+  type: vless
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x38\x33"
+  port: 443
+  uuid: "\x66\x37\x32\x62\x32\x62\x39\x31\x2d\x65\x34\x39\x34\x2d\x34\x34\x32\x32\x2d\x39\x65\x33\x32\x2d\x30\x66\x33\x34\x36\x63\x33\x63\x37\x38\x66\x39"
+  udp: true
+  tls: true
+  servername: "\x6e\x65\x77\x2e\x77\x79\x74\x79\x73\x2e\x72\x75"
+  alpn:
+  - http/1.1
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /nl7ws
+    headers:
+      Host: new.wytys.ru
+- name: Igareck Node 009 | 🇳🇱 The Netherlands | [*CIDR] VK
   type: vless
   server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x38\x33"
   port: 443
@@ -63,6 +144,22 @@ proxies:
   alpn:
   - http/1.1
   client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /nl7ws
+    headers:
+      Host: new.wytys.ru
+- name: Igareck Node 010 | 🇳🇱 The Netherlands | [*CIDR] VK
+  type: vless
+  server: "\x31\x38\x35\x2e\x38\x36\x2e\x31\x34\x35\x2e\x31\x38\x33"
+  port: 443
+  uuid: "\x66\x64\x62\x64\x32\x38\x36\x37\x2d\x32\x30\x38\x31\x2d\x34\x37\x34\x61\x2d\x39\x61\x39\x33\x2d\x35\x35\x63\x62\x30\x64\x38\x66\x39\x61\x61\x37"
+  udp: true
+  tls: true
+  servername: "\x6e\x65\x77\x2e\x77\x79\x74\x79\x73\x2e\x72\x75"
+  alpn:
+  - http/1.1
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /nl7ws
