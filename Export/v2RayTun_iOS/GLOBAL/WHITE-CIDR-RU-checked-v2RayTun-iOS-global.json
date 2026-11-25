@@ -58,7 +58,7 @@
           "domain:local",
           "domain:lan",
           "regexp:^[^.]+$",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -115,7 +115,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -136,7 +136,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -157,7 +157,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -178,7 +178,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -199,7 +199,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -220,7 +220,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -241,7 +241,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -262,7 +262,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -283,7 +283,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -304,7 +304,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -325,7 +325,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -346,7 +346,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:gw1.secured-by-tenzo.sbs"
+          "full:ws.quantum.vodka"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -409,32 +409,38 @@
   "outbounds": [
     {
       "tag": "igareck-node-001",
-      "protocol": "trojan",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "185.86.147.171",
-            "port": 2223,
-            "password": "zqUo21QF_53vpwrzmZ_xZxFkTF2-aQF9"
+            "address": "ws.quantum.vodka",
+            "port": 1443,
+            "users": [
+              {
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
+                "encryption": "none"
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/api/v1/feed/b597b53d57",
+          "headers": {
+            "Host": "cdn.quantum.vodka"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "vkc9.secured-by-tenzo.sbs",
-          "fingerprint": "edge",
+          "serverName": "cdn.quantum.vodka",
+          "fingerprint": "chrome",
           "alpn": [
             "http/1.1"
           ]
@@ -443,32 +449,158 @@
     },
     {
       "tag": "igareck-node-002",
-      "protocol": "trojan",
+      "protocol": "vless",
       "settings": {
-        "servers": [
+        "vnext": [
           {
-            "address": "gw1.secured-by-tenzo.sbs",
-            "port": 2223,
-            "password": "zqUo21QF_53vpwrzmZ_xZxFkTF2-aQF9"
+            "address": "ws.quantum.vodka",
+            "port": 1443,
+            "users": [
+              {
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
+                "encryption": "none"
+              }
+            ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/api/v1/feed/b597b53d57",
+          "headers": {
+            "Host": "cdn.quantum.vodka"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "vkc9.secured-by-tenzo.sbs",
+          "serverName": "cdn.quantum.vodka",
           "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-003",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ws.quantum.vodka",
+            "port": 1443,
+            "users": [
+              {
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/api/v1/feed/b597b53d57",
+          "headers": {
+            "Host": "cdn.quantum.vodka"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.quantum.vodka",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-004",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ws.quantum.vodka",
+            "port": 1443,
+            "users": [
+              {
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/api/v1/feed/b597b53d57",
+          "headers": {
+            "Host": "cdn.quantum.vodka"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.quantum.vodka",
+          "fingerprint": "ios",
+          "alpn": [
+            "http/1.1"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-005",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ws.quantum.vodka",
+            "port": 1443,
+            "users": [
+              {
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "wsSettings": {
+          "path": "/api/v1/feed/b597b53d57",
+          "headers": {
+            "Host": "cdn.quantum.vodka"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cdn.quantum.vodka",
+          "fingerprint": "qq",
           "alpn": [
             "http/1.1"
           ]
