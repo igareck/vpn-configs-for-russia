@@ -58,7 +58,7 @@
           "domain:local",
           "domain:lan",
           "regexp:^[^.]+$",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -115,7 +115,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -136,7 +136,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -157,7 +157,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -178,7 +178,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -199,7 +199,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -220,7 +220,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -241,7 +241,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -262,7 +262,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -283,7 +283,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -304,7 +304,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -325,7 +325,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -346,7 +346,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r7.pythonmakemigreat.wiki"
+          "full:r6.pythonmakemigreat.wiki"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -413,7 +413,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "r7.pythonmakemigreat.wiki",
+            "address": "r6.pythonmakemigreat.wiki",
             "port": 8443,
             "users": [
               {
@@ -432,14 +432,22 @@
         },
         "xhttpSettings": {
           "path": "/",
-          "mode": "packet-up"
+          "mode": "packet-up",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3
+            },
+            "xPaddingBytes": "100-500",
+            "scMaxBufferedPosts": 10,
+            "scMaxEachPostBytes": "500000-1000000",
+            "scMinPostsIntervalMs": "20-40"
+          }
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "cdn.study.golangwikito.cfd",
-          "fingerprint": "edge",
+          "serverName": "assets.study.golangwikito.cfd",
+          "fingerprint": "android",
           "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "shortId": "40a4b9403abe554c",
           "spiderX": "/"
         }
       }
@@ -450,7 +458,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "r7.pythonmakemigreat.wiki",
+            "address": "r6.pythonmakemigreat.wiki",
             "port": 8443,
             "users": [
               {
@@ -469,14 +477,22 @@
         },
         "xhttpSettings": {
           "path": "/",
-          "mode": "packet-up"
+          "mode": "packet-up",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3
+            },
+            "xPaddingBytes": "100-500",
+            "scMaxBufferedPosts": 10,
+            "scMaxEachPostBytes": "500000-1000000",
+            "scMinPostsIntervalMs": "20-40"
+          }
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "cdn.study.golangwikito.cfd",
-          "fingerprint": "android",
+          "serverName": "assets.study.golangwikito.cfd",
+          "fingerprint": "firefox",
           "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "shortId": "40a4b9403abe554c",
           "spiderX": "/"
         }
       }
@@ -487,7 +503,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "r7.pythonmakemigreat.wiki",
+            "address": "r6.pythonmakemigreat.wiki",
             "port": 8443,
             "users": [
               {
@@ -506,14 +522,22 @@
         },
         "xhttpSettings": {
           "path": "/",
-          "mode": "packet-up"
+          "mode": "packet-up",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3
+            },
+            "xPaddingBytes": "100-500",
+            "scMaxBufferedPosts": 10,
+            "scMaxEachPostBytes": "500000-1000000",
+            "scMinPostsIntervalMs": "20-40"
+          }
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "cdn.study.golangwikito.cfd",
-          "fingerprint": "chrome",
+          "serverName": "assets.study.golangwikito.cfd",
+          "fingerprint": "ios",
           "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "shortId": "40a4b9403abe554c",
           "spiderX": "/"
         }
       }
@@ -524,7 +548,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "r7.pythonmakemigreat.wiki",
+            "address": "r6.pythonmakemigreat.wiki",
             "port": 8443,
             "users": [
               {
@@ -543,14 +567,22 @@
         },
         "xhttpSettings": {
           "path": "/",
-          "mode": "packet-up"
+          "mode": "packet-up",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3
+            },
+            "xPaddingBytes": "100-500",
+            "scMaxBufferedPosts": 10,
+            "scMaxEachPostBytes": "500000-1000000",
+            "scMinPostsIntervalMs": "20-40"
+          }
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "cdn.study.golangwikito.cfd",
-          "fingerprint": "ios",
+          "serverName": "assets.study.golangwikito.cfd",
+          "fingerprint": "qq",
           "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "shortId": "40a4b9403abe554c",
           "spiderX": "/"
         }
       }
@@ -561,7 +593,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "r7.pythonmakemigreat.wiki",
+            "address": "r6.pythonmakemigreat.wiki",
             "port": 8443,
             "users": [
               {
@@ -580,14 +612,22 @@
         },
         "xhttpSettings": {
           "path": "/",
-          "mode": "packet-up"
+          "mode": "packet-up",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3
+            },
+            "xPaddingBytes": "100-500",
+            "scMaxBufferedPosts": 10,
+            "scMaxEachPostBytes": "500000-1000000",
+            "scMinPostsIntervalMs": "20-40"
+          }
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "cdn.study.golangwikito.cfd",
+          "serverName": "assets.study.golangwikito.cfd",
           "fingerprint": "safari",
           "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "shortId": "40a4b9403abe554c",
           "spiderX": "/"
         }
       }
@@ -598,11 +638,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "138.16.160.132",
+            "address": "109.237.98.52",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -624,9 +664,9 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ya.ru",
+          "serverName": "tl93mf9x71e.streamedge.best",
           "fingerprint": "firefox",
-          "publicKey": "lkZzqxPF5q1EkMvxjoBIMwBDqtaz3Adsv18--DH-JUY"
+          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
         }
       }
     },
@@ -636,11 +676,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.218.113",
+            "address": "109.237.98.52",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -662,9 +702,9 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "absolute-disaster.org",
-          "fingerprint": "firefox",
-          "publicKey": "vXErM6MX4mVr214wRWwRcS52KgfxcY6ont639bH8HSE"
+          "serverName": "tl93mf9x71e.streamedge.best",
+          "fingerprint": "android",
+          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
         }
       }
     },
@@ -674,11 +714,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "138.16.160.132",
+            "address": "109.237.98.52",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -700,9 +740,9 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ya.ru",
+          "serverName": "tl93mf9x71e.streamedge.best",
           "fingerprint": "chrome",
-          "publicKey": "lkZzqxPF5q1EkMvxjoBIMwBDqtaz3Adsv18--DH-JUY"
+          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
         }
       }
     },
@@ -712,11 +752,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "138.16.160.132",
+            "address": "109.237.98.52",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -738,9 +778,9 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ya.ru",
-          "fingerprint": "ios",
-          "publicKey": "lkZzqxPF5q1EkMvxjoBIMwBDqtaz3Adsv18--DH-JUY"
+          "serverName": "tl93mf9x71e.streamedge.best",
+          "fingerprint": "edge",
+          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
         }
       }
     },
@@ -750,11 +790,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "138.16.160.132",
+            "address": "109.237.98.52",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -776,9 +816,9 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ya.ru",
-          "fingerprint": "qq",
-          "publicKey": "lkZzqxPF5q1EkMvxjoBIMwBDqtaz3Adsv18--DH-JUY"
+          "serverName": "tl93mf9x71e.streamedge.best",
+          "fingerprint": "ios",
+          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
         }
       }
     },
@@ -788,11 +828,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "138.16.160.132",
+            "address": "201.34.141.91",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -814,9 +854,10 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ya.ru",
-          "fingerprint": "safari",
-          "publicKey": "lkZzqxPF5q1EkMvxjoBIMwBDqtaz3Adsv18--DH-JUY"
+          "serverName": "ruastriamicro2.gangplatform.com",
+          "fingerprint": "android",
+          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
+          "shortId": "b01af964fbefcc1f"
         }
       }
     },
@@ -826,11 +867,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.218.113",
+            "address": "201.34.141.91",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -852,9 +893,10 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "absolute-disaster.org",
-          "fingerprint": "android",
-          "publicKey": "vXErM6MX4mVr214wRWwRcS52KgfxcY6ont639bH8HSE"
+          "serverName": "ruastriamicro2.gangplatform.com",
+          "fingerprint": "chrome",
+          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
+          "shortId": "b01af964fbefcc1f"
         }
       }
     },
@@ -864,11 +906,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.218.113",
+            "address": "201.34.141.91",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -890,9 +932,10 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "absolute-disaster.org",
-          "fingerprint": "chrome",
-          "publicKey": "vXErM6MX4mVr214wRWwRcS52KgfxcY6ont639bH8HSE"
+          "serverName": "ruastriamicro2.gangplatform.com",
+          "fingerprint": "ios",
+          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
+          "shortId": "b01af964fbefcc1f"
         }
       }
     },
@@ -902,11 +945,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.218.113",
+            "address": "201.34.141.91",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -928,9 +971,10 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "absolute-disaster.org",
-          "fingerprint": "ios",
-          "publicKey": "vXErM6MX4mVr214wRWwRcS52KgfxcY6ont639bH8HSE"
+          "serverName": "ruastriamicro2.gangplatform.com",
+          "fingerprint": "safari",
+          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
+          "shortId": "b01af964fbefcc1f"
         }
       }
     },
@@ -940,11 +984,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "195.209.218.113",
+            "address": "201.34.141.91",
             "port": 443,
             "users": [
               {
-                "id": "Fluffy_VPN-IrUwcGXw",
+                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
                 "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
@@ -966,9 +1010,10 @@
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "absolute-disaster.org",
-          "fingerprint": "safari",
-          "publicKey": "vXErM6MX4mVr214wRWwRcS52KgfxcY6ont639bH8HSE"
+          "serverName": "ruastriamicro2.gangplatform.com",
+          "fingerprint": "firefox",
+          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
+          "shortId": "b01af964fbefcc1f"
         }
       }
     },
