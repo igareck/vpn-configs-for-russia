@@ -3,12 +3,12 @@
     "name": "WHITE-CIDR-RU-checked — v2rayNG Auto Select GLOBAL",
     "generator": "Igareck GitHub",
     "notes": [
-      "5 proxies",
+      "10 proxies",
       "Interval is 5 minutes + leastPing + routing GLOBAL."
     ],
     "client": "v2rayNG",
     "source": "WHITE-CIDR-RU-checked.txt",
-    "source_datetime": "2026-11-26 08:59 Moscow"
+    "source_datetime": "2026-11-26 12:26 Moscow"
   },
   "log": {
     "loglevel": "warning"
@@ -69,7 +69,8 @@
           "full:localhost",
           "domain:local",
           "domain:lan",
-          "regexp:^[^.]+$"
+          "regexp:^[^.]+$",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -125,7 +126,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -145,7 +147,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -165,7 +168,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -185,7 +189,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -205,7 +210,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -225,7 +231,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -245,7 +252,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -265,7 +273,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -285,7 +294,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -305,7 +315,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -325,7 +336,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -345,7 +357,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:plaindune.com"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -433,11 +446,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "130.193.35.149",
-            "port": 8444,
+            "address": "plaindune.com",
+            "port": 8443,
             "users": [
               {
-                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
                 "encryption": "none"
               }
             ]
@@ -451,15 +464,24 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/9e3ee801bb41b934",
-          "mode": "auto"
+          "path": "/api/v1/upload",
+          "host": "plaindune.com",
+          "mode": "auto",
+          "extra": {
+            "scMaxEachPostBytes": 1000000,
+            "scMinPostsIntervalMs": 30,
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "maxConcurrency": "16-32",
+              "maxConnections": 0
+            },
+            "xPaddingBytes": "100-1000"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "hel.softriver.site",
-          "fingerprint": "android",
-          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
-          "shortId": "b8b1d46f23be2a8c"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "chrome"
         }
       }
     },
@@ -469,11 +491,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "130.193.35.149",
-            "port": 8444,
+            "address": "plaindune.com",
+            "port": 8443,
             "users": [
               {
-                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
                 "encryption": "none"
               }
             ]
@@ -487,15 +509,24 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/9e3ee801bb41b934",
-          "mode": "auto"
+          "path": "/api/v1/upload",
+          "host": "plaindune.com",
+          "mode": "auto",
+          "extra": {
+            "scMaxEachPostBytes": 1000000,
+            "scMinPostsIntervalMs": 30,
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "maxConcurrency": "16-32",
+              "maxConnections": 0
+            },
+            "xPaddingBytes": "100-1000"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "hel.softriver.site",
-          "fingerprint": "chrome",
-          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
-          "shortId": "b8b1d46f23be2a8c"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "edge"
         }
       }
     },
@@ -505,11 +536,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "130.193.35.149",
-            "port": 8444,
+            "address": "plaindune.com",
+            "port": 8443,
             "users": [
               {
-                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
                 "encryption": "none"
               }
             ]
@@ -523,15 +554,24 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/9e3ee801bb41b934",
-          "mode": "auto"
+          "path": "/api/v1/upload",
+          "host": "plaindune.com",
+          "mode": "auto",
+          "extra": {
+            "scMaxEachPostBytes": 1000000,
+            "scMinPostsIntervalMs": 30,
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "maxConcurrency": "16-32",
+              "maxConnections": 0
+            },
+            "xPaddingBytes": "100-1000"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "hel.softriver.site",
-          "fingerprint": "edge",
-          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
-          "shortId": "b8b1d46f23be2a8c"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "firefox"
         }
       }
     },
@@ -541,11 +581,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "130.193.35.149",
-            "port": 8444,
+            "address": "plaindune.com",
+            "port": 8443,
             "users": [
               {
-                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
                 "encryption": "none"
               }
             ]
@@ -559,15 +599,24 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/9e3ee801bb41b934",
-          "mode": "auto"
+          "path": "/api/v1/upload",
+          "host": "plaindune.com",
+          "mode": "auto",
+          "extra": {
+            "scMaxEachPostBytes": 1000000,
+            "scMinPostsIntervalMs": 30,
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "maxConcurrency": "16-32",
+              "maxConnections": 0
+            },
+            "xPaddingBytes": "100-1000"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "hel.softriver.site",
-          "fingerprint": "firefox",
-          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
-          "shortId": "b8b1d46f23be2a8c"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "ios"
         }
       }
     },
@@ -577,11 +626,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "130.193.35.149",
-            "port": 8444,
+            "address": "plaindune.com",
+            "port": 8443,
             "users": [
               {
-                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
                 "encryption": "none"
               }
             ]
@@ -595,15 +644,189 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/9e3ee801bb41b934",
-          "mode": "auto"
+          "path": "/api/v1/upload",
+          "host": "plaindune.com",
+          "mode": "auto",
+          "extra": {
+            "scMaxEachPostBytes": 1000000,
+            "scMinPostsIntervalMs": 30,
+            "xmux": {
+              "cMaxReuseTimes": "64-128",
+              "maxConcurrency": "16-32",
+              "maxConnections": 0
+            },
+            "xPaddingBytes": "100-1000"
+          }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "hel.softriver.site",
-          "fingerprint": "ios",
-          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
-          "shortId": "b8b1d46f23be2a8c"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-006",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "plaindune.com",
+            "port": 8443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "android"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-007",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "plaindune.com",
+            "port": 8443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-008",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "plaindune.com",
+            "port": 8443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-009",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "plaindune.com",
+            "port": 8443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-010",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "plaindune.com",
+            "port": 8443,
+            "users": [
+              {
+                "id": "37af0181-5598-4aad-a040-d926bcb65757",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60
+        },
+        "xhttpSettings": {
+          "path": "/api/v1/upload"
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "plaindune.com",
+          "fingerprint": "safari"
         }
       }
     },
