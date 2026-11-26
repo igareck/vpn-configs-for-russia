@@ -58,7 +58,7 @@
           "domain:local",
           "domain:lan",
           "regexp:^[^.]+$",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -115,7 +115,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -136,7 +136,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -157,7 +157,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -178,7 +178,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -199,7 +199,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -220,7 +220,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -241,7 +241,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -262,7 +262,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -283,7 +283,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -304,7 +304,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -325,7 +325,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -346,7 +346,7 @@
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
           "full:blank.dnsforge.de",
-          "full:r6.pythonmakemigreat.wiki"
+          "full:one.alpheratzz.org"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -413,42 +413,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "r6.pythonmakemigreat.wiki",
+            "address": "one.alpheratzz.org",
             "port": 8443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-                "encryption": "none"
+                "id": "0173d52e-8e1b-4681-831e-11529677b72f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "xhttpSettings": {
-          "path": "/",
-          "mode": "packet-up",
-          "extra": {
-            "xmux": {
-              "maxConnections": 3
-            },
-            "xPaddingBytes": "100-500",
-            "scMaxBufferedPosts": 10,
-            "scMaxEachPostBytes": "500000-1000000",
-            "scMinPostsIntervalMs": "20-40"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "assets.study.golangwikito.cfd",
-          "fingerprint": "android",
-          "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "spiderX": "/"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api-6b04608f.adhil.uk",
+          "fingerprint": "safari",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -458,42 +453,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "r6.pythonmakemigreat.wiki",
+            "address": "one.alpheratzz.org",
             "port": 8443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-                "encryption": "none"
+                "id": "0173d52e-8e1b-4681-831e-11529677b72f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "xhttpSettings": {
-          "path": "/",
-          "mode": "packet-up",
-          "extra": {
-            "xmux": {
-              "maxConnections": 3
-            },
-            "xPaddingBytes": "100-500",
-            "scMaxBufferedPosts": 10,
-            "scMaxEachPostBytes": "500000-1000000",
-            "scMinPostsIntervalMs": "20-40"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "assets.study.golangwikito.cfd",
-          "fingerprint": "firefox",
-          "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "spiderX": "/"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api-6b04608f.adhil.uk",
+          "fingerprint": "chrome",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -503,42 +493,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "r6.pythonmakemigreat.wiki",
+            "address": "one.alpheratzz.org",
             "port": 8443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-                "encryption": "none"
+                "id": "0173d52e-8e1b-4681-831e-11529677b72f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "xhttpSettings": {
-          "path": "/",
-          "mode": "packet-up",
-          "extra": {
-            "xmux": {
-              "maxConnections": 3
-            },
-            "xPaddingBytes": "100-500",
-            "scMaxBufferedPosts": 10,
-            "scMaxEachPostBytes": "500000-1000000",
-            "scMinPostsIntervalMs": "20-40"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "assets.study.golangwikito.cfd",
-          "fingerprint": "ios",
-          "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "spiderX": "/"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api-6b04608f.adhil.uk",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -548,42 +533,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "r6.pythonmakemigreat.wiki",
+            "address": "one.alpheratzz.org",
             "port": 8443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
-                "encryption": "none"
+                "id": "0173d52e-8e1b-4681-831e-11529677b72f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
+        "network": "raw",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
         },
-        "xhttpSettings": {
-          "path": "/",
-          "mode": "packet-up",
-          "extra": {
-            "xmux": {
-              "maxConnections": 3
-            },
-            "xPaddingBytes": "100-500",
-            "scMaxBufferedPosts": 10,
-            "scMaxEachPostBytes": "500000-1000000",
-            "scMinPostsIntervalMs": "20-40"
+        "rawSettings": {
+          "header": {
+            "type": "none"
           }
         },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "assets.study.golangwikito.cfd",
-          "fingerprint": "qq",
-          "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "spiderX": "/"
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api-6b04608f.adhil.uk",
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2"
+          ]
         }
       }
     },
@@ -593,11 +573,51 @@
       "settings": {
         "vnext": [
           {
-            "address": "r6.pythonmakemigreat.wiki",
+            "address": "one.alpheratzz.org",
             "port": 8443,
             "users": [
               {
-                "id": "f8d52ece-fad4-478d-875d-df6eed3befa7",
+                "id": "0173d52e-8e1b-4681-831e-11529677b72f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "raw",
+        "sockopt": {
+          "tcpKeepAliveIdle": 300,
+          "tcpKeepAliveInterval": 60,
+          "dialerProxy": "fragment"
+        },
+        "rawSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "api-6b04608f.adhil.uk",
+          "fingerprint": "qq",
+          "alpn": [
+            "h2"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "igareck-node-006",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.35.8.37",
+            "port": 8444,
+            "users": [
+              {
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
                 "encryption": "none"
               }
             ]
@@ -611,62 +631,15 @@
           "tcpKeepAliveInterval": 60
         },
         "xhttpSettings": {
-          "path": "/",
-          "mode": "packet-up",
-          "extra": {
-            "xmux": {
-              "maxConnections": 3
-            },
-            "xPaddingBytes": "100-500",
-            "scMaxBufferedPosts": 10,
-            "scMaxEachPostBytes": "500000-1000000",
-            "scMinPostsIntervalMs": "20-40"
-          }
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "assets.study.golangwikito.cfd",
-          "fingerprint": "safari",
-          "publicKey": "QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-006",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "109.237.98.52",
-            "port": 443,
-            "users": [
-              {
-                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "tl93mf9x71e.streamedge.best",
-          "fingerprint": "firefox",
-          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "android",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -676,35 +649,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.237.98.52",
-            "port": 443,
+            "address": "5.35.8.37",
+            "port": 8444,
             "users": [
               {
-                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "tl93mf9x71e.streamedge.best",
-          "fingerprint": "android",
-          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "chrome",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -714,35 +685,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.237.98.52",
-            "port": 443,
+            "address": "5.35.8.37",
+            "port": 8444,
             "users": [
               {
-                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "tl93mf9x71e.streamedge.best",
-          "fingerprint": "chrome",
-          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "edge",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -752,35 +721,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.237.98.52",
-            "port": 443,
+            "address": "5.35.8.37",
+            "port": 8444,
             "users": [
               {
-                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "tl93mf9x71e.streamedge.best",
-          "fingerprint": "edge",
-          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "firefox",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -790,35 +757,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "109.237.98.52",
-            "port": 443,
+            "address": "5.35.8.37",
+            "port": 8444,
             "users": [
               {
-                "id": "878f7de7-b69a-4ed4-b7be-a96b2735b368",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "tl93mf9x71e.streamedge.best",
+          "serverName": "hel.softriver.site",
           "fingerprint": "ios",
-          "publicKey": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA"
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -828,36 +793,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "201.34.141.91",
-            "port": 443,
+            "address": "130.193.35.149",
+            "port": 8444,
             "users": [
               {
-                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ruastriamicro2.gangplatform.com",
+          "serverName": "hel.softriver.site",
           "fingerprint": "android",
-          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
-          "shortId": "b01af964fbefcc1f"
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -867,36 +829,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "201.34.141.91",
-            "port": 443,
+            "address": "130.193.35.149",
+            "port": 8444,
             "users": [
               {
-                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ruastriamicro2.gangplatform.com",
+          "serverName": "hel.softriver.site",
           "fingerprint": "chrome",
-          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
-          "shortId": "b01af964fbefcc1f"
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -906,36 +865,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "201.34.141.91",
-            "port": 443,
+            "address": "130.193.35.149",
+            "port": 8444,
             "users": [
               {
-                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ruastriamicro2.gangplatform.com",
-          "fingerprint": "ios",
-          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
-          "shortId": "b01af964fbefcc1f"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "edge",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -945,36 +901,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "201.34.141.91",
-            "port": 443,
+            "address": "130.193.35.149",
+            "port": 8444,
             "users": [
               {
-                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ruastriamicro2.gangplatform.com",
-          "fingerprint": "safari",
-          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
-          "shortId": "b01af964fbefcc1f"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "firefox",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
@@ -984,36 +937,33 @@
       "settings": {
         "vnext": [
           {
-            "address": "201.34.141.91",
-            "port": 443,
+            "address": "130.193.35.149",
+            "port": 8444,
             "users": [
               {
-                "id": "9df9ee1a-0671-4c6c-93c7-65598fb946f7",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "ef1da56e-8117-42b4-bcd8-9094ebbdf985",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "xhttp",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
+          "tcpKeepAliveInterval": 60
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
+        "xhttpSettings": {
+          "path": "/9e3ee801bb41b934",
+          "mode": "auto"
         },
         "security": "reality",
         "realitySettings": {
-          "serverName": "ruastriamicro2.gangplatform.com",
-          "fingerprint": "firefox",
-          "publicKey": "xWszcU0a-SHH5bb-GGgV4cuZeQmLSz4JkwYr_5hvExI",
-          "shortId": "b01af964fbefcc1f"
+          "serverName": "hel.softriver.site",
+          "fingerprint": "ios",
+          "publicKey": "TJjBxMqU12PD9TQ9ZVr-m-LdIxYVokVp5SImQ6Z2iEQ",
+          "shortId": "b8b1d46f23be2a8c"
         }
       }
     },
