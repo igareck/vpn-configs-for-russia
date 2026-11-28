@@ -58,7 +58,8 @@
           "full:localhost",
           "domain:local",
           "domain:lan",
-          "regexp:^[^.]+$"
+          "regexp:^[^.]+$",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -114,7 +115,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -134,7 +136,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -154,7 +157,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -174,7 +178,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -194,7 +199,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -214,7 +220,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -234,7 +241,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -254,7 +262,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -274,7 +283,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -294,7 +304,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -314,7 +325,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -334,7 +346,8 @@
           "full:doh.dns4all.eu",
           "full:wikimedia-dns.org",
           "full:dns.hostux.net",
-          "full:blank.dnsforge.de"
+          "full:blank.dnsforge.de",
+          "full:apiws.wytys.ru"
         ],
         "skipFallback": true,
         "queryStrategy": "UseIPv4",
@@ -424,34 +437,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.94.48",
-            "port": 80,
+            "address": "apiws.wytys.ru",
+            "port": 443,
             "users": [
               {
-                "id": "06faca2b-ccae-45c1-9b3a-5e927dc08efb",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "c508d13b-b4fe-41cc-8242-56ad2d7ca576",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "apiws.wytys.ru"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "nl.ezhiknet.work",
-          "fingerprint": "android"
+          "serverName": "apiws.wytys.ru",
+          "fingerprint": "android",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -461,34 +477,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.94.48",
-            "port": 80,
+            "address": "apiws.wytys.ru",
+            "port": 443,
             "users": [
               {
-                "id": "06faca2b-ccae-45c1-9b3a-5e927dc08efb",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "c508d13b-b4fe-41cc-8242-56ad2d7ca576",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "apiws.wytys.ru"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "nl.ezhiknet.work",
-          "fingerprint": "chrome"
+          "serverName": "apiws.wytys.ru",
+          "fingerprint": "chrome",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -498,34 +517,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.94.48",
-            "port": 80,
+            "address": "apiws.wytys.ru",
+            "port": 443,
             "users": [
               {
-                "id": "06faca2b-ccae-45c1-9b3a-5e927dc08efb",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "c508d13b-b4fe-41cc-8242-56ad2d7ca576",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "apiws.wytys.ru"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "nl.ezhiknet.work",
-          "fingerprint": "edge"
+          "serverName": "apiws.wytys.ru",
+          "fingerprint": "edge",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
@@ -535,71 +557,37 @@
       "settings": {
         "vnext": [
           {
-            "address": "212.233.94.48",
-            "port": 80,
+            "address": "apiws.wytys.ru",
+            "port": 443,
             "users": [
               {
-                "id": "06faca2b-ccae-45c1-9b3a-5e927dc08efb",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "id": "c508d13b-b4fe-41cc-8242-56ad2d7ca576",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "raw",
+        "network": "ws",
         "sockopt": {
           "tcpKeepAliveIdle": 300,
           "tcpKeepAliveInterval": 60,
           "dialerProxy": "fragment"
         },
-        "rawSettings": {
-          "header": {
-            "type": "none"
+        "wsSettings": {
+          "path": "/nl7ws",
+          "headers": {
+            "Host": "apiws.wytys.ru"
           }
         },
         "security": "tls",
         "tlsSettings": {
-          "serverName": "nl.ezhiknet.work",
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "igareck-node-005",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "212.233.94.48",
-            "port": 80,
-            "users": [
-              {
-                "id": "06faca2b-ccae-45c1-9b3a-5e927dc08efb",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "raw",
-        "sockopt": {
-          "tcpKeepAliveIdle": 300,
-          "tcpKeepAliveInterval": 60,
-          "dialerProxy": "fragment"
-        },
-        "rawSettings": {
-          "header": {
-            "type": "none"
-          }
-        },
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "nl.ezhiknet.work",
-          "fingerprint": "safari"
+          "serverName": "apiws.wytys.ru",
+          "fingerprint": "qq",
+          "alpn": [
+            "http/1.1"
+          ]
         }
       }
     },
